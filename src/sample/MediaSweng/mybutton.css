@@ -1,0 +1,8 @@
+.my-button {
+    -fx-graphic: url("locked.png");
+}
+
+.my-button:hover {
+    -fx-graphic: url("unlocking.png");
+}
+
