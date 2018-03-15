@@ -1,66 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.*?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <ImageView fitHeight="604.0" fitWidth="695.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="1752.0" fitWidth="2365.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@MediaSweng/mesozoic.jpg" />
             </image>
         </ImageView>
         <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Map" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7a7ade" height="521.0" layoutX="-4.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="699.0" />
-        <Button layoutX="281.0" layoutY="292.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Button">
-            <graphic>
-                <ImageView fitHeight="119.0" fitWidth="325.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@MediaSweng/dino.png" />
-                    </image>
-                </ImageView>
-            </graphic>
-        </Button>
+        <Button layoutX="281.0" layoutY="292.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Button" />
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toArea1" text="Back" />
-      <Text layoutX="93.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sauropods lived in the Late Jurassic times.">
+      <Text layoutX="1040.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sauropods lived in the Late Jurassic times.">
          <font>
             <Font name="Dimbo Regular" size="30.0" />
          </font>
       </Text>
-      <Text layoutX="105.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They had very long necks, tails and very small heads.">
+      <Text layoutX="1052.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They had very long necks, tails and very small heads.">
          <font>
             <Font name="Dimbo Regular" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="104.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They also had four trunk-like legs.">
+      <Text layoutX="1051.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They also had four trunk-like legs.">
          <font>
             <Font name="Dimbo Regular" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="104.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They are some of the biggest animals to have lived on land.">
+      <Text layoutX="1051.0" layoutY="505.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They are some of the biggest animals to have lived on land.">
          <font>
             <Font name="Dimbo Regular" size="25.0" />
          </font>
       </Text>
-      <ImageView fitHeight="64.0" fitWidth="75.0" layoutX="294.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@MediaSweng/lildino.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="416.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is a young Sauropod next to an adult.">
+      <Text layoutX="2326.0" layoutY="989.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is a young Sauropod next to an adult." wrappingWidth="506.227294921875">
          <font>
             <Font name="Dimbo Regular" size="19.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="96.0" layoutX="20.0" layoutY="408.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" width="178.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="96.0" layoutX="319.0" layoutY="1315.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" width="178.0">
          <effect>
             <DropShadow />
          </effect>
       </Rectangle>
-      <Text fill="WHITE" layoutX="63.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Words">
+      <Text fill="WHITE" layoutX="362.0" layoutY="1342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Words">
          <font>
             <Font name="Dimbo Regular" size="23.0" />
          </font>
