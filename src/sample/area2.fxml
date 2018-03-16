@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -16,7 +18,7 @@
             <Image url="@MediaSweng/322.jpg" />
          </image>
       </ImageView>
-      <Button layoutX="63.0" layoutY="539.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+      <Button layoutX="7.0" layoutY="635.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -24,5 +26,12 @@
                </image>
             </ImageView>
          </graphic></Button>
+      <Text layoutX="247.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Explore the Area">
+         <font>
+            <Font name="Dimbo Regular" size="60.0" />
+         </font>
+      </Text>
+      <Button layoutX="751.0" layoutY="141.0" mnemonicParsing="false" onMouseEntered="#excCursor" onMouseExited="#mag2Cursor" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Button" />
+      <Button layoutX="189.0" layoutY="484.0" mnemonicParsing="false" onMouseEntered="#excCursor" onMouseExited="#mag2Cursor" prefHeight="83.0" prefWidth="175.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Button" />
    </children>
 </AnchorPane>
