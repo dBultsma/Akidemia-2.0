@@ -1,0 +1,9 @@
+.area1 {
+    -fx-graphic: url(area1.png);
+    -fx-opacity: 0;
+}
+
+.settingsbutton:hover {
+    -fx-graphic: url("area1hover.png");
+    -fx-opacity: 100;
+}

@@ -1,0 +1,7 @@
+.area1 {
+    -fx-graphic: url("a1.png");
+}
+
+.area1:hover {
+    -fx-graphic: url("a1hover.png");
+}

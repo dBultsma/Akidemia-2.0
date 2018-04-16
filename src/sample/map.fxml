@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
+<?import javafx.scene.shape.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -16,34 +18,54 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="729.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@MediaSweng/dinomap.png" />
-         </image>
-      </ImageView>
-      <AnchorPane prefHeight="802.0" prefWidth="1067.0">
+      <AnchorPane layoutX="2.0" layoutY="-73.0" prefHeight="652.0" prefWidth="1057.0">
          <children>
-            <Button layoutX="29.0" layoutY="31.0" mnemonicParsing="false" onAction="#PressGo" text="Home" />
-            <Button layoutX="590.0" layoutY="212.0" mnemonicParsing="false" onAction="#toArea2" text="Area 2">
+            <ImageView fitHeight="515.0" fitWidth="761.0" layoutX="192.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/mapbackground.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="126.0" layoutY="1.0" mnemonicParsing="false" onAction="#toArea4" prefHeight="797.0" prefWidth="1136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area4" stylesheets="@MediaSweng/area4.css" text="Area 4">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="385.0" layoutY="346.0" mnemonicParsing="false" onAction="#toArea1" text="Area 1">
+            <Button layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#toArea1" prefHeight="204.0" prefWidth="310.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Area 1">
+               <font>
+                  <Font name="Chalkboard SE Bold" size="13.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@MediaSweng/area1.css" />
+                  <URL value="@MediaSweng/circlebutton.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="area1" />
+                  <String fx:value="circleButton" />
+               </styleClass>
+            </Button>
+            <Button layoutX="277.0" layoutY="164.0" mnemonicParsing="false" onAction="#toArea2" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Area 2">
+               <font>
+                  <Font name="Chalkboard SE Bold" size="13.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@MediaSweng/area2.css" />
+                  <URL value="@MediaSweng/circlebutton.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="area2" />
+                  <String fx:value="circleButton" />
+               </styleClass>
+            </Button>
+            <Button layoutX="526.0" layoutY="160.0" mnemonicParsing="false" onAction="#toArea3" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area3" stylesheets="@MediaSweng/area3.css" text="Area 3">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="257.0" layoutY="551.0" mnemonicParsing="false" onAction="#toArea3" text="Area 3">
+            <Button layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="42.0" prefWidth="67.0" stylesheets="@CSS%20Files/prettybutton.css" text="Home">
                <font>
-                  <Font name="Chalkboard SE Bold" size="13.0" />
-               </font>
-            </Button>
-            <Button layoutX="639.0" layoutY="526.0" mnemonicParsing="false" onAction="#toArea4" text="Area 4">
-               <font>
-                  <Font name="Chalkboard SE Bold" size="13.0" />
+                  <Font size="14.0" />
                </font>
             </Button>
          </children>

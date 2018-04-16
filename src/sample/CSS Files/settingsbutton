@@ -1,0 +1,8 @@
+.settingsbutton {
+    -fx-graphic: url("settings.png");
+}
+
+.settingsbutton:hover {
+    -fx-graphic: url("settings2.gif");
+}
+

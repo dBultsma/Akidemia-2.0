@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import java.net.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane prefHeight="833.0" prefWidth="1568.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="1035.0" fitWidth="1416.0" layoutX="-107.0" layoutY="-104.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@MediaSweng/forest_path_anime_background_by_wbd-d3l83r9.jpg" />
+         </image>
+      </ImageView>
+      <Button id="prettybutton" layoutX="33.0" layoutY="6.0" mnemonicParsing="false" onAction="#BackToMainScene" prefHeight="75.0" prefWidth="170.0" stylesheets="@CSS%20Files/button.css" text="Back" textFill="WHITE">
+         <font>
+            <Font name="Dimbo Regular" size="47.0" />
+         </font>
+      </Button>
+      <Text fill="WHITE" layoutX="489.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Settings">
+         <font>
+            <Font name="Dimbo Regular" size="96.0" />
+         </font>
+      </Text>
+      <Slider layoutX="365.0" layoutY="326.0" prefHeight="15.0" prefWidth="580.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" stylesheets="@CSS%20Files/slider.css" />
+      <Slider layoutX="364.0" layoutY="235.0" prefHeight="15.0" prefWidth="580.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" stylesheets="@CSS%20Files/slider.css" />
+   </children>
+</Pane>

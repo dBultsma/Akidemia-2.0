@@ -1,9 +1,6 @@
 package sample;
 
-
-//import java.awt.event.ActionEvent;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -12,10 +9,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.image.*;
-
+import javafx.animation.*;
 import java.io.IOException;
-
-import static javafx.scene.image.ImageView.*;
 
 public class Controller {
 
@@ -33,7 +28,7 @@ public class Controller {
     public void toSettings(ActionEvent event) throws IOException {
 
         //Getting the layout from file
-        Parent SettingLayout = FXMLLoader.load(getClass().getResource("settingmenu.fxml"));
+        Parent SettingLayout = FXMLLoader.load(getClass().getResource("settings.fxml"));
         //Used to get the current window
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(new Scene(SettingLayout, window.getWidth(), window.getHeight()));

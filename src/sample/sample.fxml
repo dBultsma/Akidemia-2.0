@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -46,35 +47,23 @@
          <right>
             <AnchorPane prefHeight="713.0" prefWidth="1066.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button layoutX="464.0" layoutY="329.0" mnemonicParsing="false" onAction="#PressGo" text="Play">
+                  <Button id="prettybutton" layoutX="400.0" layoutY="329.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="95.0" prefWidth="244.0" stylesheets="@CSS%20Files/button.css" text="Play" textFill="WHITE">
                      <font>
-                        <Font name="Chalkboard SE Bold" size="36.0" />
+                        <Font name="Dimbo Regular" size="47.0" />
                      </font>
                   </Button>
-                  <ImageView fitHeight="191.0" fitWidth="565.0" layoutX="256.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="191.0" fitWidth="565.0" layoutX="256.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@MediaSweng/Akidemia%20Logo.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="98.0" fitWidth="94.0" layoutX="91.0" layoutY="577.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="98.0" fitWidth="94.0" layoutX="35.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@MediaSweng/files.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="895.0" layoutY="582.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="my-button" stylesheets="@MediaSweng/mybutton.css">
-                     <graphic>
-                        <ImageView fitHeight="77.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@MediaSweng/locked.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-                  <ImageView fitHeight="97.0" fitWidth="120.0" layoutX="1018.0" layoutY="585.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@MediaSweng/settings.png" />
-                     </image>
-                  </ImageView>
+                  <Button layoutX="827.0" layoutY="561.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="my-button" stylesheets="@MediaSweng/mybutton.css" />
+                  <Button layoutX="964.0" layoutY="563.0" mnemonicParsing="false" onAction="#toSettings" prefHeight="98.0" prefWidth="116.0" style="-fx-background-color: transparent;" styleClass="settingsbutton" stylesheets="@MediaSweng/settingsbutton.css" />
                </children>
             </AnchorPane>
          </right>

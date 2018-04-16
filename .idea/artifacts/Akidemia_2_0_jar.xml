@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Akidemia-2.0:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Akidemia_2_0_jar</output-path>
+    <root id="archive" name="Akidemia-2.0.jar">
+      <element id="module-output" name="Akidemia-2.0" />
+    </root>
+  </artifact>
+</component>
