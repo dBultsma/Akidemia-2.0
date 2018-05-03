@@ -21,9 +21,11 @@ public class Main extends Application {
 //        Sound sound = new Sound("src/sample/MediaSweng/Dinosaur1.wav");
 //        sound.play();
 
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("test.fxml"));
+        primaryStage.setHeight(height);
+        primaryStage.setWidth(width);
         primaryStage.setTitle("Akidemia");
-        primaryStage.setScene(new Scene(root, width, height));
+        primaryStage.setScene(new Scene(root, primaryStage.getWidth(), primaryStage.getHeight()));
         //primaryStage.setMaximized(true);
         primaryStage.show();
     }
