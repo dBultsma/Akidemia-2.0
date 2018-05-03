@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.net.*?>
 <?import javafx.scene.shape.*?>
 <?import java.lang.*?>
@@ -18,7 +19,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="729.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="729.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MapController">
    <children>
       <AnchorPane layoutX="2.0" layoutY="-73.0" prefHeight="652.0" prefWidth="1057.0">
          <children>
@@ -31,43 +32,35 @@
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
             </Button>
-            <Button layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#toArea1" prefHeight="204.0" prefWidth="310.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Area 1">
-               <font>
-                  <Font name="Chalkboard SE Bold" size="13.0" />
-               </font>
-               <stylesheets>
-                  <URL value="@MediaSweng/area1.css" />
-                  <URL value="@MediaSweng/circlebutton.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="area1" />
-                  <String fx:value="circleButton" />
-               </styleClass>
-            </Button>
-            <Button layoutX="277.0" layoutY="164.0" mnemonicParsing="false" onAction="#toArea2" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Area 2">
-               <font>
-                  <Font name="Chalkboard SE Bold" size="13.0" />
-               </font>
-               <stylesheets>
-                  <URL value="@MediaSweng/area2.css" />
-                  <URL value="@MediaSweng/circlebutton.css" />
-               </stylesheets>
-               <styleClass>
-                  <String fx:value="area2" />
-                  <String fx:value="circleButton" />
-               </styleClass>
-            </Button>
-            <Button layoutX="526.0" layoutY="160.0" mnemonicParsing="false" onAction="#toArea3" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area3" stylesheets="@MediaSweng/area3.css" text="Area 3">
+            <Button fx:id="area1" layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#toArea1" prefHeight="204.0" prefWidth="310.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area1" stylesheets="@MediaSweng/area1.css" text="Area 1">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="42.0" prefWidth="67.0" stylesheets="@CSS%20Files/prettybutton.css" text="Home">
+            <Button fx:id="area2" layoutX="277.0" layoutY="164.0" mnemonicParsing="false" onAction="#toArea2" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area2" stylesheets="@MediaSweng/area2.css" text="Area 2">
+               <font>
+                  <Font name="Chalkboard SE Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="area3" layoutX="526.0" layoutY="160.0" mnemonicParsing="false" onAction="#toArea3" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area3" stylesheets="@MediaSweng/area3.css" text="Area 3">
+               <font>
+                  <Font name="Chalkboard SE Bold" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="42.0" prefWidth="67.0" text="Home">
                <font>
                   <Font size="14.0" />
                </font>
+               <stylesheets>
+                  <URL value="@CSS%20Files/prettybutton.css" />
+                  <URL value="@CSS%20Files/prettybutton.css" />
+               </stylesheets>
             </Button>
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="229.0" layoutY="270.0" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </AnchorPane>
    </children>
