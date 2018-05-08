@@ -1,0 +1,7 @@
+.area1 {
+    -fx-graphic: url("/MediaSweng/area1.png");
+}
+
+.area1:hover {
+    -fx-graphic: url("/MediaSweng/area1hover.png");
+}
