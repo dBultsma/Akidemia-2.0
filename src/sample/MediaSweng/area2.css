@@ -1,7 +1,0 @@
-.area2 {
-    -fx-graphic: url("a2.png");
-}
-
-.area2:hover {
-    -fx-graphic: url("a2hover.png");
-}

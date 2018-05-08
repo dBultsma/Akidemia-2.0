@@ -17,59 +17,78 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-   <children>
-      <ImageView fitHeight="1035.0" fitWidth="1416.0" layoutX="-133.0" layoutY="-136.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@MediaSweng/forest_path_anime_background_by_wbd-d3l83r9.jpg" />
-         </image>
-      </ImageView>
-      <BorderPane layoutX="-1.0" layoutY="6.0" prefHeight="843.0" prefWidth="1173.0">
-         <bottom>
-            <AnchorPane prefHeight="21.0" prefWidth="1173.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button layoutX="20.0" layoutY="150.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Files">
-                     <font>
-                        <Font name="Chalkboard SE Bold" size="18.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="360.0" layoutY="136.0" mnemonicParsing="false" prefHeight="118.0" prefWidth="136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Lock">
-                     <font>
-                        <Font name="Chalkboard SE Bold" size="18.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="638.0" layoutY="150.0" mnemonicParsing="false" prefHeight="162.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Settings">
-                     <font>
-                        <Font name="Chalkboard SE Bold" size="18.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="358.0" layoutY="212.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
-               </children>
-            </AnchorPane>
-         </bottom>
-         <right>
-            <AnchorPane prefHeight="713.0" prefWidth="1066.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button id="prettybutton" layoutX="400.0" layoutY="329.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="95.0" prefWidth="244.0" stylesheets="@CSS%20Files/button.css" text="Play" textFill="WHITE">
-                     <font>
-                        <Font name="Dimbo Regular" size="47.0" />
-                     </font>
-                  </Button>
-                  <ImageView fitHeight="191.0" fitWidth="565.0" layoutX="256.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@MediaSweng/Akidemia%20Logo.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fitHeight="98.0" fitWidth="94.0" layoutX="35.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@MediaSweng/files.png" />
-                     </image>
-                  </ImageView>
-                  <Button layoutX="827.0" layoutY="561.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="my-button" stylesheets="@MediaSweng/mybutton.css" />
-                  <Button layoutX="964.0" layoutY="563.0" mnemonicParsing="false" onAction="#toSettings" prefHeight="98.0" prefWidth="116.0" style="-fx-background-color: transparent;" styleClass="settingsbutton" stylesheets="@MediaSweng/settingsbutton.css" />
-               </children>
-            </AnchorPane>
-         </right>
-      </BorderPane>
-   </children>
-</Pane>
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <ImageView fitHeight="529.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@MediaSweng/forest_path_anime_background_by_wbd-d3l83r9.jpg" />
+            </image>
+        </ImageView>
+        <BorderPane prefHeight="527.0" prefWidth="675.0">
+            <bottom>
+                <AnchorPane BorderPane.alignment="CENTER">
+                    <children>
+                        <Button layoutX="20.0" layoutY="150.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Files">
+                            <font>
+                                <Font name="Chalkboard SE Bold" size="18.0" />
+                            </font></Button>
+                        <Button layoutX="360.0" layoutY="136.0" mnemonicParsing="false" prefHeight="118.0" prefWidth="136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Lock">
+                            <font>
+                                <Font name="Chalkboard SE Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button layoutX="638.0" layoutY="150.0" mnemonicParsing="false" prefHeight="162.0" prefWidth="139.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Settings">
+                            <font>
+                                <Font name="Chalkboard SE Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <ImageView fitHeight="98.0" fitWidth="94.0" layoutX="37.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@MediaSweng/files.png" />
+                            </image>
+                        </ImageView>
+                        <ImageView fitHeight="97.0" fitWidth="120.0" layoutX="667.0" layoutY="190.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@MediaSweng/settings.png" />
+                            </image>
+                        </ImageView>
+                        <Button layoutX="358.0" layoutY="212.0" mnemonicParsing="false" style="-fx-background-color: transparent;" />
+                        <Button layoutX="497.0" layoutY="190.0" mnemonicParsing="false" style="-fx-background-color: transparent;" styleClass="my-button" stylesheets="@MediaSweng/mybutton.css">
+                            <graphic>
+                                <ImageView fitHeight="77.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@MediaSweng/locked.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </bottom>
+            <center>
+                <AnchorPane prefHeight="344.0" prefWidth="675.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="303.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@MediaSweng/Akidemia%20Logo.png" />
+                            </image>
+                        </ImageView>
+                        <Button layoutX="343.0" layoutY="147.0" mnemonicParsing="false" onAction="#PressGo" text="Play">
+                            <font>
+                                <Font name="Chalkboard SE Bold" size="36.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </center>
+        </BorderPane>
+    </children>
+</GridPane>

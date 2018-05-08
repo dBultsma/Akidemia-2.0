@@ -1,7 +1,0 @@
-.area4 {
-    -fx-graphic: url("a4.png");
-}
-
-.area4:hover {
-    -fx-graphic: url("a4hover.png");
-}
