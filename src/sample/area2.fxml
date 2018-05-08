@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
@@ -11,10 +12,9 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ImageView fitHeight="912.0" fitWidth="1282.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="593.0" fitWidth="836.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@MediaSweng/322.jpg" />
          </image>
@@ -35,6 +35,7 @@
                </image>
             </ImageView>
          </graphic></Button>
+        
       <ImageView fitHeight="210.0" fitWidth="428.0" layoutX="888.0" layoutY="560.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@MediaSweng/companion.png" />
