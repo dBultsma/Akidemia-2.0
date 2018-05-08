@@ -5,6 +5,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
 import javafx.stage.Stage;
 import sample.Controller;
 import javafx.fxml.FXML;
@@ -33,8 +36,8 @@ public class MapController implements Initializable {
     @FXML private Button area3;
     @FXML private Button area4;
     @FXML public Circle circle;
+    @FXML public ImageView backg;
 
-    @FXML
     public void initialize(URL location, ResourceBundle resources) {
 
         transitions();
@@ -109,6 +112,21 @@ public class MapController implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         window.setScene(new Scene(area1aLayout, window.getWidth(), window.getHeight()));
         window.show();
+    }
+
+    public void MapStage2(ActionEvent event) throws IOException {
+        // Here I need to make the previous images and buttons unclickable and invisible
+        area1.setManaged(false);
+        area1.setVisible(false);
+        area2.setManaged(false);
+        area2.setVisible(false);
+        area3.setManaged(false);
+        area3.setVisible(false);
+        area4.setManaged(false);
+        area4.setVisible(false);
+        backg.setVisible(false);
+
+        // how do I make these unable to be clicked?
     }
 
     public void transitions(){

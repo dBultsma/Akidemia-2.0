@@ -19,11 +19,12 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
+
 <AnchorPane prefHeight="729.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MapController">
    <children>
       <AnchorPane layoutX="2.0" layoutY="-73.0" prefHeight="652.0" prefWidth="1057.0">
          <children>
-            <ImageView fitHeight="515.0" fitWidth="761.0" layoutX="192.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="backg" fitHeight="515.0" fitWidth="761.0" layoutX="192.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@MediaSweng/mapbackground.png" />
                </image>
@@ -36,7 +37,7 @@
                   <InnerShadow />
                </effect>
             </Button>
-            <Button fx:id="area1" layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#toArea1" prefHeight="204.0" prefWidth="310.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area1" stylesheets="@MediaSweng/area1.css" text="Area 1">
+            <Button fx:id="area1" layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#MapStage2" prefHeight="204.0" prefWidth="310.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area1" stylesheets="@MediaSweng/area1.css" text="Area 1">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
@@ -51,7 +52,7 @@
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="42.0" prefWidth="67.0" text="Home">
+            <Button fx:id="area4" layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="42.0" prefWidth="67.0" text="Home">
                <font>
                   <Font size="14.0" />
                </font>
@@ -60,7 +61,7 @@
                   <URL value="@CSS%20Files/prettybutton.css" />
                </stylesheets>
             </Button>
-            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="229.0" layoutY="270.0" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="229.0" layoutY="270.0" onMouseClicked="#MapStage2" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </AnchorPane>
    </children>
