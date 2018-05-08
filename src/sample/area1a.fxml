@@ -1,73 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.*?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+
+<AnchorPane prefHeight="770.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <ImageView fitHeight="604.0" fitWidth="695.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="800.0" fitWidth="1200.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@MediaSweng/mesozoic.jpg" />
             </image>
         </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#a4a4a4" height="799.0" opacity="0.34" stroke="BLACK" strokeType="INSIDE" width="1065.0" />
         <Button layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Map" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#7a7a7ade" height="521.0" layoutX="-4.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="699.0" />
-        <Button layoutX="281.0" layoutY="292.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Button">
-            <graphic>
-                <ImageView fitHeight="119.0" fitWidth="325.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@MediaSweng/dino.png" />
-                    </image>
-                </ImageView>
-            </graphic>
-        </Button>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toArea1" text="Back" />
-      <Text layoutX="93.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sauropods lived in the Late Jurassic times.">
+        <Button layoutX="281.0" layoutY="292.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" text="Button" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toArea1" prefHeight="37.0" prefWidth="87.0" text="Back" />
+      <Text layoutX="298.0" layoutY="183.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sauropods lived in the Late Jurassic times.">
          <font>
-            <Font name="Dimbo Regular" size="30.0" />
+            <Font name="Dimbo Regular" size="40.0" />
          </font>
       </Text>
-      <Text layoutX="105.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They had very long necks, tails and very small heads.">
+      <Text layoutX="295.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They had very long necks, tails and very small heads.">
          <font>
-            <Font name="Dimbo Regular" size="25.0" />
+            <Font name="Dimbo Regular" size="40.0" />
          </font>
       </Text>
-      <Text layoutX="104.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They also had four trunk-like legs.">
+      <Text layoutX="294.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They also had four trunk-like legs.">
          <font>
-            <Font name="Dimbo Regular" size="25.0" />
+            <Font name="Dimbo Regular" size="40.0" />
          </font>
       </Text>
-      <Text layoutX="104.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They are some of the biggest animals to have lived on land.">
+      <Text layoutX="296.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They are some of the biggest animals to have lived on land.">
          <font>
-            <Font name="Dimbo Regular" size="25.0" />
+            <Font name="Dimbo Regular" size="40.0" />
          </font>
       </Text>
-      <ImageView fitHeight="64.0" fitWidth="75.0" layoutX="294.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@MediaSweng/lildino.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="416.0" layoutY="434.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is a young Sauropod next to an adult.">
+      <Text fill="WHITE" layoutX="522.0" layoutY="672.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Here is a young Sauropod next to an adult." wrappingWidth="517.29052734375">
          <font>
-            <Font name="Dimbo Regular" size="19.0" />
+            <Font name="Dimbo Regular" size="35.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="96.0" layoutX="20.0" layoutY="408.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" width="178.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ababab" height="161.0" layoutX="53.0" layoutY="596.0" opacity="0.5" stroke="TRANSPARENT" strokeType="INSIDE" width="178.0">
          <effect>
             <DropShadow />
          </effect>
       </Rectangle>
-      <Text fill="WHITE" layoutX="63.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Words">
+      <Text fill="WHITE" layoutX="65.0" layoutY="625.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Key Words">
          <font>
             <Font name="Dimbo Regular" size="23.0" />
          </font>
       </Text>
-      <Text layoutX="93.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sauropods">
+      <Text layoutX="527.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sauropods">
          <font>
-            <Font name="Dimbo Regular" size="52.0" />
+            <Font name="Dimbo Regular" size="60.0" />
+         </font>
+      </Text>
+      <Text layoutX="79.0" layoutY="684.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sauropod" wrappingWidth="93.955078125">
+         <font>
+            <Font name="Dimbo Regular" size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="76.0" layoutY="714.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jurassic">
+         <font>
+            <Font name="Dimbo Regular" size="30.0" />
          </font>
       </Text>
     </children>

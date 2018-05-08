@@ -146,8 +146,4 @@ public class Controller {
         magCursor(((Node)evt.getSource()).getScene());
     }
 
-//    public void unlockAnimation(Stage primaryStage) throws Exception {
-//        ImageView.setStyle("-fx-image: url(\"MediaSweng/unlock.png\");");
-//    }
-
 }
