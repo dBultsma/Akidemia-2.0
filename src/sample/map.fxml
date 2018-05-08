@@ -29,7 +29,7 @@
                   <Image url="@MediaSweng/mapbackground.png" />
                </image>
             </ImageView>
-            <Button layoutX="126.0" layoutY="1.0" mnemonicParsing="false" onAction="#toArea4" prefHeight="797.0" prefWidth="1136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area4" stylesheets="@MediaSweng/area4.css" text="Area 4">
+            <Button fx:id="area4" layoutX="126.0" layoutY="1.0" mnemonicParsing="false" onAction="#toArea4" prefHeight="797.0" prefWidth="1136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area4" stylesheets="@MediaSweng/area4.css" text="Area 4">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
@@ -52,7 +52,7 @@
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
             </Button>
-            <Button fx:id="area4" layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="42.0" prefWidth="67.0" text="Home">
+            <Button layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="42.0" prefWidth="67.0" text="Home">
                <font>
                   <Font size="14.0" />
                </font>
