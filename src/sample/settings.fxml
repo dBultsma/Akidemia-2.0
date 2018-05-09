@@ -40,7 +40,7 @@
             <Font size="48.0" />
          </font>
       </Text>
-      <Button id="prettybutton" layoutX="717.0" layoutY="418.0" mnemonicParsing="false" onAction="#BackToMainScene" prefHeight="95.0" prefWidth="158.0" stylesheets="@CSS%20Files/button.css" text="Set" textFill="WHITE">
+      <Button id="prettybutton" layoutX="717.0" layoutY="418.0" mnemonicParsing="false" onAction="#toPasswordsettings" prefHeight="95.0" prefWidth="158.0" stylesheets="@CSS%20Files/button.css" text="Set" textFill="WHITE">
          <font>
             <Font name="Dimbo Regular" size="47.0" />
          </font>

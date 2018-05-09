@@ -35,15 +35,7 @@ public class ChildLock {
     }
 
 
-    public void toPasswordsettings(ActionEvent event) throws IOException {
 
-        //Getting the layout from file
-        Parent passwordSettings = FXMLLoader.load(getClass().getResource("SettingPassword.fxml"));
-        Stage childLockWindow = new Stage();
-        childLockWindow.setTitle("Password Settings");
-        childLockWindow.setScene(new Scene(passwordSettings));
-        childLockWindow.show();
-    }
 
     public void CloseWindow(ActionEvent event){
 
