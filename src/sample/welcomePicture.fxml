@@ -10,12 +10,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<<<<<<< HEAD
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
-=======
 
 <AnchorPane prefHeight="754.0" prefWidth="1075.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
->>>>>>> parent of 148eb69... Merge branch 'master' into ImprovingMap
    <children>
       <ImageView fitHeight="477.0" fitWidth="645.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
