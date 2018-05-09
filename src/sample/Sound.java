@@ -9,16 +9,31 @@ import java.io.File;
 //	newSound.play();
 
 public class Sound{
-	MediaPlayer mediaPlayer;
+	private static MediaPlayer mediaPlayer;
+	private boolean looping;
 
-	public Sound(String path){
-		mediaPlayer = new MediaPlayer(new Media(new File(path).toURI().toString()));
-		this.mediaPlayer.setOnEndOfMedia(() -> this.mediaPlayer.stop());
+	public Sound(String path, boolean loop) {
+		this.looping = loop;
+		this.mediaPlayer = new MediaPlayer(new Media(this.getClass().getResource(path).toExternalForm()));
+		this.mediaPlayer.setOnEndOfMedia(() -> {
+			this.mediaPlayer.stop();
+			if (this.looping) {
+				this.mediaPlayer.play();
+			}
+		});
 	}
 
 	public void play(){
 		this.mediaPlayer.stop();
 		this.mediaPlayer.play();
+	}
+
+	public void stop(){
+		this.mediaPlayer.stop();
+	}
+
+	public void stopAudioLoop() {
+		this.looping = false;
 	}
 
 }
