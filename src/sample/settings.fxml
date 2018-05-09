@@ -23,7 +23,7 @@
             <Image url="@MediaSweng/forest_path_anime_background_by_wbd-d3l83r9.jpg" />
          </image>
       </ImageView>
-      <Button id="prettybutton" layoutX="33.0" layoutY="6.0" mnemonicParsing="false" onAction="#BackToMainScene" prefHeight="75.0" prefWidth="170.0" stylesheets="@CSS%20Files/button.css" text="Back" textFill="WHITE">
+      <Button id="prettybutton" layoutX="33.0" layoutY="6.0" mnemonicParsing="false" onAction="#BackToMainScene" prefHeight="91.0" prefWidth="216.0" stylesheets="@CSS%20Files/button.css" text="Back" textFill="WHITE">
          <font>
             <Font name="Dimbo Regular" size="47.0" />
          </font>
@@ -35,5 +35,15 @@
       </Text>
       <Slider layoutX="365.0" layoutY="326.0" prefHeight="15.0" prefWidth="580.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" stylesheets="@CSS%20Files/slider.css" />
       <Slider layoutX="364.0" layoutY="235.0" prefHeight="15.0" prefWidth="580.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" stylesheets="@CSS%20Files/slider.css" />
+      <Text fill="#170000" layoutX="224.0" layoutY="498.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Child lock">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Text>
+      <Button id="prettybutton" layoutX="717.0" layoutY="418.0" mnemonicParsing="false" onAction="#toPasswordsettings" prefHeight="95.0" prefWidth="158.0" stylesheets="@CSS%20Files/button.css" text="Set" textFill="WHITE">
+         <font>
+            <Font name="Dimbo Regular" size="47.0" />
+         </font>
+      </Button>
    </children>
 </Pane>
