@@ -19,54 +19,39 @@ import static javafx.scene.image.ImageView.*;
 
 public class Controller {
 
+    ChangingScene sc = new ChangingScene();
+
     public void PressGo(ActionEvent event) throws IOException {
 
-        System.out.println("Go");
-        //Getting the layout from file
-        Parent ChangeScene = FXMLLoader.load(getClass().getResource("ChooseYourAdventure.fxml"));
-        //Used to get the current window
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(new Scene(ChangeScene, window.getWidth(), window.getHeight()));
-        window.show();
+        sc.changeScene("ChooseYourAdventure.fxml", window);
     }
 
     public void toSettings(ActionEvent event) throws IOException {
+<<<<<<< HEAD
 
         //Getting the layout from file
         Parent SettingLayout = FXMLLoader.load(getClass().getResource("settingmenu.fxml"));
         //Used to get the current window
+=======
+>>>>>>> ImprovingMap
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(new Scene(SettingLayout, window.getWidth(), window.getHeight()));
-        window.show();
+        sc.changeScene("settings.fxml", window);
     }
 
     public void BackToMainScene(ActionEvent event) throws IOException {
-
-        //Getting the layout from file
-        Parent MainLayout = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        //Used to get the current window
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(new Scene(MainLayout, window.getWidth(), window.getHeight()));
-        window.show();
+        sc.changeScene("sample.fxml", window);
     }
 
     public void toWelcomePicture(ActionEvent event) throws IOException {
-        //Getting the layout from file
-        Parent welcomePictureLayout = FXMLLoader.load(getClass().getResource("welcomePicture.fxml"));
-        //Used to get the current window
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(new Scene(welcomePictureLayout, window.getWidth(), window.getHeight()));
-        window.show();
+        sc.changeScene("welcomePicture.fxml", window);
     }
 
     public void toMap(ActionEvent event) throws IOException {
-
-        //Getting the layout from file
-        Parent mapLayout = FXMLLoader.load(getClass().getResource("map.fxml"));
-        //Used to get the current window
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        window.setScene(new Scene(mapLayout, window.getWidth(), window.getHeight()));
-        window.show();
+        sc.changeScene("map.fxml", window);
     }
 
     public void toArea1(ActionEvent event) throws IOException {
