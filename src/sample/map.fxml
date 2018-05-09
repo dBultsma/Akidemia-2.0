@@ -70,7 +70,7 @@
             </Button>
             <Circle fx:id="circle" fill="DODGERBLUE" layoutX="229.0" layoutY="270.0" onMouseClicked="#MapStage2" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
-      </GridPane>
+      </AnchorPane>
       <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#PressGo" text="Home" />
    </children>
 </AnchorPane>
