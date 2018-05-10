@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.effect.*?>
 <?import java.net.*?>
 <?import javafx.scene.shape.*?>
@@ -17,17 +16,36 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="729.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MapController">
    <children>
-      <AnchorPane layoutX="2.0" layoutY="-73.0" prefHeight="652.0" prefWidth="1057.0">
+      <AnchorPane fx:id="stage4" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" text="hellloooo" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="stage3" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" text="HEY" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="stage2" prefHeight="200.0" prefWidth="200.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" text="You're great!" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="stage1" prefHeight="415.0" prefWidth="619.0" visible="false">
+         <children>
+            <Button mnemonicParsing="false" text="Hello!" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="map" layoutX="2.0" layoutY="-73.0" prefHeight="652.0" prefWidth="1057.0">
          <children>
             <ImageView fx:id="backg" fitHeight="515.0" fitWidth="761.0" layoutX="192.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@MediaSweng/mapbackground.png" />
                </image>
             </ImageView>
-            <Button layoutX="126.0" layoutY="1.0" mnemonicParsing="false" onAction="#toArea4" prefHeight="797.0" prefWidth="1136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area4" stylesheets="@MediaSweng/area4.css" text="Area 4">
+            <Button layoutX="126.0" layoutY="1.0" mnemonicParsing="false" onAction="#MapStage4" prefHeight="797.0" prefWidth="1136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area4" stylesheets="@MediaSweng/area4.css" text="Area 4">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
@@ -35,15 +53,15 @@
                   <InnerShadow />
                </effect>
             </Button>
-            <Button fx:id="area1" layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#MapStage2" prefHeight="204.0" prefWidth="310.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area1" stylesheets="@MediaSweng/area1.css" text="Area 1">
+            <Button fx:id="area1" layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#MapStage1" prefHeight="204.0" prefWidth="310.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area1" stylesheets="@MediaSweng/area1.css" text="Area 1">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
             </Button>
 
-            <Button fx:id="area2" layoutX="277.0" layoutY="164.0" mnemonicParsing="false" onAction="#toArea2" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area2" stylesheets="@MediaSweng/area2.css" text="Area 2">
+                        <Button fx:id="area2" layoutX="277.0" layoutY="164.0" mnemonicParsing="false" onAction="#MapStage2" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area2" stylesheets="@MediaSweng/area2.css" text="Area 2">
 
-               <font>
+                           <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
                <GridPane.margin>
@@ -51,7 +69,7 @@
                </GridPane.margin>
             </Button>
 
-            <Button fx:id="area3" layoutX="526.0" layoutY="160.0" mnemonicParsing="false" onAction="#toArea3" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area3" stylesheets="@MediaSweng/area3.css" text="Area 3">
+                        <Button fx:id="area3" layoutX="526.0" layoutY="160.0" mnemonicParsing="false" onAction="#MapStage3" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area3" stylesheets="@MediaSweng/area3.css" text="Area 3">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
@@ -68,9 +86,8 @@
                   <URL value="@CSS%20Files/prettybutton.css" />
                </stylesheets>
             </Button>
-            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="229.0" layoutY="270.0" onMouseClicked="#MapStage2" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="305.0" layoutY="429.0" onMouseClicked="#MapStage2" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
          </children>
       </AnchorPane>
-      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#PressGo" text="Home" />
    </children>
 </AnchorPane>

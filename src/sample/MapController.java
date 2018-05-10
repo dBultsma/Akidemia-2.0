@@ -37,6 +37,12 @@ public class MapController implements Initializable {
     @FXML private Button area4;
     @FXML public Circle circle;
     @FXML public ImageView backg;
+    @FXML public AnchorPane stage1;
+    @FXML public AnchorPane stage2;
+    @FXML public AnchorPane stage3;
+    @FXML public AnchorPane stage4;
+    @FXML public AnchorPane map;
+
 
     ChangingScene sc = new ChangingScene();
 
@@ -83,20 +89,32 @@ public class MapController implements Initializable {
         sc.changeScene("area1a.fxml", window);
     }
 
-    public void MapStage2(ActionEvent event) throws IOException {
-        // Here I need to make the previous images and buttons unclickable and invisible
-        area1.setManaged(false);
-        area1.setVisible(false);
-        area2.setManaged(false);
-        area2.setVisible(false);
-        area3.setManaged(false);
-        area3.setVisible(false);
-        area4.setManaged(false);
-        area4.setVisible(false);
-        backg.setVisible(false);
-
-        // how do I make these unable to be clicked?
+    public void MapStage1(ActionEvent event) throws IOException {
+        map.setVisible(false);
+        stage1.setVisible(true);
     }
+
+    public void MapStage2(ActionEvent event) throws IOException {
+        map.setVisible(false);
+        stage2.setVisible(true);
+    }
+
+    public void MapStage3(ActionEvent event) throws IOException {
+        map.setVisible(false);
+        stage3.setVisible(true);
+    }
+
+    public void MapStage4(ActionEvent event) throws IOException {
+        map.setVisible(false);
+        stage4.setVisible(true);
+    }
+
+
+
+
+
+
+
 
     public void transitions(){
         System.out.println(circle);
