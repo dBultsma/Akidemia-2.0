@@ -19,101 +19,50 @@ public class ChildLock {
     @FXML private PasswordField setPassword;
     @FXML private PasswordField confirmPassword;
     @FXML private PasswordField checkPassword;
-    String password;
+    String password = new String();
 
-    public void childLockPassword(ActionEvent event) throws IOException {
+    User user = new User();
+    DataBase dataBase = new DataBase();
 
-        System.out.println("---------------------------Child lock-------------------");
-        System.out.println("Password: " + password);
-        //Getting the layout from file
-        Parent childlock = FXMLLoader.load(getClass().getResource("childLock.fxml"));
-        Stage childLockWindow = new Stage();
-        childLockWindow.setTitle("Child lock");
-        childLockWindow.setScene(new Scene(childlock));
-        childLockWindow.show();
-        System.out.println("Password: " + password);
-    }
-
-
-
-
-    public void CloseWindow(ActionEvent event){
+    public void passwordChecker(ActionEvent event){
 
         System.out.println("---------------------Check password--------------------------");
-        System.out.println("Password: " + password);
-        System.out.println("entred password: " + checkPassword.getText().toString());
+        dataBase.viewDataBase();
+        dataBase.checkPasswordFromDataBase(checkPassword.getText());
 
-        if(password.isEmpty())
+        /*if(user.getPassword() == "")
         {
             PasswordLabel.setText("Need to set the password in settings");
         }
-        else if(checkPassword.getText().contentEquals(password)){
+        else if(checkPassword.getText().contentEquals(user.getPassword())){
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.close();
         }
         else{
             PasswordLabel.setText("Your Password is wrong");
-        }
-        //String message  = checkPassword(checkPassword.getText().toString());
-        // PasswordLabel.setText(message);
+        }*/
+
+
+
+
 
     }
 
     public void setPassword(ActionEvent event) {
-
-        //System.out.println("Password: " + setPassword.getText() + " confirm password: " + confirmPassword.getText());
         System.out.println("----------------------Setting the password--------------------------");
         if (setPassword.getText().trim().isEmpty()) {
             setPasswordLabel.setText("Need to set a password");
         } else if (confirmPassword.getText().trim().isEmpty()) {
             setPasswordLabel.setText("Need to set a password");
         } else if (setPassword.getText().equals(confirmPassword.getText())) {
-            password = setPassword.getText();
-            System.out.println("Password: " + password);
+            dataBase.addUserToDataBase(confirmPassword.getText());
+            dataBase.viewDataBase();
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.close();
-
-
         } else {
             setPasswordLabel.setText("Those passwords do not match");
         }
 
-    }
-
-    public void toSettings(ActionEvent event) throws IOException {
-
-        //Getting the layout from file
-        password = "hello";
-        System.out.println("-------------------------Settings-------------------------");
-        System.out.println("Password: " + password);
-        Parent SettingLayout = FXMLLoader.load(getClass().getResource("settings.fxml"));
-        //Used to get the current window
-        Stage window = new Stage();
-        window.setScene(new Scene(SettingLayout));
-        window.show();
-        password = "hello";
-    }
-
-    public String checkPassword(String checkPassword){
-
-        System.out.println("------------------check password method-------------------");
-        System.out.println("password: " + password);
-        String returnValue;
-
-        //Check if a password has been set
-        if(password == null)
-        {
-            returnValue = "Need to set the password in settings";
-        }
-        //Check the entered value with the set password
-        else if (checkPassword.equals(password)){
-            returnValue = null;
-        }
-        else{
-            returnValue = "Your Password is wrong";
-        }
-
-        return returnValue;
     }
 
 }
