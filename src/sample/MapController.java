@@ -3,38 +3,24 @@ package sample;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import sample.Controller;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.shape.Circle;
 import javafx.animation.*;
 import javafx.util.Duration;
-
-import javax.annotation.Resources;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.text.Text;
 
 
 public class MapController implements Initializable {
 
 
-
-    // I think this is where all the timeline stuff which interacts with the fxml will go. I hope so anyway!
-    // Otherwise, I will look further into how to use css in order to do stuff! From the graphics module, it can be
-    // seen that objects can have a duration- though this isn't entirely useful for what we need transitions to do.
-    // Rather than using timelines, it may be more appropriate to use sequential transitions.
-    @FXML private Button area1;
-    @FXML private Button area2;
-    @FXML private Button area3;
-    @FXML private Button area4;
     @FXML public Circle circle;
     @FXML public ImageView backg;
     @FXML public AnchorPane stage1;
@@ -42,6 +28,12 @@ public class MapController implements Initializable {
     @FXML public AnchorPane stage3;
     @FXML public AnchorPane stage4;
     @FXML public AnchorPane map;
+    @FXML public Text oceanlabel;
+    @FXML public Text plainslabel;
+    @FXML public Text mountainslabel;
+    @FXML public Text woodlandlabel;
+    @FXML public ImageView mountainimage, oceanimage, plainsimage, woodlandimage ;
+
 
 
     ChangingScene sc = new ChangingScene();
@@ -49,45 +41,52 @@ public class MapController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         transitions();
-    }
 
+        addTextHandler(mountainslabel, mountainimage);
+        addTextHandler(oceanlabel, oceanimage);
+        addTextHandler(woodlandlabel, woodlandimage);
+        addTextHandler(plainslabel, plainsimage);
+        addButtonHandler(stage1, plainsimage);
+        addButtonHandler(stage2, woodlandimage);
+        addButtonHandler(stage3, mountainimage);
+        addButtonHandler(stage4, oceanimage);
+    }
 
 
     public void PressGo(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("ChooseYourAdventure.fxml", window);
-    }
 
+    }
+    public void toMap(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("map.fxml", window);
+    }
     public void toArea1(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area1.fxml", window);
-      //  magCursor(area1Scene);
-
     }
-
 
     public void toArea2(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area2.fxml", window);
-       // magCursor(area2Scene);
     }
 
     public void toArea3(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area3.fxml", window);
-      //  magCursor(area3Scene);
     }
 
     public void toArea4(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area4.fxml", window);
-        //magCursor(area4Scene);
     }
 
     public void toArea1a(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area1a.fxml", window);
     }
+
 
     public void MapStage1(ActionEvent event) throws IOException {
         map.setVisible(false);
@@ -109,10 +108,25 @@ public class MapController implements Initializable {
         stage4.setVisible(true);
     }
 
+    public void addTextHandler(Text text, ImageView imageView) {
+        imageView.addEventFilter(MouseEvent.MOUSE_MOVED, e -> {
+            Color color = imageView.getImage().getPixelReader().getColor((int)e.getX(),(int)e.getY());
+            text.setVisible(color.getOpacity() != 0);
+        });
+        imageView.addEventFilter(MouseEvent.MOUSE_EXITED, e -> {
+            text.setVisible(false);
+        });
+    }
+    public void addButtonHandler(AnchorPane anchorPane, ImageView imageView) {
+        imageView.addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
+            Color color = imageView.getImage().getPixelReader().getColor((int)e.getX(),(int)e.getY());
+            if (color.getOpacity() != 0) {
+                anchorPane.setVisible(true);
+                map.setVisible(false);
+            }
 
-
-
-
+        });
+    }
 
 
 

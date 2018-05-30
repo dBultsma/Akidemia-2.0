@@ -16,36 +16,91 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="729.0" prefWidth="1173.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MapController">
+<AnchorPane id="wood-pane" prefHeight="729.0" prefWidth="1173.0" stylesheets="@MediaSweng/pane.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MapController">
    <children>
+      <AnchorPane fx:id="stage2" prefHeight="730.0" prefWidth="1171.0" visible="false">
+         <children>
+            <Button fx:id="area41" layoutX="46.0" layoutY="42.0" mnemonicParsing="false" onAction="#toMap" prefHeight="40.0" prefWidth="58.0" text="Back">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@CSS%20Files/prettybutton.css" />
+                  <URL value="@CSS%20Files/prettybutton.css" />
+               </stylesheets>
+            </Button>
+            <ImageView fitHeight="645.0" fitWidth="771.0" layoutX="188.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/submap2.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="stage4" prefHeight="200.0" prefWidth="200.0" visible="false">
          <children>
-            <Button mnemonicParsing="false" text="hellloooo" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <InnerShadow />
+               </effect></ImageView>
+            <Button mnemonicParsing="false" onAction="#toMap" prefHeight="42.0" prefWidth="67.0" text="Back">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@CSS%20Files/prettybutton.css" />
+                  <URL value="@CSS%20Files/prettybutton.css" />
+               </stylesheets>
+            </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="stage3" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="stage3" prefHeight="730.0" prefWidth="1171.0" visible="false">
          <children>
-            <Button mnemonicParsing="false" text="HEY" />
+            <Button layoutX="23.0" layoutY="21.0" mnemonicParsing="false" onAction="#toMap" prefHeight="42.0" prefWidth="67.0" stylesheets="@CSS%20Files/prettybutton.css" text="Back">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="665.0" fitWidth="846.0" layoutX="176.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <effect>
+                  <InnerShadow />
+               </effect>
+               <image>
+                  <Image url="@MediaSweng/submap3.png" />
+               </image></ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="stage2" prefHeight="200.0" prefWidth="200.0" visible="false">
+      <AnchorPane fx:id="stage1" layoutX="-2.0" prefHeight="732.0" prefWidth="807.0" visible="false">
          <children>
-            <Button mnemonicParsing="false" text="You're great!" />
+            <Button mnemonicParsing="false" onAction="#toMap" prefHeight="42.0" prefWidth="67.0" text="Back">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@CSS%20Files/prettybutton.css" />
+                  <URL value="@CSS%20Files/prettybutton.css" />
+               </stylesheets>
+            </Button>
+            <ImageView fitHeight="717.0" fitWidth="951.0" layoutX="97.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/submap1.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="stage1" prefHeight="415.0" prefWidth="619.0" visible="false">
-         <children>
-            <Button mnemonicParsing="false" text="Hello!" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="map" layoutX="2.0" layoutY="-73.0" prefHeight="652.0" prefWidth="1057.0">
+      <AnchorPane layoutX="2.0" layoutY="-73.0" prefHeight="652.0" prefWidth="1057.0" visible="false">
          <children>
             <ImageView fx:id="backg" fitHeight="515.0" fitWidth="761.0" layoutX="192.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@MediaSweng/mapbackground.png" />
                </image>
             </ImageView>
-            <Button layoutX="126.0" layoutY="1.0" mnemonicParsing="false" onAction="#MapStage4" prefHeight="797.0" prefWidth="1136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area4" stylesheets="@MediaSweng/area4.css" text="Area 4">
+            <Button layoutX="126.0" layoutY="-4.0" mnemonicParsing="false" onAction="#MapStage4" prefHeight="797.0" prefWidth="1136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area4" stylesheets="@MediaSweng/area4.css" text="Area 4">
                <font>
                   <Font name="Chalkboard SE Bold" size="13.0" />
                </font>
@@ -86,7 +141,54 @@
                   <URL value="@CSS%20Files/prettybutton.css" />
                </stylesheets>
             </Button>
-            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="305.0" layoutY="429.0" onMouseClicked="#MapStage2" radius="69.0" stroke="BLACK" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="map" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <ImageView fx:id="oceanimage" fitHeight="776.0" fitWidth="991.0" layoutX="181.0" layoutY="-36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/a4.png" />
+               </image>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </ImageView>
+            <ImageView fx:id="mountainimage" fitHeight="353.0" fitWidth="336.0" layoutX="551.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/a3.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="plainsimage" fitHeight="295.0" fitWidth="527.0" layoutX="259.0" layoutY="300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/a1.png" />
+               </image>
+            </ImageView>
+            <Circle fx:id="circle" fill="DODGERBLUE" layoutX="281.0" layoutY="239.0" onMouseClicked="#MapStage2" radius="69.0" stroke="BLACK" strokeType="INSIDE" visible="false" />
+            <ImageView fx:id="woodlandimage" fitHeight="339.0" fitWidth="392.0" layoutX="319.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/a2.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="woodlandlabel" fill="WHITE" layoutX="483.0" layoutY="355.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Woodland" visible="false" wrappingWidth="178.18820190429688">
+               <font>
+                  <Font name="Dimbo Regular" size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="plainslabel" fill="WHITE" layoutX="439.0" layoutY="476.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Plains" visible="false" wrappingWidth="178.18820190429688">
+               <font>
+                  <Font name="Dimbo Regular" size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="mountainslabel" fill="WHITE" layoutX="637.0" layoutY="282.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Mountains" visible="false" wrappingWidth="178.18820190429688">
+               <font>
+                  <Font name="Dimbo Regular" size="50.0" />
+               </font>
+            </Text>
+            <Text fx:id="oceanlabel" fill="WHITE" layoutX="672.0" layoutY="604.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="Ocean" visible="false" wrappingWidth="178.18820190429688">
+               <font>
+                  <Font name="Dimbo Regular" size="50.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </children>
