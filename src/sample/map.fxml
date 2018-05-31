@@ -37,6 +37,46 @@
                   <InnerShadow />
                </effect>
             </ImageView>
+            <ImageView fx:id="area1aimage" fitHeight="388.0" fitWidth="445.0" layoutX="226.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/1a.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="area1dimage" fitHeight="404.0" fitWidth="312.0" layoutX="542.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/1d.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="area1bimage" fitHeight="370.0" fitWidth="394.0" layoutX="227.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/1b.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="area1cimage" fitHeight="264.0" fitWidth="304.0" layoutX="560.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/1c.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="onelabeld" fill="WHITE" focusTraversable="true" layoutX="680.0" layoutY="323.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="4" visible="false">
+               <font>
+                  <Font name="Dimbo Regular" size="63.0" />
+               </font>
+            </Text>
+            <Text fx:id="onelabelc" fill="WHITE" focusTraversable="true" layoutX="694.0" layoutY="535.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="3" visible="false">
+               <font>
+                  <Font name="Dimbo Regular" size="63.0" />
+               </font>
+            </Text>
+            <Text fx:id="onelabelb" fill="WHITE" focusTraversable="true" layoutX="444.0" layoutY="520.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="2" visible="false">
+               <font>
+                  <Font name="Dimbo Regular" size="63.0" />
+               </font>
+            </Text>
+            <Text fx:id="onelabela" fill="WHITE" focusTraversable="true" layoutX="409.0" layoutY="333.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="1" visible="false">
+               <font>
+                  <Font name="Dimbo Regular" size="63.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="stage4" prefHeight="200.0" prefWidth="200.0" visible="false">
@@ -70,6 +110,46 @@
                <image>
                   <Image url="@MediaSweng/submap3.png" />
                </image></ImageView>
+            <ImageView fx:id="area2aimage" fitHeight="384.0" fitWidth="419.0" layoutX="176.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/2b.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="area2cimage" fitHeight="350.0" fitWidth="379.0" layoutX="420.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/2c.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="area2bimage" fitHeight="299.0" fitWidth="456.0" layoutX="254.0" layoutY="399.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/2a.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="area2dimage" fitHeight="454.0" fitWidth="402.0" layoutX="491.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/2d.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="twolabeld" fill="WHITE" focusTraversable="true" layoutX="705.0" layoutY="375.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="4" visible="false">
+               <font>
+                  <Font name="Dimbo Regular" size="63.0" />
+               </font>
+            </Text>
+            <Text fx:id="twolabelc" fill="WHITE" focusTraversable="true" layoutX="598.0" layoutY="228.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="3" visible="false">
+               <font>
+                  <Font name="Dimbo Regular" size="63.0" />
+               </font>
+            </Text>
+            <Text fx:id="twolabelb" fill="WHITE" focusTraversable="true" layoutX="469.0" layoutY="604.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="2" visible="false">
+               <font>
+                  <Font name="Dimbo Regular" size="63.0" />
+               </font>
+            </Text>
+            <Text fx:id="twolabela" fill="WHITE" focusTraversable="true" layoutX="352.0" layoutY="300.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="1" visible="false">
+               <font>
+                  <Font name="Dimbo Regular" size="63.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="stage1" layoutX="-2.0" prefHeight="732.0" prefWidth="807.0" visible="false">
@@ -91,56 +171,46 @@
                   <InnerShadow />
                </effect>
             </ImageView>
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="2.0" layoutY="-73.0" prefHeight="652.0" prefWidth="1057.0" visible="false">
-         <children>
-            <ImageView fx:id="backg" fitHeight="515.0" fitWidth="761.0" layoutX="192.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="area3bimage" fitHeight="384.0" fitWidth="311.0" layoutX="184.0" layoutY="321.0" onMouseClicked="#toArea3b" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@MediaSweng/mapbackground.png" />
+                  <Image url="@MediaSweng/3b.png" />
                </image>
             </ImageView>
-            <Button layoutX="126.0" layoutY="-4.0" mnemonicParsing="false" onAction="#MapStage4" prefHeight="797.0" prefWidth="1136.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area4" stylesheets="@MediaSweng/area4.css" text="Area 4">
+            <ImageView fx:id="area3aimage" fitHeight="350.0" fitWidth="426.0" layoutX="234.0" layoutY="112.0" onMouseClicked="#toArea3a" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/3a.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="area3dimage" fitHeight="465.0" fitWidth="366.0" layoutX="576.0" layoutY="56.0" onMouseClicked="#toArea3d" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/3d.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="area3cimage" fitHeight="322.0" fitWidth="441.0" layoutX="413.0" layoutY="362.0" onMouseClicked="#toArea3c" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/3c.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="threelabela" fill="WHITE" focusTraversable="true" layoutX="433.0" layoutY="325.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="1" visible="false">
                <font>
-                  <Font name="Chalkboard SE Bold" size="13.0" />
+                  <Font name="Dimbo Regular" size="63.0" />
                </font>
-               <effect>
-                  <InnerShadow />
-               </effect>
-            </Button>
-            <Button fx:id="area1" layoutX="208.0" layoutY="361.0" mnemonicParsing="false" onAction="#MapStage1" prefHeight="204.0" prefWidth="310.0" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area1" stylesheets="@MediaSweng/area1.css" text="Area 1">
+            </Text>
+            <Text fx:id="threelabelb" fill="WHITE" focusTraversable="true" layoutX="364.0" layoutY="510.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="2" visible="false">
                <font>
-                  <Font name="Chalkboard SE Bold" size="13.0" />
+                  <Font name="Dimbo Regular" size="63.0" />
                </font>
-            </Button>
-
-                        <Button fx:id="area2" layoutX="277.0" layoutY="164.0" mnemonicParsing="false" onAction="#MapStage2" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area2" stylesheets="@MediaSweng/area2.css" text="Area 2">
-
-                           <font>
-                  <Font name="Chalkboard SE Bold" size="13.0" />
-               </font>
-               <GridPane.margin>
-                  <Insets left="50.0" top="20.0" />
-               </GridPane.margin>
-            </Button>
-
-                        <Button fx:id="area3" layoutX="526.0" layoutY="160.0" mnemonicParsing="false" onAction="#MapStage3" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="area3" stylesheets="@MediaSweng/area3.css" text="Area 3">
+            </Text>
+            <Text fx:id="threelabelc" fill="WHITE" focusTraversable="true" layoutX="531.0" layoutY="580.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="3" visible="false">
                <font>
-                  <Font name="Chalkboard SE Bold" size="13.0" />
+                  <Font name="Dimbo Regular" size="63.0" />
                </font>
-               <GridPane.margin>
-                  <Insets bottom="50.0" />
-               </GridPane.margin>
-            </Button>
-            <Button fx:id="area4" layoutX="58.0" layoutY="122.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="42.0" prefWidth="67.0" text="Home">
+            </Text>
+            <Text fx:id="threelabeld" fill="WHITE" focusTraversable="true" layoutX="734.0" layoutY="290.0" mouseTransparent="true" strokeType="OUTSIDE" strokeWidth="0.0" text="4" visible="false">
                <font>
-                  <Font size="14.0" />
+                  <Font name="Dimbo Regular" size="63.0" />
                </font>
-               <stylesheets>
-                  <URL value="@CSS%20Files/prettybutton.css" />
-                  <URL value="@CSS%20Files/prettybutton.css" />
-               </stylesheets>
-            </Button>
+            </Text>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="map" prefHeight="200.0" prefWidth="200.0">

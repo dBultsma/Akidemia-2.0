@@ -23,16 +23,15 @@ public class MapController implements Initializable {
 
     @FXML public Circle circle;
     @FXML public ImageView backg;
-    @FXML public AnchorPane stage1;
-    @FXML public AnchorPane stage2;
-    @FXML public AnchorPane stage3;
-    @FXML public AnchorPane stage4;
-    @FXML public AnchorPane map;
-    @FXML public Text oceanlabel;
-    @FXML public Text plainslabel;
-    @FXML public Text mountainslabel;
-    @FXML public Text woodlandlabel;
-    @FXML public ImageView mountainimage, oceanimage, plainsimage, woodlandimage ;
+    @FXML public AnchorPane stage1, stage2, stage3, stage4, map;
+    @FXML public Text oceanlabel, plainslabel, mountainslabel, woodlandlabel;
+    @FXML public ImageView mountainimage, oceanimage, plainsimage, woodlandimage;
+    @FXML public ImageView area3aimage, area3bimage, area3cimage, area3dimage;
+    @FXML public ImageView area2aimage, area2bimage, area2cimage, area2dimage;
+    @FXML public ImageView area1aimage, area1bimage, area1cimage, area1dimage;
+    @FXML public Text threelabela, threelabelb, threelabelc, threelabeld;
+    @FXML public Text onelabela, onelabelb, onelabelc, onelabeld;
+    @FXML public Text twolabela, twolabelb, twolabelc, twolabeld;
 
 
 
@@ -50,7 +49,32 @@ public class MapController implements Initializable {
         addButtonHandler(stage2, woodlandimage);
         addButtonHandler(stage3, mountainimage);
         addButtonHandler(stage4, oceanimage);
+
+        addTextHandler(threelabela, area3aimage);
+        addTextHandler(threelabelb, area3bimage);
+        addTextHandler(threelabelc, area3cimage);
+        addTextHandler(threelabeld, area3dimage);
+
+        addTextHandler(onelabela, area1aimage);
+        addTextHandler(onelabelb, area1bimage);
+        addTextHandler(onelabelc, area1cimage);
+        addTextHandler(onelabeld, area1dimage);
+
+        addTextHandler(twolabela, area2aimage);
+        addTextHandler(twolabelb, area2bimage);
+        addTextHandler(twolabelc, area2cimage);
+        addTextHandler(twolabeld, area2dimage);
+
+//        if(map.setVisible(false) = true) {
+//            addTextHandler(threelabela, area3aimage);
+//            addTextHandler(threelabelb, area3bimage);
+//            addTextHandler(threelabelc, area3cimage);
+//            addTextHandler(threelabeld, area3dimage);
+//        }
+
+
     }
+
 
 
     public void PressGo(ActionEvent event) throws IOException {
@@ -62,29 +86,54 @@ public class MapController implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("map.fxml", window);
     }
-    public void toArea1(ActionEvent event) throws IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area1.fxml", window);
-    }
 
-    public void toArea2(ActionEvent event) throws IOException {
+    public void toArea3a(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area2.fxml", window);
+        sc.changeScene("area3a.fxml", window);
     }
-
-    public void toArea3(ActionEvent event) throws IOException {
+    public void toArea3b(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area3.fxml", window);
+        sc.changeScene("area3b.fxml", window);
     }
-
-    public void toArea4(ActionEvent event) throws IOException {
+    public void toArea3c(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area4.fxml", window);
+        sc.changeScene("area3c.fxml", window);
     }
-
+    public void toArea3d(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area3d.fxml", window);
+    }
     public void toArea1a(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area1a.fxml", window);
+    }
+    public void toArea1b(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area1b.fxml", window);
+    }
+    public void toArea1c(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area1c.fxml", window);
+    }
+    public void toArea1d(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area1d.fxml", window);
+    }
+    public void toArea2a(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area2a.fxml", window);
+    }
+    public void toArea2b(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area2b.fxml", window);
+    }
+    public void toArea2c(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area2c.fxml", window);
+    }
+    public void toArea2d(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area2d.fxml", window);
     }
 
 
@@ -127,7 +176,6 @@ public class MapController implements Initializable {
 
         });
     }
-
 
 
     public void transitions(){

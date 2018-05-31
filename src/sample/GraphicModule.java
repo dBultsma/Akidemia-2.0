@@ -1,9 +1,12 @@
+package sample;
+
 import javafx.animation.*;
 import javafx.event.EventHandler;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 import javafx.scene.paint.LinearGradient;
 import javafx.util.Duration;
+
 
 /* -- The following code has been produced as intended in the contracts between SImpLe and the buyer.
     If you have any trouble with the code, feel free to contact Amy Jo Turner (ajt562@york.ac.uk) for assistance. -- */
@@ -21,7 +24,7 @@ public abstract class GraphicModule {
         line.setStroke(color);
         Timeline timeline = new Timeline(); //makes line disappear after time seconds.
         timeline.getKeyFrames().add(new KeyFrame(Duration.millis(time),
-                (EventHandler) event -> line.setVisible(false)));
+                event -> line.setVisible(false)));
         timeline.play();
         return line;
     }
