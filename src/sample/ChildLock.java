@@ -22,13 +22,11 @@ public class ChildLock {
     String password = new String();
 
     User user = new User();
-    DataBase dataBase = new DataBase();
+
 
     public void passwordChecker(ActionEvent event){
 
         System.out.println("---------------------Check password--------------------------");
-        dataBase.viewDataBase();
-        dataBase.checkPasswordFromDataBase(checkPassword.getText());
 
         /*if(user.getPassword() == "")
         {
@@ -55,8 +53,6 @@ public class ChildLock {
         } else if (confirmPassword.getText().trim().isEmpty()) {
             setPasswordLabel.setText("Need to set a password");
         } else if (setPassword.getText().equals(confirmPassword.getText())) {
-            dataBase.addUserToDataBase(confirmPassword.getText());
-            dataBase.viewDataBase();
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.close();
         } else {
