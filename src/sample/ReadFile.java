@@ -7,21 +7,21 @@ public class ReadFile {
 
     private Scanner s;
 
-    public void openFile(String file){
-        try{
+    public void openFile(String file) {
+        try {
             s = new Scanner(new File("%s", file));
-        }
-        catch(Exception e){
+        } catch (Exception e) {
             System.out.println("file not found");
         }
     }
 
     public String readData(){
+        String data = new String();
         // hasNext until end of file
         while(s.hasNext()){
-            String data = s.next();
-            return data;
+            data = s.next();
         }
+        return data;
     }
 
     public void closeFile(){
