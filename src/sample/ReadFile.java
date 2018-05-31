@@ -9,7 +9,7 @@ public class ReadFile {
 
     public void openFile(String file) {
         try {
-            s = new Scanner(new File("%s", file));
+            s = new Scanner(new File( file));
         } catch (Exception e) {
             System.out.println("file not found");
         }

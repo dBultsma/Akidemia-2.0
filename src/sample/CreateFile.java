@@ -8,7 +8,7 @@ public class CreateFile {
 
     public void openFile(String file){
         try{
-            f = new Formatter("%s", file);
+            f = new Formatter( file );
         }
         catch(Exception e){
             System.out.println("error encountered when opening file");
@@ -23,8 +23,8 @@ public class CreateFile {
         f.close();
     }
 
-
-    // CreateFile passwordStorage = new createFile();
+    // example of usage
+    // CreateFile passwordStorage = new CreateFile();
     // passwordStorage.openFile(password.txt);
     // passwordStorage.addData(password);
     // passwordStorage.closeFile();

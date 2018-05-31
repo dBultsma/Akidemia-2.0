@@ -19,30 +19,30 @@ public class ChildLock {
     @FXML private PasswordField setPassword;
     @FXML private PasswordField confirmPassword;
     @FXML private PasswordField checkPassword;
-    String password = new String();
 
-    User user = new User();
-
+    private String savedPassword = new String();
 
     public void passwordChecker(ActionEvent event){
 
         System.out.println("---------------------Check password--------------------------");
 
-        /*if(user.getPassword() == "")
+
+        ReadFile readPassword = new ReadFile();
+        readPassword.openFile("password.txt");
+        savedPassword = readPassword.readData();
+        readPassword.closeFile();
+
+       /* if(savedPassword == "")
         {
             PasswordLabel.setText("Need to set the password in settings");
-        }
-        else if(checkPassword.getText().contentEquals(user.getPassword())){
+        }*/ //revist later
+        if(checkPassword.getText().contentEquals(savedPassword)){
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.close();
         }
         else{
             PasswordLabel.setText("Your Password is wrong");
-        }*/
-
-
-
-
+        }
 
     }
 
@@ -53,6 +53,10 @@ public class ChildLock {
         } else if (confirmPassword.getText().trim().isEmpty()) {
             setPasswordLabel.setText("Need to set a password");
         } else if (setPassword.getText().equals(confirmPassword.getText())) {
+             CreateFile passwordStorage = new CreateFile();
+             passwordStorage.openFile("password.txt");
+             passwordStorage.addData(setPassword.getText());
+             passwordStorage.closeFile();
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.close();
         } else {
