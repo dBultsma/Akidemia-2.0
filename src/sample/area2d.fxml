@@ -13,23 +13,23 @@
     <children>
         <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@MediaSweng/Quetzalcoatlus720.png" />
+                <Image url="@MediaSweng/Hatzegopteryx2.png" />
             </image>
         </ImageView>
         <AnchorPane prefHeight="720.0" prefWidth="1280.0">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#949494" height="720.0" opacity="0.59" width="1280.0" />
-                <Text fill="WHITE" layoutX="50.0" layoutY="118.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="7.0" text="Quetzalcoatlus" wrappingWidth="486.4951171875">
+                <Text fill="WHITE" layoutX="50.0" layoutY="118.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="7.0" text="Hatzegopteryx" wrappingWidth="486.4951171875">
                     <font>
                         <Font name="Dimbo Regular" size="96.0" />
                     </font>
                 </Text>
-                <Text fill="BLACK" layoutX="50.0" layoutY="178.0" text="Quetzalcoatlus lived in the Late Cretaceous period. They are one of the largest known flying animals of all time, rivalling the Hatzegopteryx." wrappingWidth="350.0">
+                <Text fill="BLACK" layoutX="70.0" layoutY="178.0" text="The Hatzegopteryx had a wingspan of around 10-12 meters and lived in the late cretaceous period." textAlignment="CENTER" wrappingWidth="750.0">
                     <font>
                         <Font name="Dimbo Regular" size="40.0" />
                     </font>
                 </Text>
-                <Text fill="BLACK" layoutX="770.0" layoutY="378.0" text="They were toothless pterosaurs with long stiffened necks. They are named after the Mesoamerican god: Quetzalcoatl. They stood 3 meters high." wrappingWidth="450.0">
+                <Text fill="BLACK" layoutX="770.0" layoutY="398.0" text="This species is the largest flying vertebrate ever known, standing over 5.5 meters tall." textAlignment="RIGHT" wrappingWidth="450.0">
                     <font>
                         <Font name="Dimbo Regular" size="40.0" />
                     </font>
@@ -37,7 +37,7 @@
             </children></AnchorPane>
         <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@MediaSweng/QuetzalcoatlusNoBackground720.png" />
+                <Image url="@MediaSweng/Hatzegopteryx.png" />
             </image>
         </ImageView>
 
