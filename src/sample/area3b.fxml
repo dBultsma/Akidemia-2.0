@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.shape.*?>
@@ -9,73 +13,76 @@
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1200.0" stylesheets="@MediaSweng/background3a.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area3Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area3b">
     <children>
         <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@MediaSweng/3a.JPG" />
+                <Image url="@MediaSweng/plane2.jpg" />
             </image>
         </ImageView>
-        <AnchorPane fx:id="pane2" prefHeight="800.0" prefWidth="1200.0">
+        <AnchorPane prefHeight="800.0" prefWidth="1200.0">
             <children>
-                <ImageView fitHeight="119.0" fitWidth="380.0" layoutX="142.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="320.0" fitWidth="328.0" layoutX="40.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@MediaSweng/3aNB.PNG" />
+                        <Image url="@MediaSweng/3bNBmirror.PNG" />
                     </image>
                 </ImageView>
-                <ImageView fitHeight="360.0" fitWidth="854.0" layoutX="147.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true" rotate="-9.5">
+                <ImageView fitHeight="449.0" fitWidth="319.0" layoutX="807.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@MediaSweng/3aNB.PNG" />
+                        <Image url="@MediaSweng/3bNB.jpg" />
                     </image>
-                    <rotationAxis>
-                        <Point3D y="1.0" z="1.0" />
-                    </rotationAxis>
                 </ImageView>
             </children>
         </AnchorPane>
         <AnchorPane prefHeight="800.0" prefWidth="1200.0">
             <children>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f2ff85" height="800.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
-                <ImageView fitHeight="127.0" fitWidth="285.0" layoutX="137.0" layoutY="345.0" pickOnBounds="true" preserveRatio="true">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="800.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
+                <ImageView fitHeight="320.0" fitWidth="328.0" layoutX="40.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@MediaSweng/3aNB.PNG" />
+                        <Image url="@MediaSweng/3bNBmirror.PNG" />
                     </image>
                 </ImageView>
-                <ImageView fitHeight="362.0" fitWidth="855.0" layoutX="145.0" layoutY="322.0" pickOnBounds="true" preserveRatio="true" rotate="-9.5" scaleX="0.99" scaleY="0.99">
+                <ImageView fitHeight="449.0" fitWidth="319.0" layoutX="807.0" layoutY="257.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@MediaSweng/3aNB.PNG" />
+                        <Image url="@MediaSweng/3bNB.jpg" />
                     </image>
-                    <rotationAxis>
-                        <Point3D y="1.0" z="1.0" />
-                    </rotationAxis>
                 </ImageView>
-                <Text layoutX="45.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Triceratops lived aound 67 and 65 million years ago." wrappingWidth="425.4197540283203">
+                <Text layoutX="50.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spinosaurus was the largest meat eating dinosaur to walk the earth." wrappingWidth="347.1953430175781">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Text>
-                <Text layoutX="521.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They have a large boney frill on their heads. This frill could be almost as large as 1m." wrappingWidth="486.7530975341797">
+                <Text layoutX="450.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They lived on the planet between 112 and 97 million years ago." wrappingWidth="347.1953430175781">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Text>
-                <Text layoutX="74.0" layoutY="269.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Triceratops horns and frill were used to defend themselves from predators." wrappingWidth="425.4197540283203">
+                <Text layoutX="600.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They could grow to 17m long and could weigh around 6 tons." wrappingWidth="347.1953430175781">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Text>
-                <Text layoutX="600.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They were a herbivore, meaning they only ate plants." wrappingWidth="425.4197540283203">
+                <Text layoutX="390.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Their name meas &quot;Spine lizard&quot; and comes from the large spines that grow on their back." wrappingWidth="347.1953430175781">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="390.0" layoutY="600.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Their diet was mostly fish and small dinosaurs." wrappingWidth="347.1953430175781">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="400.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spinsaurs have a large snout similar to a crocdiles. " wrappingWidth="347.1953430175781">
                     <font>
                         <Font size="24.0" />
                     </font>
                 </Text>
             </children>
         </AnchorPane>
-        <AnchorPane prefHeight="800.0" prefWidth="1200.0">
+        <AnchorPane prefHeight="100.0" prefWidth="300.0">
             <children>
-                <Text layoutX="75.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Triceratops">
+                <Text layoutX="75.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Spinosaurus">
                     <font>
                         <Font size="36.0" />
                     </font>
