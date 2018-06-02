@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area3d">
+    <children>
+        <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@MediaSweng/plane4.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="800.0" prefWidth="1200.0">
+            <children>
+                <ImageView fitHeight="396.0" fitWidth="1220.0" layoutX="331.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/3dNB2.PNG" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="800.0" prefWidth="1200.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f2ff85" height="800.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
+                <ImageView fitHeight="396.0" fitWidth="1220.0" layoutX="331.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/3dNB2.PNG" />
+                    </image>
+                </ImageView>
+                <Text layoutX="480.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Their name means &quot;crocodile mimic&quot;. They were named this as their head is very similar to a crocodiles" wrappingWidth="499.51568603515625">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="75.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They llived between 125 and 112 millin years ago" wrappingWidth="381.3893127441406">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="75.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Suchomimus comes from the same family as the Spinsaurus." wrappingWidth="381.3893127441406">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="75.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They could grow to be as long as 12m and could weigh 6 tons." wrappingWidth="262.7226257324219">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="75.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Their mouths held over 100 fairly blunt teeth, suggesting they mostly ate fish." wrappingWidth="381.3893127441406">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Text layoutX="75.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suchomimus">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Text>
+                <Button layoutX="5.0" layoutY="605.0" mnemonicParsing="false" onAction="#toMap" prefHeight="161.0" prefWidth="162.0" styleClass="backgroundset" stylesheets="@MediaSweng/backgroundset.css" textFill="TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@MediaSweng/minimap.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area3c">
+    <children>
+        <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@MediaSweng/plane3.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="800.0" prefWidth="1200.0">
+            <children>
+                <ImageView fitHeight="410.0" fitWidth="725.0" layoutX="525.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/3cNB.PNG" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="388.0" fitWidth="544.0" layoutX="59.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/3cNB2.png" />
+                    </image>
+                    <rotationAxis>
+                        <Point3D y="1.0" />
+                    </rotationAxis>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f2ff85" height="800.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
+                <ImageView fitHeight="388.0" fitWidth="544.0" layoutX="59.0" layoutY="237.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/3cNB2.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="410.0" fitWidth="725.0" layoutX="525.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/3cNB.PNG" />
+                    </image>
+                </ImageView>
+                <Text layoutX="100.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Tyrannosaurus lived between 70 and 65 million years ago." wrappingWidth="298.30859375">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="450.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The T. Rex was one of the largest carnivores, but not as large as the Spinosaurus." wrappingWidth="298.30859375">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="800.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They were one of the top preditors of their time, hunting other dinosaurs like the Triceratops." wrappingWidth="298.30859375">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+                <Text layoutX="500.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They could grow up to 12m tall and their teeth have been found as long as 30cm." wrappingWidth="366.30859375">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Text layoutX="75.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tyrannosaurus Rex">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Text>
+                <Button layoutX="5.0" layoutY="605.0" mnemonicParsing="false" onAction="#toMap" prefHeight="161.0" prefWidth="162.0" styleClass="backgroundset" stylesheets="@MediaSweng/backgroundset.css" textFill="TRANSPARENT">
+                    <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@MediaSweng/minimap.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
