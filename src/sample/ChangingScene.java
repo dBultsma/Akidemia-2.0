@@ -12,6 +12,7 @@ public class ChangingScene {
         Parent parentToScene = FXMLLoader.load(getClass().getResource(name));
         Scene newScene = new Scene(parentToScene, window.getWidth(), window.getHeight());
         window.setScene(newScene);
+        window.setMaximized(true);
         window.show();
         return(newScene);
 

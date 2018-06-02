@@ -59,6 +59,11 @@ public class Controller {
         ((Node)evt.getSource()).getScene().setCursor(new ImageCursor(image, 1, 1));
     }
 
+    public void toChildLock(ActionEvent event)throws IOException {
+        Stage window = new Stage();
+        sc.changeScene("childLock.fxml", window);
+    }
+
     public void mag2Cursor(MouseEvent evt) {
         magCursor(((Node)evt.getSource()).getScene());
     }
