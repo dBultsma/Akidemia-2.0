@@ -276,7 +276,6 @@ public class QuizController2 implements Initializable{
         }
     }
 
-
     public void mapButtonPressed(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("map.fxml", window);
@@ -292,4 +291,3 @@ public class QuizController2 implements Initializable{
 
     }
 }
-

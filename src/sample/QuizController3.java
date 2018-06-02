@@ -113,7 +113,7 @@ public class QuizController3 implements Initializable{
     }
 
     public void confirm1Pressed(ActionEvent event) throws IOException {
-        if (radioB3.isSelected())
+        if (radioB1.isSelected())
         {
             int correct1 = 1;
             score1 = score + 1;
@@ -150,7 +150,7 @@ public class QuizController3 implements Initializable{
     }
 
     public void confirm2Pressed(ActionEvent event) throws IOException {
-        if (radioB8.isSelected())
+        if (radioB7.isSelected())
         {
             int correct2 = 1;
             score2 = score1 + correct2;
@@ -187,7 +187,7 @@ public class QuizController3 implements Initializable{
     }
 
     public void confirm3Pressed(ActionEvent event) throws IOException {
-        if (radioB9.isSelected())
+        if (radioB12.isSelected())
         {
             int correct3 = 1;
             score3 = score2 + correct3;
@@ -224,7 +224,7 @@ public class QuizController3 implements Initializable{
     }
 
     public void confirm4Pressed(ActionEvent event) throws IOException {
-        if (radioB15.isSelected())
+        if (radioB13.isSelected())
         {
             int correct4 = 1;
             score4 = score3 + correct4;

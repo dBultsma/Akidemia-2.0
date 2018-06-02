@@ -79,28 +79,28 @@
                   <Font name="Myanmar Text" size="15.0" />
                </font>
             </Button>
-            <RadioButton fx:id="radioB1" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="1 to 2m" textFill="WHITE">
+            <RadioButton fx:id="radioB1" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="Three-horned face" textFill="WHITE">
                <toggleGroup>
                   <ToggleGroup fx:id="q1" />
                </toggleGroup>
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB2" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="3 to 4m" textFill="WHITE" toggleGroup="$q1">
+            <RadioButton fx:id="radioB2" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="Two-horned face" textFill="WHITE" toggleGroup="$q1">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB3" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="5 to 7m" textFill="WHITE" toggleGroup="$q1">
+            <RadioButton fx:id="radioB3" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="Three-horned dinosaur" textFill="WHITE" toggleGroup="$q1">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB4" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="8 to 10m" textFill="WHITE" toggleGroup="$q1">
+            <RadioButton fx:id="radioB4" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="Four-horned Lizard" textFill="WHITE" toggleGroup="$q1">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <Label alignment="CENTER" prefHeight="81.0" prefWidth="600.0" text="How big do Liopleurodons grow to be?" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="81.0" prefWidth="600.0" text="Where does the name 'Triceratops' come from?" textFill="WHITE">
                <font>
-                  <Font name="Myanmar Text Bold" size="27.0" />
+                  <Font name="Myanmar Text Bold" size="24.0" />
                </font>
             </Label>
          </children>
@@ -119,28 +119,28 @@
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <RadioButton fx:id="radioB5" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="King Dinosaur" textFill="WHITE">
+            <RadioButton fx:id="radioB5" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Tyrannosaurus Rex" textFill="WHITE">
                <toggleGroup>
                   <ToggleGroup fx:id="q2" />
                </toggleGroup>
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB6" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Queen Lizard" textFill="WHITE" toggleGroup="$q2">
+            <RadioButton fx:id="radioB6" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Suchomimus" textFill="WHITE" toggleGroup="$q2">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB7" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Water Lizard" textFill="WHITE" toggleGroup="$q2">
+            <RadioButton fx:id="radioB7" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Spinosaurus" textFill="WHITE" toggleGroup="$q2">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB8" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="King Lizard" textFill="WHITE" toggleGroup="$q2">
+            <RadioButton fx:id="radioB8" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Allosaurus" textFill="WHITE" toggleGroup="$q2">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <Label alignment="CENTER" layoutX="-2.0" prefHeight="81.0" prefWidth="600.0" text="What does Basilosaurus mean?" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="-2.0" prefHeight="81.0" prefWidth="600.0" text="Which dinosaur was the largest meat-eater to walk on Earth?" textFill="WHITE">
                <font>
-                  <Font name="Myanmar Text Bold" size="27.0" />
+                  <Font name="Myanmar Text Bold" size="19.0" />
                </font>
             </Label>
          </children>
@@ -159,28 +159,28 @@
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <RadioButton fx:id="radioB9" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now New Zealand" textFill="WHITE">
+            <RadioButton fx:id="radioB9" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="20m" textFill="WHITE">
                <toggleGroup>
                   <ToggleGroup fx:id="q3" />
                </toggleGroup>
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB10" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now Europe" textFill="WHITE" toggleGroup="$q3">
+            <RadioButton fx:id="radioB10" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="5m" textFill="WHITE" toggleGroup="$q3">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB11" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now North America" textFill="WHITE" toggleGroup="$q3">
+            <RadioButton fx:id="radioB11" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="15m" textFill="WHITE" toggleGroup="$q3">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB12" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now Africa" textFill="WHITE" toggleGroup="$q3">
+            <RadioButton fx:id="radioB12" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="12m" textFill="WHITE" toggleGroup="$q3">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="81.0" prefWidth="600.0" text="Where could a Mauisaurus be found?" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="81.0" prefWidth="600.0" text="How tall would an average Tyrannosaurus Rex grow to be?" textFill="WHITE">
                <font>
-                  <Font name="Myanmar Text Bold" size="27.0" />
+                  <Font name="Myanmar Text Bold" size="20.0" />
                </font>
             </Label>
          </children>
@@ -199,26 +199,26 @@
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <RadioButton fx:id="radioB13" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Birds" textFill="WHITE">
+            <RadioButton fx:id="radioB13" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="100+" textFill="WHITE">
                <toggleGroup>
                   <ToggleGroup fx:id="q4" />
                </toggleGroup>
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB14" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Fish" textFill="WHITE" toggleGroup="$q4">
+            <RadioButton fx:id="radioB14" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="50" textFill="WHITE" toggleGroup="$q4">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB15" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Turtles and plesiosaurs" textFill="WHITE" toggleGroup="$q4">
+            <RadioButton fx:id="radioB15" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="25" textFill="WHITE" toggleGroup="$q4">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB16" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Plants" textFill="WHITE" toggleGroup="$q4">
+            <RadioButton fx:id="radioB16" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="32" textFill="WHITE" toggleGroup="$q4">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <Label alignment="CENTER" prefHeight="87.0" prefWidth="600.0" text="What would a Kronosaurus eat lots of?" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="87.0" prefWidth="600.0" text="How many teeth did a Suchomimus have?" textFill="WHITE">
                <font>
                   <Font name="Myanmar Text Bold" size="27.0" />
                </font>
