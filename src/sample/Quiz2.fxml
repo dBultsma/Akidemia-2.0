@@ -25,9 +25,8 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
+                  <Image url="@MediaSweng/quiz2bg.jpg" />
+               </image></ImageView>
             <Button fx:id="mapButton" layoutX="241.0" layoutY="249.0" mnemonicParsing="false" onAction="#mapButtonPressed" prefHeight="56.0" prefWidth="119.0" stylesheets="@CSS%20Files/whitebutton.css" text="Back to map">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
@@ -68,10 +67,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextQuestion1" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ1Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+                  <Image url="@MediaSweng/quiz2bg.jpg" />
+               </image></ImageView>
+            <Button fx:id="nextQuestion1" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ1Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/greybutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="15.0" />
                </font>
@@ -81,26 +79,26 @@
                   <Font name="Myanmar Text" size="15.0" />
                </font>
             </Button>
-            <RadioButton fx:id="radioB1" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="1 to 2m" textFill="WHITE">
+            <RadioButton fx:id="radioB1" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="4.1 feet" textFill="WHITE">
                <toggleGroup>
                   <ToggleGroup fx:id="q1" />
                </toggleGroup>
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB2" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="3 to 4m" textFill="WHITE" toggleGroup="$q1">
+            <RadioButton fx:id="radioB2" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="4.6 feet" textFill="WHITE" toggleGroup="$q1">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB3" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="5 to 7m" textFill="WHITE" toggleGroup="$q1">
+            <RadioButton fx:id="radioB3" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="5.5 feet" textFill="WHITE" toggleGroup="$q1">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB4" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="8 to 10m" textFill="WHITE" toggleGroup="$q1">
+            <RadioButton fx:id="radioB4" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="6.4 feet" textFill="WHITE" toggleGroup="$q1">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <Label alignment="CENTER" prefHeight="81.0" prefWidth="600.0" text="How big do Liopleurodons grow to be?" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="81.0" prefWidth="600.0" text="What was the wingspan of the dimorphodon?" textFill="WHITE">
                <font>
                   <Font name="Myanmar Text Bold" size="27.0" />
                </font>
@@ -111,10 +109,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextQuestion2" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ2Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+                  <Image url="@MediaSweng/quiz2bg.jpg" />
+               </image></ImageView>
+            <Button fx:id="nextQuestion2" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ2Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/greybutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
@@ -122,28 +119,28 @@
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <RadioButton fx:id="radioB5" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="King Dinosaur" textFill="WHITE">
+            <RadioButton fx:id="radioB5" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Dimorphodon and Pterodactylus" textFill="WHITE">
                <toggleGroup>
                   <ToggleGroup fx:id="q2" />
                </toggleGroup>
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB6" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Queen Lizard" textFill="WHITE" toggleGroup="$q2">
+            <RadioButton fx:id="radioB6" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Dimorphodon and Quetzalcoatlus" textFill="WHITE" toggleGroup="$q2">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB7" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Water Lizard" textFill="WHITE" toggleGroup="$q2">
+            <RadioButton fx:id="radioB7" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Hatzegopteryx and Pterodactylus" textFill="WHITE" toggleGroup="$q2">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB8" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="King Lizard" textFill="WHITE" toggleGroup="$q2">
+            <RadioButton fx:id="radioB8" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Hatzegopteryx and Quetzalcoatlus" textFill="WHITE" toggleGroup="$q2">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <Label alignment="CENTER" layoutX="-2.0" prefHeight="81.0" prefWidth="600.0" text="What does Basilosaurus mean?" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="-2.0" prefHeight="81.0" prefWidth="600.0" text="Which two pterosaurs lived in the Jurassic Period?" textFill="WHITE">
                <font>
-                  <Font name="Myanmar Text Bold" size="27.0" />
+                  <Font name="Myanmar Text Bold" size="23.0" />
                </font>
             </Label>
          </children>
@@ -152,10 +149,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextQuestion3" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ3Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+                  <Image url="@MediaSweng/quiz2bg.jpg" />
+               </image></ImageView>
+            <Button fx:id="nextQuestion3" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ3Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/greybutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
@@ -163,26 +159,26 @@
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <RadioButton fx:id="radioB9" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now New Zealand" textFill="WHITE">
+            <RadioButton fx:id="radioB9" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="Quetzaloc" textFill="WHITE">
                <toggleGroup>
                   <ToggleGroup fx:id="q3" />
                </toggleGroup>
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB10" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now Europe" textFill="WHITE" toggleGroup="$q3">
+            <RadioButton fx:id="radioB10" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="Coatlus" textFill="WHITE" toggleGroup="$q3">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB11" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now North America" textFill="WHITE" toggleGroup="$q3">
+            <RadioButton fx:id="radioB11" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="Quetzalcoatl" textFill="WHITE" toggleGroup="$q3">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB12" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now Africa" textFill="WHITE" toggleGroup="$q3">
+            <RadioButton fx:id="radioB12" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="Quetzalcoatlusan" textFill="WHITE" toggleGroup="$q3">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="81.0" prefWidth="600.0" text="Where could a Mauisaurus be found?" textFill="WHITE">
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="81.0" prefWidth="600.0" text="Who were the Quetzalcoatlus named after?" textFill="WHITE">
                <font>
                   <Font name="Myanmar Text Bold" size="27.0" />
                </font>
@@ -193,10 +189,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextButton" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextPressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next">
+                  <Image url="@MediaSweng/quiz2bg.jpg" />
+               </image></ImageView>
+            <Button fx:id="nextButton" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextPressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/greybutton.css" text="Next">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
@@ -204,28 +199,28 @@
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <RadioButton fx:id="radioB13" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Birds" textFill="WHITE">
+            <RadioButton fx:id="radioB13" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Pterodactylus" textFill="WHITE">
                <toggleGroup>
                   <ToggleGroup fx:id="q4" />
                </toggleGroup>
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB14" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Fish" textFill="WHITE" toggleGroup="$q4">
+            <RadioButton fx:id="radioB14" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Dimorphodon" textFill="WHITE" toggleGroup="$q4">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB15" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Turtles and plesiosaurs" textFill="WHITE" toggleGroup="$q4">
+            <RadioButton fx:id="radioB15" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Hatzegopteryx" textFill="WHITE" toggleGroup="$q4">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <RadioButton fx:id="radioB16" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Plants" textFill="WHITE" toggleGroup="$q4">
+            <RadioButton fx:id="radioB16" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Quetzalcoatlus" textFill="WHITE" toggleGroup="$q4">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></RadioButton>
-            <Label alignment="CENTER" prefHeight="87.0" prefWidth="600.0" text="What would a Kronosaurus eat lots of?" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="87.0" prefWidth="600.0" text="Which is the largest flying vertebrate ever known?" textFill="WHITE">
                <font>
-                  <Font name="Myanmar Text Bold" size="27.0" />
+                  <Font name="Myanmar Text Bold" size="24.0" />
                </font>
             </Label>
          </children>
@@ -234,14 +229,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" layoutY="-5.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="startButton" layoutX="360.0" layoutY="265.0" mnemonicParsing="false" onAction="#startPressed" prefHeight="50.0" prefWidth="100.0" text="Start">
-               <stylesheets>
-                  <URL value="@CSS%20Files/prettybutton.css" />
-                  <URL value="@CSS%20Files/bluebutton.css" />
-               </stylesheets>
+                  <Image url="@MediaSweng/quiz2bg.jpg" />
+               </image></ImageView>
+            <Button fx:id="startButton" layoutX="360.0" layoutY="265.0" mnemonicParsing="false" onAction="#startPressed" prefHeight="50.0" prefWidth="100.0" stylesheets="@CSS%20Files/greybutton.css" text="Start">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
@@ -249,7 +239,7 @@
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <Label alignment="CENTER" layoutY="27.0" prefHeight="203.0" prefWidth="600.0" text="Oceans Quiz" textFill="WHITE">
+            <Label alignment="CENTER" layoutY="27.0" prefHeight="203.0" prefWidth="600.0" text="Flying Dinosaurs Quiz" textFill="WHITE">
                <font>
                   <Font name="Myanmar Text" size="56.0" />
                </font>

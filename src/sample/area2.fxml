@@ -50,5 +50,6 @@
          </font>
       </Text>
       <Button fx:id="jungleQuiz" layoutX="345.0" layoutY="245.0" mnemonicParsing="false" onAction="#quiz1Pressed" prefHeight="51.0" prefWidth="92.0" text="Quiz" />
+      <Button fx:id="mountainsQuiz" layoutX="345.0" layoutY="376.0" mnemonicParsing="false" onAction="#quiz2Pressed" prefHeight="51.0" prefWidth="92.0" text="Quiz" />
    </children>
 </AnchorPane>

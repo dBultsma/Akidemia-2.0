@@ -25,14 +25,13 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
+                  <Image url="@MediaSweng/plainsbg.jpg" />
+               </image></ImageView>
             <Button fx:id="mapButton" layoutX="241.0" layoutY="249.0" mnemonicParsing="false" onAction="#mapButtonPressed" prefHeight="56.0" prefWidth="119.0" stylesheets="@CSS%20Files/whitebutton.css" text="Back to map">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <Label alignment="CENTER" prefHeight="214.0" prefWidth="600.0" text="Oceans Quiz Finished" textAlignment="RIGHT" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="214.0" prefWidth="600.0" text="Plains Quiz Finished" textAlignment="RIGHT" textFill="WHITE">
                <font>
                   <Font name="Myanmar Text" size="44.0" />
                </font>
@@ -68,10 +67,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextQuestion1" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ1Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+                  <Image url="@MediaSweng/plainsbg.jpg" />
+               </image></ImageView>
+            <Button fx:id="nextQuestion1" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ1Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/brownbutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="15.0" />
                </font>
@@ -111,10 +109,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextQuestion2" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ2Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+                  <Image url="@MediaSweng/plainsbg.jpg" />
+               </image></ImageView>
+            <Button fx:id="nextQuestion2" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ2Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/brownbutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
@@ -152,10 +149,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextQuestion3" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ3Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+                  <Image url="@MediaSweng/plainsbg.jpg" />
+               </image></ImageView>
+            <Button fx:id="nextQuestion3" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ3Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/brownbutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
@@ -193,10 +189,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="nextButton" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextPressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next">
+                  <Image url="@MediaSweng/plainsbg.jpg" />
+               </image></ImageView>
+            <Button fx:id="nextButton" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextPressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/brownbutton.css" text="Next">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
@@ -234,14 +229,9 @@
          <children>
             <ImageView fitHeight="406.0" fitWidth="600.0" layoutY="-5.0" pickOnBounds="true">
                <image>
-                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
-               </image>
-            </ImageView>
-            <Button fx:id="startButton" layoutX="360.0" layoutY="265.0" mnemonicParsing="false" onAction="#startPressed" prefHeight="50.0" prefWidth="100.0" text="Start">
-               <stylesheets>
-                  <URL value="@CSS%20Files/prettybutton.css" />
-                  <URL value="@CSS%20Files/bluebutton.css" />
-               </stylesheets>
+                  <Image url="@MediaSweng/plainsbg.jpg" />
+               </image></ImageView>
+            <Button fx:id="startButton" layoutX="360.0" layoutY="265.0" mnemonicParsing="false" onAction="#startPressed" prefHeight="50.0" prefWidth="100.0" stylesheets="@CSS%20Files/brownbutton.css" text="Start">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
@@ -249,7 +239,7 @@
                <font>
                   <Font name="Myanmar Text" size="12.0" />
                </font></Button>
-            <Label alignment="CENTER" layoutY="27.0" prefHeight="203.0" prefWidth="600.0" text="Oceans Quiz" textFill="WHITE">
+            <Label alignment="CENTER" layoutY="27.0" prefHeight="203.0" prefWidth="600.0" text="Plains Quiz" textFill="WHITE">
                <font>
                   <Font name="Myanmar Text" size="56.0" />
                </font>
