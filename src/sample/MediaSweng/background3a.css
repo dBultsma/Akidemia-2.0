@@ -1,0 +1,5 @@
+#dinotest {
+	-fx-background-image: url("3a.jpg");
+	-fx-background-repeat: stretch;
+	-fx-background-position: center center;
+}
