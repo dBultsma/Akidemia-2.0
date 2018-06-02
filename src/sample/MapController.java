@@ -29,9 +29,11 @@ public class MapController implements Initializable {
     @FXML public ImageView area3aimage, area3bimage, area3cimage, area3dimage;
     @FXML public ImageView area2aimage, area2bimage, area2cimage, area2dimage;
     @FXML public ImageView area1aimage, area1bimage, area1cimage, area1dimage;
+    @FXML public ImageView area41image, area42image, area43image, area44image;
     @FXML public Text threelabela, threelabelb, threelabelc, threelabeld;
     @FXML public Text onelabela, onelabelb, onelabelc, onelabeld;
     @FXML public Text twolabela, twolabelb, twolabelc, twolabeld;
+    @FXML public Text area4one, area4two, area4three, area4four;
 
 
 
@@ -50,27 +52,25 @@ public class MapController implements Initializable {
         addButtonHandler(stage3, mountainimage);
         addButtonHandler(stage4, oceanimage);
 
-        addTextHandler(threelabela, area3aimage);
-        addTextHandler(threelabelb, area3bimage);
-        addTextHandler(threelabelc, area3cimage);
-        addTextHandler(threelabeld, area3dimage);
+            addTextHandler(threelabela, area3aimage);
+            addTextHandler(threelabelb, area3bimage);
+            addTextHandler(threelabelc, area3cimage);
+            addTextHandler(threelabeld, area3dimage);
 
-        addTextHandler(onelabela, area1aimage);
-        addTextHandler(onelabelb, area1bimage);
-        addTextHandler(onelabelc, area1cimage);
-        addTextHandler(onelabeld, area1dimage);
+            addTextHandler(onelabela, area1aimage);
+            addTextHandler(onelabelb, area1bimage);
+            addTextHandler(onelabelc, area1cimage);
+            addTextHandler(onelabeld, area1dimage);
 
-        addTextHandler(twolabela, area2aimage);
-        addTextHandler(twolabelb, area2bimage);
-        addTextHandler(twolabelc, area2cimage);
-        addTextHandler(twolabeld, area2dimage);
+            addTextHandler(twolabela, area2aimage);
+            addTextHandler(twolabelb, area2bimage);
+            addTextHandler(twolabelc, area2cimage);
+            addTextHandler(twolabeld, area2dimage);
 
-//        if(map.setVisible(false) = true) {
-//            addTextHandler(threelabela, area3aimage);
-//            addTextHandler(threelabelb, area3bimage);
-//            addTextHandler(threelabelc, area3cimage);
-//            addTextHandler(threelabeld, area3dimage);
-//        }
+            addTextHandler(area4one, area41image);
+            addTextHandler(area4two, area42image);
+            addTextHandler(area4three, area43image);
+            addTextHandler(area4four, area44image);
 
 
     }

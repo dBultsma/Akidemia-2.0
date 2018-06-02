@@ -1,0 +1,8 @@
+.spike {
+	-fx-image: url(dinoopeneyes.png);
+}
+
+.spike:hover {
+	-fx-image: url("companion.png");
+
+}
