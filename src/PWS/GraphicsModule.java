@@ -1,3 +1,5 @@
+package PWS;
+
 import javafx.animation.*;
 import javafx.event.EventHandler;
 import javafx.scene.paint.Color;
@@ -7,7 +9,7 @@ import javafx.util.Duration;
 
 /* -- The following code has been produced as intended in the contracts between SImpLe and the buyer.
     If you have any trouble with the code, feel free to contact Amy Jo Turner (ajt562@york.ac.uk) for assistance. -- */
-public abstract class GraphicModule {
+public abstract class GraphicsModule {
 
 
     //The following are full graphics with full capabilities, if color0 and color1 are set to the same, the color will be solid, otherwise gradient.

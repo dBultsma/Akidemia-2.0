@@ -1,5 +1,7 @@
 package sample;
 
+import PWS.*;
+import javafx.geometry.Pos;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
@@ -12,24 +14,37 @@ import java.io.IOException;
 
 public class Parser {
 
-    public void Parser(File file){
+    public Presentation Parser(File file){
         SAXParserFactory spf = SAXParserFactory.newInstance();
         try{
             spf.setNamespaceAware(true);
             SAXParser saxParser = spf.newSAXParser();
             PwsHandler handler = new PwsHandler();
             saxParser.parse(file, handler);
+            return handler.getPresentation();
         }
-        catch (ParserConfigurationException | SAXException | IOException e){e.printStackTrace();}
+        catch (ParserConfigurationException | SAXException | IOException e){
+            e.printStackTrace();
+            return null;
+        }
     }
-
 }
 
 class PwsHandler extends DefaultHandler{
     private boolean bText = false;
     private boolean bFormat = false;
+
+    private Presentation presentation;
+    private Slide slide;
+    private TextView textView;
+
+    Presentation getPresentation() {
+        return presentation;
+    }
+
     @Override
     public void startDocument() throws SAXException{}
+
     @Override
     public void startElement(String namespaceURI, String localName, String qName, Attributes attrs) throws SAXException{
         // Font
@@ -169,7 +184,7 @@ class PwsHandler extends DefaultHandler{
         switch(qName.toLowerCase()){
             case "presentation": {
 
-                System.out.println("new presentation");
+//                System.out.println("new presentation");
 
                 if(attrs_font != null){ font = attrs_font; }
                 else{ font = "Arial"; }
@@ -186,7 +201,9 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_underline != null){ underline = Boolean.parseBoolean(attrs_underline); }
                 else{ underline = false; }
 
-                System.out.println("    text formatting: font: " + font + ", size: " + size + ", bold: " + bold + ", italic: " + italic + ", underline: " + underline);
+                Fonts fonts = new Fonts(font, italic, bold, underline, size);
+
+//                System.out.println("    text formatting: font: " + font + ", size: " + size + ", bold: " + bold + ", italic: " + italic + ", underline: " + underline);
 
                 if(attrs_color != null){ color = attrs_color; }
                 else{ color = "#000000"; }
@@ -194,18 +211,25 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_fill != null){ fill = attrs_fill; }
                 else{ fill = "#ffffff"; }
 
-                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
+                Colors colors = new Colors(color, fill);
+
+//                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
+
+                presentation = new Presentation(fonts, colors);
+
             }
             break;
             case "meta": {
 
-                System.out.println("    meta: key: " + key + ", value: " + value);
+//                System.out.println("    meta: key: " + key + ", value: " + value);
+
+                presentation.add(new Meta(key, value));
 
             }
             break;
             case "slide": {
 
-                System.out.println("new slide");
+//                System.out.println("new slide");
 
                 if(attrs_font != null){ font = attrs_font; }
                 else{ font = "Arial"; }
@@ -222,7 +246,9 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_underline != null){ underline = Boolean.parseBoolean(attrs_underline); }
                 else{ underline = false; }
 
-                System.out.println("    text formatting: font: " + font + ", size: " + size + ", bold: " + bold + ", italic: " + italic + ", underline: " + underline);
+                Fonts fonts = new Fonts(font, italic, bold, underline, size);
+
+//                System.out.println("    text formatting: font: " + font + ", size: " + size + ", bold: " + bold + ", italic: " + italic + ", underline: " + underline);
 
                 if(attrs_color != null){ color = attrs_color; }
                 else{ color = "#000000"; }
@@ -230,13 +256,20 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_fill != null){ fill = attrs_fill; }
                 else{ fill = "#ffffff"; }
 
-                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
+                Colors colors = new Colors(color, fill);
+
+//                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
+
+                Transitions transitions = new Transitions(start, duration);
+
+                slide = new Slide(fonts, colors, transitions);
+                presentation.add(slide);
 
             }
             break;
             case "text": {
                 bText = true;
-                System.out.println("new text");
+//                System.out.println("new text");
 
                 if(attrs_font != null){ font = attrs_font; }
                 else{ font = "Arial"; }
@@ -267,7 +300,7 @@ class PwsHandler extends DefaultHandler{
             break;
             case "format": {
                 bFormat = true;
-                System.out.println("new format");
+//                System.out.println("new format");
 
                 if(attrs_font != null){ font = attrs_font; }
                 else{ font = "Arial"; }
@@ -304,9 +337,11 @@ class PwsHandler extends DefaultHandler{
             break;
             case "shape": {
 
-                System.out.println("new shape");
+                Position position = new Position(x, y, x2, y2);
 
-                System.out.println("    shape: type: " + type + ", stroke: " + stroke);
+//                System.out.println("new shape");
+
+//                System.out.println("    shape: type: " + type + ", stroke: " + stroke);
 
                 if(attrs_color != null){ color = attrs_color; }
                 else{ color = "#000000"; }
@@ -314,33 +349,53 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_fill != null){ fill = attrs_fill; }
                 else{ fill = "#ffffff"; }
 
-                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
+                Colors colors = new Colors(color, fill);
+
+//                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
+
+                slide.add(new Shape(position, colors, type, stroke));
 
             }
             break;
             case "image": {
 
-                System.out.println("new image");
+                Position position = new Position(x, y, x2, y2);
 
-                System.out.println("    image: path: " + path);
+//                System.out.println("new image");
 
+//                System.out.println("    image: path: " + path);
+                try{
+                    slide.add(new Image(position, path));
+                }
+                catch(NullPointerException e){
+                    System.out.println("Image file not found");
+                }
             }
             break;
             case "audio": {
-                System.out.println("new audio");
+//                System.out.println("new audio");
 
-                System.out.println("    audio: path: " + path);
+//                System.out.println("    audio: path: " + path);
+                try{
+                    slide.add(new Audio(path, false));
+                }
+                catch(NullPointerException e){
+                    System.out.println("Audio file not found");
+                }
 
             }
             break;
             case "video": {
-                System.out.println("new video");
+//                System.out.println("new video");
 
-                System.out.println("    video: path: " + path);
+//                System.out.println("    video: path: " + path);
+
+                System.out.println("Please implement video...");
             }
             break;
         }
     }
+
     @Override
     public void endElement(String namespaceURI, String localName, String qName) throws SAXException{
         switch (qName.toLowerCase()){
@@ -352,8 +407,10 @@ class PwsHandler extends DefaultHandler{
                 break;
         }
     }
+
     @Override
     public void endDocument() throws SAXException{}
+
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException{
         String string = new String(ch, start, length);

@@ -1,4 +1,4 @@
-package sample;
+package PWS;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -8,11 +8,11 @@ import java.io.File;
 //	Sound newSound = new Sound("../resources/example.mp3");
 //	newSound.play();
 
-public class Sound{
+public class Audio {
 	private static MediaPlayer mediaPlayer;
 	private boolean looping;
 
-	public Sound(String path, boolean loop) {
+	public Audio(String path, boolean loop) {
 		this.looping = loop;
 		this.mediaPlayer = new MediaPlayer(new Media(this.getClass().getResource(path).toExternalForm()));
 		this.mediaPlayer.setOnEndOfMedia(() -> {
