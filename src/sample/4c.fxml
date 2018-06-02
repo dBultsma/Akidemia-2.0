@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Akidemia/src/sample/MediaSweng/mauisaurus.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="270.0" fitWidth="374.0" layoutX="28.0" layoutY="42.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Akidemia/src/sample/MediaSweng/mauisaurus1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="182.0" fitWidth="165.0" layoutX="410.0" layoutY="141.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Akidemia/src/sample/MediaSweng/maui2.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+            <ImageView fitHeight="182.0" fitWidth="165.0" layoutX="410.0" layoutY="141.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Akidemia/src/sample/MediaSweng/maui2.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="270.0" fitWidth="374.0" layoutX="28.0" layoutY="42.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Akidemia/src/sample/MediaSweng/mauisaurus1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="10.0" layoutY="67.0" prefHeight="40.0" prefWidth="197.0" text="The name 'Mauisaurus' means &quot;Maui reptile&quot; " wrapText="true" />
+            <Label layoutX="190.0" layoutY="298.0" prefHeight="94.0" prefWidth="165.0" text="The Mauisaurus lived in the Late Cretaceous period (80 to 69 million years ago), around the area that is now New Zealand" wrapText="true" />
+            <Label layoutX="10.0" layoutY="99.0" prefHeight="69.0" prefWidth="120.0" text="They were a marine reptile and not a dinosaur" wrapText="true" />
+            <Label layoutX="378.0" layoutY="292.0" prefHeight="94.0" prefWidth="197.0" text="They had two sets of flippers, which allowed for high swimming speeds and may have allowed them to venture onto shorlines for short periods of time" wrapText="true" />
+            <Label layoutX="402.0" layoutY="56.0" prefHeight="87.0" prefWidth="189.0" text="They were carnivores mostly eating fish and squid and grew to be around 8m in length" wrapText="true" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="33.0" layoutY="6.0" prefHeight="62.0" prefWidth="220.0" text="Mauisaurus">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <ImageView fitHeight="134.0" fitWidth="127.0" layoutX="8.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Akidemia-2.0-Area-3-info/Akidemia-2.0-Area-3-info/src/sample/MediaSweng/minimap.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
