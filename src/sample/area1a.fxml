@@ -7,35 +7,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area1Controller">
+<AnchorPane prefHeight="720.0" prefWidth="1028.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area1Controller">
     <children>
-        <ImageView fitHeight="452.0" fitWidth="603.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
+        <ImageView fitHeight="720.0" fitWidth="1325.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
             <image>
                 <Image url="@MediaSweng/area_1a_back.png" />
             </image>
         </ImageView>
-        <AnchorPane prefHeight="403.0" prefWidth="603.0">
-            <children>
-                <ImageView fx:id="targetDino" fitHeight="227.0" fitWidth="344.0" layoutX="207.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@MediaSweng/area_1_diplo.png" />
-                    </image>
-                </ImageView>
-            </children>
-        </AnchorPane>
         <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" visible="false">
             <children>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="402.0" stroke="BLACK" strokeType="INSIDE" width="603.0" />
-                <ImageView fitHeight="227.0" fitWidth="347.0" layoutX="207.0" layoutY="143.0" pickOnBounds="true" preserveRatio="true">
-                    <image>
-                        <Image url="@MediaSweng/area_1_diplo.png" />
-                    </image>
-                </ImageView>
-                <Text layoutX="33.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They could crack their long tail like a whip, creating a loud sonic boom to scare away predators." wrappingWidth="228.380859375" />
-                <Text layoutX="350.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It was part of the Sauropod family, which were the largest dinosaurs. The largest Diplodocus is the seismosaurus, which was the longest dinosaur at 170 feet! The tallest dinosaur, the Brachiosaurus, was also a Sauropod." wrappingWidth="228.380859375" />
-                <Text layoutX="99.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Diplodocus (meaning &quot;Double Beam&quot;) was a herbivorous dinosaur from the late Jurassic period. " wrappingWidth="216.8095703125" />
-                <Text layoutX="156.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diplodocus, and other Sauropods lived at the edge of forests, where they would eat the leaves from the trees." wrappingWidth="186.205078125" />
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Diplodocus" x="10.0" y="20.0">
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="720.0" stroke="BLACK" strokeType="INSIDE" width="1080.0" />
+                <Text layoutX="32.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Diplodocus (meaning &quot;Double Beam&quot;) was a herbivorous dinosaur from the late Jurassic period. It was part of the Sauropod family, which were the largest dinosaurs. The largest Diplodocus is the seismosaurus, which was the longest dinosaur at 170 feet! The tallest dinosaur, the Brachiosaurus, was also a Sauropod. Diplodocus, and other Sauropods lived at the edge of forests, where they would eat the leaves from the trees. The Diplodocus had a long whip-like tail that it could crack to make a sonic boom to scare away predators." wrappingWidth="434.8095703125" />
+                <Text layoutX="22.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Diplodocus" x="10.0" y="20.0">
                     <font>
                         <Font name="System Bold" size="14.0" />
                     </font>
@@ -44,7 +27,12 @@
         </AnchorPane>
         <AnchorPane layoutY="211.0" prefHeight="178.0" prefWidth="138.0">
             <children>
-                <ImageView fitHeight="105.0" fitWidth="97.0" layoutX="20.0" layoutY="66.0" onMouseClicked="#toMap" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="targetDino" fitHeight="411.0" fitWidth="614.0" layoutX="366.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" x="5.0" y="2.0">
+                    <image>
+                        <Image url="@MediaSweng/area_1_diplo.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="105.0" fitWidth="97.0" layoutX="20.0" layoutY="391.0" onMouseClicked="#toMap" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@MediaSweng/minimap.png" />
                     </image>
