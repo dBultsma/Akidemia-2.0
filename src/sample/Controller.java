@@ -172,8 +172,13 @@ public class Controller implements Initializable {
         return fileChooser.showOpenDialog(stage);
     }
 
+    public void pwsparser(){
+        PWS pws = new PWS();
+        pws.start(new Stage());
+    }
 
-    public void parser(ActionEvent event, Stage window) throws IOException {
+
+    public void parser(Stage window) throws IOException {
 
 
         Parser parser = new Parser();
