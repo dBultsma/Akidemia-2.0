@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ChildLock">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="300.0">
+         <children>
+            <PasswordField fx:id="checkPassword" layoutX="122.0" layoutY="86.0" prefHeight="19.0" prefWidth="136.0" />
+            <Label layoutX="55.0" layoutY="90.0" text="Password" />
+            <Label fx:id="PasswordLabel" layoutX="123.0" layoutY="64.0" textFill="#f20909" />
+            <Button layoutX="116.0" layoutY="145.0" mnemonicParsing="false" onAction="#checkPasswordClose" text="Close" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

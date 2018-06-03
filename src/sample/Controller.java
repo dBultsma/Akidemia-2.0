@@ -73,7 +73,7 @@ public class Controller implements Initializable {
         Stage window = new Stage();
         sc.changeScene("SettingPassword.fxml", window);
     }
-    
+
     public void magCursor(Scene x) {
         Image image = new Image(getClass().getResource("MediaSweng/cursor.png").toExternalForm(),
                 20, 20, false, true);

@@ -1,9 +1,11 @@
 package sample;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 
@@ -24,7 +26,9 @@ public class ChangingScene {
         Scene newScene = new Scene(parentToScene, window.getWidth(), window.getHeight());
         window.setScene(newScene);
         window.show();
+
         return(newScene);
 
     }
 }
+

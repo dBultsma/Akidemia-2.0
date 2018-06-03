@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,11 +32,6 @@ public class ChildLock {
         readPassword.openFile("password.txt");
         savedPassword = readPassword.readData();
         readPassword.closeFile();
-
-       /* if(savedPassword == "")
-        {
-            PasswordLabel.setText("Need to set the password in settings");
-        }*/ //revist later
         if(checkPassword.getText().contentEquals(savedPassword)){
             Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
             window.close();
@@ -59,10 +55,26 @@ public class ChildLock {
              passwordStorage.closeFile();
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.close();
+
         } else {
             setPasswordLabel.setText("Those passwords do not match");
         }
+    }
+
+    public void checkPasswordClose(ActionEvent event){
+        ReadFile readPassword = new ReadFile();
+        readPassword.openFile("password.txt");
+        savedPassword = readPassword.readData();
+        readPassword.closeFile();
+        if(checkPassword.getText().contentEquals(savedPassword)){
+            System.exit(0);
+        }
+        else{
+            PasswordLabel.setText("Your Password is wrong");
+        }
 
     }
+
+
 
 }
