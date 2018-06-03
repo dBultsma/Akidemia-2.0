@@ -15,22 +15,19 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class Area3Controller implements Initializable {
-    @FXML public Button button;
-    @FXML public AnchorPane pane2;
+    @FXML
+    public Button button;
+    @FXML
+    public AnchorPane pane2;
+
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
     ChangingScene sc = new ChangingScene();
 
-   public void toMap(ActionEvent event) throws IOException {
-           Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-           sc.changeScene("map.fxml", window);
-           //  magCursor(area1Scene);
-   }
+    public void toMap(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("map.fxml", window);
+    }
 }
-
-
-        //public void Part2(ActionEvent event) throws IOException{
-        //    part1.setVisble(false);
-        //    part2.setVisible(true);
-        //}

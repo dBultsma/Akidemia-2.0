@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -24,8 +25,15 @@ import java.util.ResourceBundle;
 
 public class Area2Controller {
 
+    ChangingScene sc = new ChangingScene();
+
     public void initialize(URL location, ResourceBundle resources) {
 
+    }
+
+    public void toMap(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("map.fxml", window);
     }
 
 }
