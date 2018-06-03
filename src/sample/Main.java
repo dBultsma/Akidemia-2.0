@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.image.*;
+import sun.awt.OSInfo;
 
 
 
@@ -14,6 +15,8 @@ import java.awt.*;
 import java.nio.file.Paths;
 
 public class Main extends Application {
+
+    public GetOS type = new GetOS();
 
     GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     int width = gd.getDisplayMode().getWidth();
@@ -29,6 +32,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, width, height));
         //primaryStage.setMaximized(true);
         primaryStage.show();
+        type.returnOSType();
     }
 
     
