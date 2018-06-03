@@ -1,5 +1,7 @@
 package sample;
 
+import PWS.Presentation;
+
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -15,17 +17,24 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.image.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.UncheckedIOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 public class Controller implements Initializable {
 
+
     ChangingScene sc = new ChangingScene();
+    Presentation presentation;
+    Pane currentSlide;
 
 
     @FXML public Button goButton;
@@ -125,7 +134,7 @@ public class Controller implements Initializable {
             System.err.println(player.getError());
         });
 
-        root.getChildren().add( mediaView);
+        root.getChildren().add(mediaView);
 
         Scene scene = new Scene(root, window.getWidth(), window.getHeight());
 
@@ -150,4 +159,48 @@ public class Controller implements Initializable {
     }
 
 
+
+    private File openFile(Stage stage) {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("open xml");
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("PWS (*.pws)", "*.pws"));
+        return fileChooser.showOpenDialog(stage);
+    }
+
+
+    public void parser(ActionEvent event, Stage window) throws IOException {
+
+
+        Parser parser = new Parser();
+        Group group = new Group();
+        File xml = openFile(window);
+        presentation = parser.Parser(xml);
+
+
+        if (presentation != null) {
+            Scene scene = new Scene(group, window.getWidth(), window.getHeight());
+            window.setScene(scene);
+
+            currentSlide = presentation.getFirstSlide();
+
+            group.getChildren().add(currentSlide);
+
+            scene.setOnKeyPressed((keyEvent) -> {
+                switch (keyEvent.getCode()) {
+                    case RIGHT:
+                        group.getChildren().remove(currentSlide);
+                        currentSlide = presentation.getNextSlide();
+                        group.getChildren().add(currentSlide);
+                        break;
+                    case LEFT:
+                        group.getChildren().remove(currentSlide);
+                        currentSlide = presentation.getPreviousSlide();
+                        group.getChildren().add(currentSlide);
+                        break;
+                }
+            });
+        }
+    }
+
 }
+

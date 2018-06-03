@@ -1,9 +1,13 @@
 package sample;
 
+import PWS.Presentation;
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.image.*;
@@ -11,8 +15,9 @@ import sun.awt.OSInfo;
 
 
 
+import javax.swing.*;
 import java.awt.*;
-import java.nio.file.Paths;
+
 
 public class Main extends Application {
 
@@ -24,9 +29,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-//        Sound sound = new Sound("src/sample/MediaSweng/Dinosaur1.wav");
-//        sound.play();
-
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Akidemia");
         primaryStage.setScene(new Scene(root, width, height));
@@ -35,11 +37,13 @@ public class Main extends Application {
         //type.returnOSType();
     }
 
-    
+
 
     public static void main(String[] args) {
         launch(args);
     }
+
+
 
 
 }
