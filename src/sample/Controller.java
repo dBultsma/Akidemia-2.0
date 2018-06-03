@@ -37,6 +37,10 @@ public class Controller implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("settings.fxml", window);
     }
+    public void toCompanion(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("companion.fxml", window);
+    }
 
     public void BackToMainScene(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
