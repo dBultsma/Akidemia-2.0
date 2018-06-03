@@ -74,10 +74,10 @@ public class MapController implements Initializable {
             addTextHandler(area4three, area43image);
             addTextHandler(area4four, area44image);
 
-//            area1aimage.setOnMouseClicked(e -> toArea1a(e));
-//            area1bimage.setOnMouseClicked(e -> toArea1b(e));
-//            area1cimage.setOnMouseClicked(e -> toArea1c(e));
-//            area1dimage.setOnMouseClicked(e -> toArea1d(e));
+            area1aimage.setOnMouseClicked(e -> toArea1a(e));
+            area1bimage.setOnMouseClicked(e -> toArea1b(e));
+            area1cimage.setOnMouseClicked(e -> toArea1c(e));
+            area1dimage.setOnMouseClicked(e -> toArea1d(e));
             area2aimage.setOnMouseClicked(e -> toArea2a(e));
             area2bimage.setOnMouseClicked(e -> toArea2b(e));
             area2cimage.setOnMouseClicked(e -> toArea2c(e));
@@ -124,7 +124,24 @@ public class MapController implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area3d.fxml", window);
     }
-//
+
+    public void toArea1a(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area1a.fxml", window);
+    }
+    public void toArea1b(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area1b.fxml", window);
+    }
+    public void toArea1c(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area1c.fxml", window);
+    }
+    public void toArea1d(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("area1d.fxml", window);
+    }
+
     public void toArea2a(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area2a.fxml", window);
