@@ -1,6 +1,6 @@
 package sample;
 
-import com.oracle.tools.packager.Log;
+//import com.oracle.tools.packager.Log;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;

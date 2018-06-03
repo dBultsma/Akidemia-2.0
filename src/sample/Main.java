@@ -8,6 +8,17 @@ import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.image.*;
 
+//imports from Video main
+
+import javafx.geometry.Insets;
+import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.shape.Rectangle;
+
+
 import java.awt.*;
 
 public class Main extends Application {
