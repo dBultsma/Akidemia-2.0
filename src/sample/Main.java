@@ -22,70 +22,24 @@ public class Main extends Application {
     int width = gd.getDisplayMode().getWidth();
     int height = gd.getDisplayMode().getHeight();
 
-    Presentation presentation;
-    Pane currentSlide;
-
     @Override
-    public void start(Stage primaryStage) throws Exception{
-//        Sound sound = new Sound("src/sample/MediaSweng/Dinosaur1.wav");
-//        sound.play();
+    public void start(Stage primarystage) throws Exception{
+        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primarystage.setTitle("Akidemia");
+        primarystage.setScene(new Scene(root, width, height));
+        primarystage.show();
 
-        primaryStage.setTitle("Akidemia");
-        Group group = new Group();
 
-        File xml = openFile(primaryStage);
+}
 
-        if(xml == null){
-            System.out.println("No file chosen. Exiting.");
-            stop();
-        }
-        else{
-            Parser parser = new Parser();
-            presentation = parser.Parser(xml);
 
-            if(presentation != null){
-                Scene scene = new Scene(group, width, height);
-                primaryStage.setScene(scene);
-
-                currentSlide = presentation.getFirstSlide();
-
-                group.getChildren().add(currentSlide);
-
-                scene.setOnKeyPressed((keyEvent) -> {
-                    switch(keyEvent.getCode()){
-                        case RIGHT:
-                            group.getChildren().remove(currentSlide);
-                            currentSlide = presentation.getNextSlide();
-                            group.getChildren().add(currentSlide);
-                            break;
-                        case LEFT:
-                            group.getChildren().remove(currentSlide);
-                            currentSlide = presentation.getPreviousSlide();
-                            group.getChildren().add(currentSlide);
-                            break;
-                    }
-                });
-            }
-            else {
-                Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-                primaryStage.setScene(new Scene(root, width, height));
-            }
-
-            //primaryStage.setMaximized(true);
-            primaryStage.show();
-        }
-    }
 
     public static void main(String[] args) {
         launch(args);
     }
 
-    private File openFile(Stage stage){
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("open xml");
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("PWS (*.pws)", "*.pws"));
-        return fileChooser.showOpenDialog(stage);
-    }
+
+
 
 }
 

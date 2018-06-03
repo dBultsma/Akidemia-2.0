@@ -67,6 +67,7 @@
                   </ImageView>
                   <Button layoutX="827.0" layoutY="561.0" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="my-button" stylesheets="@MediaSweng/mybutton.css" />
                   <Button layoutX="964.0" layoutY="563.0" mnemonicParsing="false" onAction="#toSettings" prefHeight="98.0" prefWidth="116.0" style="-fx-background-color: transparent;" styleClass="settingsbutton" stylesheets="@MediaSweng/settingsbutton.css" />
+                  <Button layoutX="53.0" layoutY="594.0" mnemonicParsing="false" onAction="#BackToMainScene" text="Button" />
                </children>
             </AnchorPane>
          </right>
