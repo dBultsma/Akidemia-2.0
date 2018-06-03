@@ -42,6 +42,7 @@ public class Controller implements Initializable {
     public void PressGo(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("ChooseYourAdventure.fxml", window);
+
         //start();
     }
 

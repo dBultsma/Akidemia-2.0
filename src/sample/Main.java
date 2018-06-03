@@ -14,6 +14,8 @@ import javafx.scene.*;
 import javafx.scene.image.*;
 import javafx.stage.WindowEvent;
 import sun.awt.OSInfo;
+import java.io.*;
+import java.util.*;
 
 
 
@@ -25,21 +27,32 @@ public class Main extends Application {
 
     public GetOS type = new GetOS();
 
+
     GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     int width = gd.getDisplayMode().getWidth();
     int height = gd.getDisplayMode().getHeight();
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource(
+                "sample.fxml"));
         primaryStage.setTitle("Akidemia");
+
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+
+
             public void handle(WindowEvent we) {
-                we.consume();
-                Stage window = new Stage();
-                new ChangingScene().changeScene("childLockClose.fxml", window);
+                if (new ChildLock().childLockStatus().equals("locked")) {
+                    we.consume();
+                    Stage window = new Stage();
+                    new ChangingScene().changeScene("childLockClose.fxml", window);
+                } else {
+
+                    System.exit(0);
+                }
             }
         });
+
         primaryStage.setScene(new Scene(root, width, height));
         //primaryStage.setMaximized(true);
         primaryStage.show();

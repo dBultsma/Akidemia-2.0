@@ -2,6 +2,7 @@ package sample;
 
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -10,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 import java.io.IOException;
 
@@ -22,12 +24,10 @@ public class ChildLock {
     @FXML private PasswordField checkPassword;
 
     private String savedPassword = new String();
+    public String childLockStatus = new String();
+
 
     public void passwordChecker(ActionEvent event){
-
-        System.out.println("---------------------Check password--------------------------");
-
-
         ReadFile readPassword = new ReadFile();
         readPassword.openFile("password.txt");
         savedPassword = readPassword.readData();
@@ -53,7 +53,25 @@ public class ChildLock {
              passwordStorage.openFile("password.txt");
              passwordStorage.addData(setPassword.getText());
              passwordStorage.closeFile();
+
+            CreateFile childLockStatus = new CreateFile();
+            childLockStatus.openFile("childLockStatus.txt");
+            childLockStatus.addData("locked");
+            childLockStatus.closeFile();
+
+
+
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            window.setOnCloseRequest(new EventHandler<WindowEvent>() {
+
+                public void handle(WindowEvent we) {
+                    we.consume();
+                    Stage window = new Stage();
+                    new ChangingScene().changeScene("childLockClose.fxml", window);
+                }
+            });
+
             window.close();
 
         } else {
@@ -67,6 +85,10 @@ public class ChildLock {
         savedPassword = readPassword.readData();
         readPassword.closeFile();
         if(checkPassword.getText().contentEquals(savedPassword)){
+            CreateFile childLockStatus = new CreateFile();
+            childLockStatus.openFile("childLockStatus.txt");
+            childLockStatus.addData("unlocked");
+            childLockStatus.closeFile();
             System.exit(0);
         }
         else{
@@ -75,6 +97,12 @@ public class ChildLock {
 
     }
 
-
+    public String childLockStatus(){
+        ReadFile readChildLockStatus = new ReadFile();
+        readChildLockStatus.openFile("childLockStatus.txt");
+        childLockStatus = readChildLockStatus.readData();
+        readChildLockStatus.closeFile();
+        return childLockStatus;
+    }
 
 }
