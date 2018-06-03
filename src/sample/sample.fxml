@@ -10,7 +10,7 @@
 
 <Pane prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <ImageView fitHeight="1035.0" fitWidth="1416.0" layoutX="-133.0" layoutY="-136.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="1035.0" layoutX="-133.0" layoutY="-136.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@MediaSweng/forest_path_anime_background_by_wbd-d3l83r9.jpg" />
          </image>
@@ -51,14 +51,13 @@
                         <Image url="@MediaSweng/Akidemia%20Logo.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="98.0" fitWidth="94.0" layoutX="35.0" layoutY="544.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@MediaSweng/files.png" />
-                     </image>
-                  </ImageView>
                   <Button layoutX="827.0" layoutY="561.0" mnemonicParsing="false" onAction="#toChildLock" style="-fx-background-color: transparent; -fx-text-fill: transparent;" styleClass="my-button" stylesheets="@MediaSweng/mybutton.css" />
                   <Button layoutX="964.0" layoutY="563.0" mnemonicParsing="false" onAction="#toSettings" prefHeight="98.0" prefWidth="116.0" style="-fx-background-color: transparent;" styleClass="settingsbutton" stylesheets="@MediaSweng/settingsbutton.css" />
+
                   <Button layoutX="53.0" layoutY="594.0" mnemonicParsing="false" onAction="#pwsparser" text="Button" />
+
+                  <Button layoutX="105.0" layoutY="94.0" mnemonicParsing="false" onAction="#toCompanion" text="Spike Test" />
+
                </children>
             </AnchorPane>
          </right>
