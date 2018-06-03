@@ -32,7 +32,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, width, height));
         //primaryStage.setMaximized(true);
         primaryStage.show();
-        type.returnOSType();
+        //type.returnOSType();
     }
 
     

@@ -7,7 +7,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+
+
 public class ChangingScene {
+
+
     public Scene changeScene(String name, Stage window)  {
         Parent parentToScene = null;
         try {

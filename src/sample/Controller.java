@@ -127,7 +127,7 @@ public class Controller implements Initializable {
 
         root.getChildren().add( mediaView);
 
-        Scene scene = new Scene(root, 1280, 720);
+        Scene scene = new Scene(root, window.getWidth(), window.getHeight());
 
         window.setScene(scene);
         window.show();
