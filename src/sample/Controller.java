@@ -21,6 +21,7 @@ public class Controller implements Initializable {
 
     ChangingScene sc = new ChangingScene();
 
+
     @FXML public Button goButton;
 
     public void PressGo(ActionEvent event) throws IOException {

@@ -15,9 +15,6 @@ public class Main extends Application {
 
     public GetOS type = new GetOS();
 
-    
-
-
     GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     int width = gd.getDisplayMode().getWidth();
     int height = gd.getDisplayMode().getHeight();
@@ -32,6 +29,7 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, width, height));
         //primaryStage.setMaximized(true);
         primaryStage.show();
+        type.returnOSType();
     }
 
     
