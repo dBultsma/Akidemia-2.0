@@ -115,7 +115,7 @@ public class Controller implements Initializable {
 
         StackPane root = new StackPane();
 
-        MediaPlayer player = new MediaPlayer( new Media(getClass().getResource("MediaSweng/Welcome.mp4").toExternalForm()));
+        MediaPlayer player = new MediaPlayer( new Media(getClass().getResource("MediaSweng/WelcomeFixedAudio.mp4").toExternalForm()));
         MediaView mediaView = new MediaView(player);
         player.setVolume(1);
         player.setMute(false);
