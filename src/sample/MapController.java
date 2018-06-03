@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.image.ImageView;
@@ -72,87 +73,122 @@ public class MapController implements Initializable {
             addTextHandler(area4three, area43image);
             addTextHandler(area4four, area44image);
 
+//            area1aimage.setOnMouseClicked(e -> toArea1a(e));
+//            area1bimage.setOnMouseClicked(e -> toArea1b(e));
+//            area1cimage.setOnMouseClicked(e -> toArea1c(e));
+//            area1dimage.setOnMouseClicked(e -> toArea1d(e));
+            area2aimage.setOnMouseClicked(e -> toArea2a(e));
+            area2bimage.setOnMouseClicked(e -> toArea2b(e));
+            area2cimage.setOnMouseClicked(e -> toArea2c(e));
+            area2dimage.setOnMouseClicked(e -> toArea2d(e));
+            area3aimage.setOnMouseClicked(e -> toArea3a(e));
+            area3bimage.setOnMouseClicked(e -> toArea3b(e));
+            area3cimage.setOnMouseClicked(e -> toArea3c(e));
+            area3dimage.setOnMouseClicked(e -> toArea3d(e));
+            area41image.setOnMouseClicked(e -> toArea4a(e));
+            area42image.setOnMouseClicked(e -> toArea4b(e));
+            area43image.setOnMouseClicked(e -> toArea4c(e));
+            area44image.setOnMouseClicked(e -> toArea4d(e));
+
+
 
     }
 
 
 
-    public void PressGo(ActionEvent event) throws IOException {
+
+    public void PressGo(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("ChooseYourAdventure.fxml", window);
 
     }
-    public void toMap(ActionEvent event) throws IOException {
+    public void toMap(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("map.fxml", window);
     }
 
-    public void toArea3a(ActionEvent event) throws IOException {
+    public void toArea3a(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area3a.fxml", window);
     }
-    public void toArea3b(ActionEvent event) throws IOException {
+    public void toArea3b(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area3b.fxml", window);
     }
-    public void toArea3c(ActionEvent event) throws IOException {
+    public void toArea3c(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area3c.fxml", window);
     }
-    public void toArea3d(ActionEvent event) throws IOException {
+    public void toArea3d(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area3d.fxml", window);
     }
-    public void toArea1a(ActionEvent event) throws IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area1a.fxml", window);
-    }
-    public void toArea1b(ActionEvent event) throws IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area1b.fxml", window);
-    }
-    public void toArea1c(ActionEvent event) throws IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area1c.fxml", window);
-    }
-    public void toArea1d(ActionEvent event) throws IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area1d.fxml", window);
-    }
-    public void toArea2a(ActionEvent event) throws IOException {
+//    public void toArea1a(Event event) {
+//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        sc.changeScene("area1a.fxml", window);
+//    }
+//    public void toArea1b(Event event) {
+//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        sc.changeScene("area1b.fxml", window);
+//    }
+//    public void toArea1c(Event event) {
+//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        sc.changeScene("area1c.fxml", window);
+//    }
+//    public void toArea1d(Event event) {
+//        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+//        sc.changeScene("area1d.fxml", window);
+//    }
+    public void toArea2a(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area2a.fxml", window);
     }
-    public void toArea2b(ActionEvent event) throws IOException {
+    public void toArea2b(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area2b.fxml", window);
     }
-    public void toArea2c(ActionEvent event) throws IOException {
+    public void toArea2c(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area2c.fxml", window);
     }
-    public void toArea2d(ActionEvent event) throws IOException {
+    public void toArea2d(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area2d.fxml", window);
     }
+    public void toArea4a(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("4a.fxml", window);
+    }
+    public void toArea4b(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("4b.fxml", window);
+    }
+    public void toArea4c(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("4c.fxml", window);
+    }
+    public void toArea4d(Event event)  {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("4d.fxml", window);
+    }
 
 
-    public void MapStage1(ActionEvent event) throws IOException {
+    public void MapStage1(ActionEvent event) {
         map.setVisible(false);
         stage1.setVisible(true);
     }
 
-    public void MapStage2(ActionEvent event) throws IOException {
+    public void MapStage2(ActionEvent event) {
         map.setVisible(false);
         stage2.setVisible(true);
     }
 
-    public void MapStage3(ActionEvent event) throws IOException {
+    public void MapStage3(ActionEvent event)  {
         map.setVisible(false);
         stage3.setVisible(true);
     }
 
-    public void MapStage4(ActionEvent event) throws IOException {
+    public void MapStage4(ActionEvent event)  {
         map.setVisible(false);
         stage4.setVisible(true);
     }

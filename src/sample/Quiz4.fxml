@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import java.net.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="quizPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuizController4">
+   <children>
+      <Label fx:id="correctLabel" alignment="CENTER" layoutX="215.0" layoutY="280.0" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #b2dfee;" text="Correct!" visible="false">
+         <font>
+            <Font name="Myanmar Text" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="incorrectLabel" alignment="CENTER" layoutX="215.0" layoutY="280.0" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #b2dfee;" text="Incorrect!" visible="false">
+         <font>
+            <Font name="Myanmar Text" size="19.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="quizFinished" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b2dfee;" visible="false">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="mapButton" layoutX="241.0" layoutY="249.0" mnemonicParsing="false" onAction="#mapButtonPressed" prefHeight="56.0" prefWidth="119.0" stylesheets="@CSS%20Files/whitebutton.css" text="Back to map">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <Label alignment="CENTER" prefHeight="214.0" prefWidth="600.0" text="Oceans Quiz Finished" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Myanmar Text" size="44.0" />
+               </font>
+            </Label>
+            <Label fx:id="score100" alignment="CENTER" layoutX="1.0" layoutY="114.0" prefHeight="149.0" prefWidth="600.0" text="You got 4/4 correct! Well done! :)" textAlignment="RIGHT" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Myanmar Text" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="score75" alignment="CENTER" layoutX="1.0" layoutY="114.0" prefHeight="149.0" prefWidth="600.0" text="You got 3/4 correct! Well done! :)" textAlignment="RIGHT" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Myanmar Text" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="score50" alignment="CENTER" layoutX="1.0" layoutY="114.0" prefHeight="149.0" prefWidth="600.0" text="You got 2/4 correct!" textAlignment="RIGHT" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Myanmar Text" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="score25" alignment="CENTER" layoutX="1.0" layoutY="114.0" prefHeight="149.0" prefWidth="600.0" text="You got 1/4 correct! Better luck next time!" textAlignment="RIGHT" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Myanmar Text" size="30.0" />
+               </font>
+            </Label>
+            <Label fx:id="score0" alignment="CENTER" layoutX="1.0" layoutY="114.0" prefHeight="149.0" prefWidth="600.0" text="You got 0/4 correct!" textAlignment="RIGHT" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Myanmar Text" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="question1" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b2dfee;" visible="false">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="nextQuestion1" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ1Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+               <font>
+                  <Font name="Myanmar Text" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="confirmButton1" layoutX="70.0" layoutY="280.0" mnemonicParsing="false" onAction="#confirm1Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/whitebutton.css" text="Confirm">
+               <font>
+                  <Font name="Myanmar Text" size="15.0" />
+               </font>
+            </Button>
+            <RadioButton fx:id="radioB1" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="1 to 2m" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="q1" />
+               </toggleGroup>
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB2" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="3 to 4m" textFill="WHITE" toggleGroup="$q1">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB3" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="5 to 7m" textFill="WHITE" toggleGroup="$q1">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB4" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB1to4" text="8 to 10m" textFill="WHITE" toggleGroup="$q1">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <Label alignment="CENTER" prefHeight="81.0" prefWidth="600.0" text="How big do Liopleurodons grow to be?" textFill="WHITE">
+               <font>
+                  <Font name="Myanmar Text Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="question2" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b2dfee;" visible="false">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="nextQuestion2" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ2Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <Button fx:id="confirmButton2" layoutX="70.0" layoutY="280.0" mnemonicParsing="false" onAction="#confirm2Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/whitebutton.css" text="Confirm">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <RadioButton fx:id="radioB5" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="King Dinosaur" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="q2" />
+               </toggleGroup>
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB6" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Queen Lizard" textFill="WHITE" toggleGroup="$q2">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB7" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="Water Lizard" textFill="WHITE" toggleGroup="$q2">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB8" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB5to8" text="King Lizard" textFill="WHITE" toggleGroup="$q2">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <Label alignment="CENTER" layoutX="-2.0" prefHeight="81.0" prefWidth="600.0" text="What does Basilosaurus mean?" textFill="WHITE">
+               <font>
+                  <Font name="Myanmar Text Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="question3" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b2dfee;" visible="false">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="nextQuestion3" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextQ3Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next Question">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <Button fx:id="confirmButton3" layoutX="70.0" layoutY="280.0" mnemonicParsing="false" onAction="#confirm3Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/whitebutton.css" text="Confirm">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <RadioButton fx:id="radioB9" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now New Zealand" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="q3" />
+               </toggleGroup>
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB10" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now Europe" textFill="WHITE" toggleGroup="$q3">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB11" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now North America" textFill="WHITE" toggleGroup="$q3">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB12" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB9to12" text="What is now Africa" textFill="WHITE" toggleGroup="$q3">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <Label alignment="CENTER" layoutX="-2.0" layoutY="-1.0" prefHeight="81.0" prefWidth="600.0" text="Where could a Mauisaurus be found?" textFill="WHITE">
+               <font>
+                  <Font name="Myanmar Text Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="question4" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b2dfee;" visible="false">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="600.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="nextButton" layoutX="385.0" layoutY="280.0" mnemonicParsing="false" onAction="#nextPressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/bluebutton.css" text="Next">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <Button fx:id="confirmButton4" layoutX="70.0" layoutY="280.0" mnemonicParsing="false" onAction="#confirm4Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/whitebutton.css" text="Confirm">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <RadioButton fx:id="radioB13" layoutX="70.0" layoutY="95.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Birds" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="q4" />
+               </toggleGroup>
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB14" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Fish" textFill="WHITE" toggleGroup="$q4">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB15" layoutX="70.0" layoutY="175.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Turtles and plesiosaurs" textFill="WHITE" toggleGroup="$q4">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <RadioButton fx:id="radioB16" layoutX="70.0" layoutY="215.0" mnemonicParsing="false" onAction="#selectRadioB13to16" text="Plants" textFill="WHITE" toggleGroup="$q4">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></RadioButton>
+            <Label alignment="CENTER" prefHeight="87.0" prefWidth="600.0" text="What would a Kronosaurus eat lots of?" textFill="WHITE">
+               <font>
+                  <Font name="Myanmar Text Bold" size="27.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="quizStart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #b2dfee;">
+         <children>
+            <ImageView fitHeight="406.0" fitWidth="600.0" layoutY="-5.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/underwater-802092_960_720.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="startButton" layoutX="360.0" layoutY="265.0" mnemonicParsing="false" onAction="#startPressed" prefHeight="50.0" prefWidth="100.0" text="Start">
+               <stylesheets>
+                  <URL value="@CSS%20Files/prettybutton.css" />
+                  <URL value="@CSS%20Files/bluebutton.css" />
+               </stylesheets>
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <Button fx:id="backButton" layoutX="140.0" layoutY="265.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="50.0" prefWidth="100.0" stylesheets="@CSS%20Files/whitebutton.css" text="Back">
+               <font>
+                  <Font name="Myanmar Text" size="12.0" />
+               </font></Button>
+            <Label alignment="CENTER" layoutY="27.0" prefHeight="203.0" prefWidth="600.0" text="Oceans Quiz" textFill="WHITE">
+               <font>
+                  <Font name="Myanmar Text" size="56.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

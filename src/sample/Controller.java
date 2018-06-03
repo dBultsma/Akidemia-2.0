@@ -1,24 +1,35 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.image.*;
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class Controller {
+public class Controller implements Initializable {
 
     ChangingScene sc = new ChangingScene();
 
-    public void PressGo(ActionEvent event) throws IOException {
+    @FXML public Button goButton;
 
+    public void PressGo(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("ChooseYourAdventure.fxml", window);
+    }
+
+    public void dinoSelected (ActionEvent event) throws IOException {
+        goButton.setDisable((false));
     }
 
     public void toSettings(ActionEvent event) throws IOException {
@@ -72,4 +83,28 @@ public class Controller {
 //        ImageView.setStyle("-fx-image: url(\"MediaSweng/unlock.png\");");
 //    }
 
+    public void quiz1Pressed(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("Quiz1.fxml", window);
+    }
+
+    public void quiz2Pressed(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("Quiz2.fxml", window);
+    }
+
+    public void quiz3Pressed(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("Quiz3.fxml", window);
+    }
+
+    public void quiz4Pressed(ActionEvent event) throws IOException {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("Quiz4.fxml", window);
+    }
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 }

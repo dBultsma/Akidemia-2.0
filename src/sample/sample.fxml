@@ -50,7 +50,7 @@
          <right>
             <AnchorPane prefHeight="713.0" prefWidth="1066.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button id="prettybutton" layoutX="400.0" layoutY="329.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="95.0" prefWidth="244.0" stylesheets="@CSS%20Files/button.css" text="Play" textFill="WHITE">
+                  <Button id="prettybutton" fx:id="playButton" layoutX="400.0" layoutY="329.0" mnemonicParsing="false" onAction="#PressGo" prefHeight="95.0" prefWidth="244.0" stylesheets="@CSS%20Files/button.css" text="Play" textFill="WHITE">
                      <font>
                         <Font name="Dimbo Regular" size="47.0" />
                      </font>

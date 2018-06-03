@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area4Controller">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../Akidemia/src/sample/MediaSweng/krono.jpeg" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="270.0" fitWidth="374.0" layoutX="28.0" layoutY="42.0" pickOnBounds="true" />
+            <ImageView fitHeight="182.0" fitWidth="165.0" layoutX="410.0" layoutY="141.0" pickOnBounds="true" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+            <ImageView fitHeight="311.0" fitWidth="472.0" layoutX="83.0" layoutY="53.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../Akidemia/src/sample/MediaSweng/kronops.png" />
+               </image></ImageView>
+            <Label layoutX="192.0" layoutY="299.0" prefHeight="87.0" prefWidth="197.0" text="The name 'Kronosaurus' means &quot;Lizard of Kronos&quot;. They were named after the leader of the Greek Titans, Cronus" wrapText="true" />
+            <Label layoutX="435.0" layoutY="118.0" prefHeight="94.0" prefWidth="165.0" text="The Kronosaurus lived in the Early Cretaceous period, around the areas that now comprise Australia and Columbia" wrapText="true" />
+            <Label layoutX="10.0" layoutY="198.0" prefHeight="69.0" prefWidth="165.0" text="They were a marine reptile and not a dinosaur, as well as a close relative to the Liopleurodon" wrapText="true" />
+            <Label layoutX="408.0" layoutY="276.0" prefHeight="94.0" prefWidth="178.0" text="They had an elongated head, a short neck and a stiff body which was propelled by four flippers and a short tail" wrapText="true" />
+            <Label layoutX="403.0" layoutY="31.0" prefHeight="87.0" prefWidth="189.0" text="They typical grew to be around 9 to 10.5m in length and weighed up to 11 tons" wrapText="true" />
+            <Label layoutX="10.0" layoutY="122.0" prefHeight="87.0" prefWidth="137.0" text="They were carnivores and mainly ate turtles and plesiosaurs" wrapText="true" />
+         </children></AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="33.0" layoutY="6.0" prefHeight="62.0" prefWidth="220.0" text="Kronosaurus">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <ImageView fitHeight="134.0" fitWidth="127.0" layoutX="8.0" layoutY="266.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Akidemia-2.0-Area-3-info/Akidemia-2.0-Area-3-info/src/sample/MediaSweng/minimap.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
