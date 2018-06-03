@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -27,17 +28,25 @@ import javafx.stage.Stage;
 
 public class Area4Controller implements Initializable {
 
-    @FXML public Button quiz4;
+    @FXML
+    public Button quiz4;
 
     ChangingScene sc = new ChangingScene();
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
 
     public void quiz4Pressed(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("Quiz", window);
     }
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
+    public void toMap(Event event) {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("map.fxml", window);
+
 
     }
 }
