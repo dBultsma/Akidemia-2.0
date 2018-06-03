@@ -42,6 +42,7 @@ public class Controller implements Initializable {
     public void PressGo(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("ChooseYourAdventure.fxml", window);
+
         //start();
     }
 
@@ -73,7 +74,7 @@ public class Controller implements Initializable {
         Stage window = new Stage();
         sc.changeScene("SettingPassword.fxml", window);
     }
-    
+
     public void magCursor(Scene x) {
         Image image = new Image(getClass().getResource("MediaSweng/cursor.png").toExternalForm(),
                 20, 20, false, true);
