@@ -1,8 +1,11 @@
 package sample;
 
+
 import PWS.*;
 import PWS.ImagePws;
 import PWS.ShapePws;
+import PWS.Slide;
+import PWS.VideoPlayer;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;

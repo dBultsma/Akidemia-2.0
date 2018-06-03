@@ -1,8 +1,6 @@
-<<<<<<< HEAD:src/sample/GraphicModule.java
-package sample;
-=======
+
 package PWS;
->>>>>>> parser:src/PWS/GraphicsModule.java
+
 
 import javafx.animation.*;
 import javafx.event.EventHandler;

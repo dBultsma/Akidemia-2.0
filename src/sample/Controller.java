@@ -1,6 +1,7 @@
 package sample;
 
 import PWS.Presentation;
+
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -15,6 +16,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.scene.layout.Pane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -98,7 +100,7 @@ public class Controller implements Initializable {
 //        ImageView.setStyle("-fx-image: url(\"MediaSweng/unlock.png\");");
 //    }
 
-   /* public void quiz1Pressed(ActionEvent event) throws IOException {
+    public void quiz1Pressed(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("Quiz1.fxml", window);
     }
@@ -116,7 +118,7 @@ public class Controller implements Initializable {
     public void quiz4Pressed(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("Quiz4.fxml", window);
-    }*/
+    }
 
     public void startVideo(Event event) throws IOException{
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
