@@ -8,11 +8,17 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ChangingScene {
-    public Scene changeScene(String name, Stage window) throws IOException {
-        Parent parentToScene = FXMLLoader.load(getClass().getResource(name));
+    public Scene changeScene(String name, Stage window)  {
+        Parent parentToScene = null;
+        try {
+            parentToScene = FXMLLoader.load(getClass().getResource(name));
+        } catch (IOException e) {
+            System.err.println(e);
+            System.err.println(e.getMessage());
+            e.printStackTrace();
+        }
         Scene newScene = new Scene(parentToScene, window.getWidth(), window.getHeight());
         window.setScene(newScene);
-        window.setMaximized(true);
         window.show();
         return(newScene);
 
