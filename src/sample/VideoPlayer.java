@@ -37,7 +37,7 @@ public class VideoPlayer {
      * @param scene The scene that you want to place the video player on
      */
 
-    public VideoPlayer(Scene scene) {
+    public VideoPlayer(Scene scene) throws Exception {
         this(scene, "example");
     }
 
@@ -48,7 +48,7 @@ public class VideoPlayer {
      * @param scene The scene that you want to place the video player on
      * @param fileName The mp4 file name, do not place the '.mp4' extension in the string provided
      */
-    public VideoPlayer(Scene scene, String fileName) {
+    public VideoPlayer(Scene scene, String fileName) throws Exception {
         this(scene, fileName, System.getProperty("user.dir"));
     }
 
@@ -62,7 +62,7 @@ public class VideoPlayer {
      * @param fileName The mp4 file name, do not place the '.mp4' extension in the string provided
      * @param filePath The file path for where the mp4 file is located
      */
-    public VideoPlayer(Scene scene, String fileName, String filePath) {
+    public VideoPlayer(Scene scene, String fileName, String filePath) throws Exception {
 
         setFile(filePath);
         setFileName(fileName);
@@ -89,7 +89,7 @@ public class VideoPlayer {
             playVideo();
         }
         catch (Exception e) {
-            System.out.println("Error: Invalid file path");
+            throw e;
         }
 
     }

@@ -10,6 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.image.*;
@@ -103,8 +107,30 @@ public class Controller implements Initializable {
         sc.changeScene("Quiz4.fxml", window);
     }
 
+    public void start(Stage primaryStage) {
+        StackPane root = new StackPane();
+
+        MediaPlayer player = new MediaPlayer( new Media(getClass().getResource("MediaSweng/Welcome.mp4").toExternalForm()));
+        MediaView mediaView = new MediaView(player);
+
+        root.getChildren().add( mediaView);
+
+        Scene scene = new Scene(root, 1280, 720);
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+
+
+
+        player.play();
+
+    }
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
+    // if()   start();
+
     }
+
 }
