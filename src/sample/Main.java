@@ -45,6 +45,7 @@ public class Main extends Application {
                 if (new ChildLock().childLockStatus().equals("locked")) {
                     we.consume();
                     Stage window = new Stage();
+                    window.setAlwaysOnTop(true);
                     new ChangingScene().changeScene("childLockClose.fxml", window);
                 } else {
 
