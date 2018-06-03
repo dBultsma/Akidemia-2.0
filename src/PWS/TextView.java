@@ -154,6 +154,57 @@ public class TextView extends Region {
         getChildren().add(textFlowNode);
     }
 
+    public TextView(double x, double y, double width, double height, Font font, Color color, Duration startTime, Duration duration) {
+        textFlowNode = new TextFlow();
+
+        // Set layout params
+        setHeight(height);
+        setWidth(width);
+        setLayoutX(x);
+        setLayoutY(y);
+        setVisible(false); // Start invisible because it will animate in (this may happen immediately)
+
+//        char lastCharOfNode = '\0';
+//        for (Text textNode : textNodes) {
+//            // For any node that is not the first node, if the node doesn't start with a space
+//            // or the previous node didn't end with one, one must be inserted so that the text flows correctly with
+//            // white space between formatting blocks
+//            if (lastCharOfNode != '\0') {
+//                if (lastCharOfNode != ' ' && textNode.getText().charAt(0) != ' ') {
+//                    textNode.setText(" " + textNode.getText());
+//                }
+//            }
+//            // Update the last char
+//            lastCharOfNode = textNode.getText().charAt(textNode.getText().length() - 1);
+//
+//            // Overwrite formatting if any is set
+//            if (font != null)
+//                textNode.setFont(font);
+//
+//            if (color != null)
+//                textNode.setFill(color);
+//        }
+
+        // Animation, can use different properties here, but visibility is the default
+        final Timeline timeline = new Timeline();
+        timeline.getKeyFrames().addAll(
+                new KeyFrame(startTime, e -> setVisible(true)),
+                new KeyFrame(duration, e -> setVisible(false))
+        );
+        timeline.play();
+
+        // Add to the region
+        getChildren().add(textFlowNode);
+    }
+
+    public void addText(Text textNodes){
+        textFlowNode.getChildren().addAll(textNodes);
+    }
+
+    public TextFlow getTextFlowNode() {
+        return textFlowNode;
+    }
+
     // Must override these because the TextFlow doesn't necessarily fit to the container
     @Override
     public void setWidth(double width) {

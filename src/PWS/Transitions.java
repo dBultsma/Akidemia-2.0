@@ -1,20 +1,43 @@
 package PWS;
 
+import javafx.util.Duration;
+
 public class Transitions {
 
-    private String start;
+    private String startString;
+    private int startInt;
     private int duration;
 
     public Transitions(String start, int duration){
-        this.start = start;
         this.duration = duration;
+        try{
+            startInt = Integer.parseInt(start);
+            startString = null;
+        }
+        catch(NumberFormatException nfe){
+            startInt = 0;
+            startString = "trigger";
+        }
     }
 
-    public int getDuration() {
-        return duration;
+    public Duration getDuration() {
+        if(duration < 0){
+            return Duration.INDEFINITE;
+        }
+        else{
+            return Duration.millis(startInt + duration);
+        }
     }
 
-    public String getStart() {
-        return start;
+    public Duration getStart(){
+        return Duration.millis(startInt);
+    }
+
+    public String getStartString() {
+        return startString;
+    }
+
+    public int getStartInt() {
+        return startInt;
     }
 }

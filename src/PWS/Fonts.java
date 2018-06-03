@@ -1,5 +1,8 @@
 package PWS;
 
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
+
 public class Fonts {
 
     private String font;
@@ -20,12 +23,22 @@ public class Fonts {
         return font;
     }
 
-    public boolean isBold() {
-        return bold;
+    public FontWeight getBold() {
+        if(bold){
+            return FontWeight.BOLD;
+        }
+        else {
+            return FontWeight.NORMAL;
+        }
     }
 
-    public boolean isItalic() {
-        return italic;
+    public FontPosture getItalic() {
+        if(italic){
+            return FontPosture.ITALIC;
+        }
+        else{
+            return FontPosture.REGULAR;
+        }
     }
 
     public boolean isUnderline() {

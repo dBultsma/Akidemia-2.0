@@ -73,6 +73,17 @@ public abstract class GraphicsModule {
         return circle;
     }
 
+    public static Ellipse ellipse(double x, double y, double width, double height, Color color) {
+        Ellipse ellipse = new Ellipse(); //Creates a circle shape with specified radius and center location in pixels.
+        ellipse.setCenterX(x);
+        ellipse.setCenterY(y);
+        ellipse.setRadiusX(width/2);
+        ellipse.setRadiusY(height/2);
+        ellipse.setFill(color);
+        ellipse.setStroke(color);
+        return ellipse;
+    }
+
     public static Rectangle rectangle(double x, double y, double w, double h, Color color) {
         Rectangle rectangle = new Rectangle(); //Creates a rectangle with specified location and size.
         rectangle.setX(x);

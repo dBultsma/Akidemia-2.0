@@ -10,10 +10,10 @@ public class Slide {
     Transitions transitions;
 
     ArrayList<TextView> textViewArrayList;
-    ArrayList<Shape> shapeArrayList;
-    ArrayList<Image> imageArrayList;
+    ArrayList<ShapePws> shapePwsArrayList;
+    ArrayList<ImagePws> imageArrayList;
     ArrayList<Audio> audioArrayList;
-//    ArrayList<Video> videoArrayList;
+    ArrayList<VideoPlayer> videoArrayList;
 
     Pane pane;
 
@@ -24,45 +24,45 @@ public class Slide {
 
         this.audioArrayList = new ArrayList<>();
         this.imageArrayList = new ArrayList<>();
-        this.shapeArrayList = new ArrayList<>();
+        this.shapePwsArrayList = new ArrayList<>();
         this.textViewArrayList = new ArrayList<>();
-//        this.videoArrayList = new ArrayList<>();
+        this.videoArrayList = new ArrayList<>();
     }
 
     public void add(Audio audio){
         this.audioArrayList.add(audio);
     }
 
-    public void add(Image image){
+    public void add(ImagePws image){
         this.imageArrayList.add(image);
     }
 
-    public void add(Shape shape){
-        this.shapeArrayList.add(shape);
+    public void add(ShapePws shapePws){
+        this.shapePwsArrayList.add(shapePws);
     }
 
     public void add(TextView textView){
         this.textViewArrayList.add(textView);
     }
 
-//    public void add(Video video){
-//        this.videoArrayList.add(video);
-//    }
+    public void add(VideoPlayer videoPlayer){
+        this.videoArrayList.add(videoPlayer);
+    }
 
     public Pane getSlidePane(){
         pane = new Pane();
         for(TextView textView : textViewArrayList){
-            pane.getChildren().add(textView);
+            pane.getChildren().add(textView.getTextFlowNode());
         }
-        for(Shape shape : shapeArrayList){
-            pane.getChildren().add(shape.getShape());
+        for(ShapePws shapePws : shapePwsArrayList){
+            pane.getChildren().add(shapePws.getShape());
         }
-        for(Image image : imageArrayList){
+        for(ImagePws image : imageArrayList){
             pane.getChildren().add(image.getImageView());
         }
-//        for(Video video : videoViewArrayList){
-//            pane.getChildren().add(video);
-//        }
+        for(VideoPlayer videoPlayer : videoArrayList){
+            pane.getChildren().add(videoPlayer.getPane());
+        }
         return pane;
     }
 }
