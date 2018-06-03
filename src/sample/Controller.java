@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,6 +19,7 @@ import javafx.stage.Stage;
 import javafx.scene.*;
 import javafx.scene.image.*;
 import java.io.IOException;
+import java.io.UncheckedIOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -30,6 +32,7 @@ public class Controller implements Initializable {
     public void PressGo(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("ChooseYourAdventure.fxml", window);
+        //start();
     }
 
     public void dinoSelected (ActionEvent event) throws IOException {
@@ -107,30 +110,43 @@ public class Controller implements Initializable {
         sc.changeScene("Quiz4.fxml", window);
     }
 
-    public void start(Stage primaryStage) {
+    public void startVideo(Event event) throws IOException{
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
         StackPane root = new StackPane();
 
         MediaPlayer player = new MediaPlayer( new Media(getClass().getResource("MediaSweng/Welcome.mp4").toExternalForm()));
         MediaView mediaView = new MediaView(player);
+        player.setVolume(1);
+        player.setMute(false);
+        player.setAutoPlay(true);
+        player.setOnError(() -> {
+            System.err.println(player.getError());
+        });
 
         root.getChildren().add( mediaView);
 
         Scene scene = new Scene(root, 1280, 720);
 
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        window.setScene(scene);
+        window.show();
 
-
-
-        player.play();
-
+        player.setOnEndOfMedia(() -> {
+            try {
+                sc.changeScene("ChooseYourAdventure.fxml", window);
+            }
+            catch(Exception e) {
+                System.err.println(e);
+            }
+        });
     }
+
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-    // if()   start();
-
     }
+
 
 }
