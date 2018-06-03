@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area1Controller">
+    <children>
+        <ImageView fitHeight="402.0" fitWidth="668.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@MediaSweng/area_1d_back.jpg" />
+            </image>
+        </ImageView>
+        <AnchorPane prefHeight="403.0" prefWidth="603.0">
+            <children>
+                <ImageView fitHeight="217.0" fitWidth="527.0" layoutX="6.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/area_1_hadro.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="402.0" stroke="BLACK" strokeType="INSIDE" width="603.0" />
+                <ImageView fitHeight="217.0" fitWidth="527.0" layoutX="6.0" layoutY="132.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/area_1_hadro.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="302.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It could walk on two legs, and rest on its tail, much like a kangaroo! " wrappingWidth="228.380859375" />
+                <Text layoutX="53.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Hadrosaur (Large Lizard) was a herbivour from the late Cretacious period. " wrappingWidth="216.8095703125" />
+                <Text layoutX="39.0" layoutY="220.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Hadrosaur was part of the Hadrosaurid family, which were also called &quot;duck-billed dinosaurs.&quot;" wrappingWidth="186.205078125" />
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="403.0" prefWidth="290.0">
+            <children>
+                <Text layoutX="66.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hadrosaur">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+                <ImageView fitHeight="120.0" fitWidth="131.0" layoutX="39.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@MediaSweng/minimap.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
