@@ -48,6 +48,7 @@ public class MapController implements Initializable {
         addTextHandler(oceanlabel, oceanimage);
         addTextHandler(woodlandlabel, woodlandimage);
         addTextHandler(plainslabel, plainsimage);
+
         addButtonHandler(stage1, plainsimage);
         addButtonHandler(stage2, woodlandimage);
         addButtonHandler(stage3, mountainimage);
@@ -123,6 +124,7 @@ public class MapController implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area3d.fxml", window);
     }
+
     public void toArea1a(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area1a.fxml", window);
@@ -139,6 +141,7 @@ public class MapController implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area1d.fxml", window);
     }
+
     public void toArea2a(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("area2a.fxml", window);
