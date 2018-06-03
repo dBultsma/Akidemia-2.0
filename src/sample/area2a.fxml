@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
@@ -16,7 +17,7 @@
                 <Image url="@MediaSweng/Quetzalcoatlus720.png" />
             </image>
         </ImageView>
-        <AnchorPane prefHeight="720.0" prefWidth="1280.0">
+        <AnchorPane fx:id="area2ainfo" prefHeight="720.0" prefWidth="1280.0" visible="false">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#949494" height="720.0" opacity="0.59" width="1280.0" />
                 <Text fill="WHITE" layoutX="50.0" layoutY="118.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="7.0" text="Quetzalcoatlus" wrappingWidth="486.4951171875">
@@ -35,7 +36,7 @@
                     </font>
                 </Text>
             </children></AnchorPane>
-        <ImageView fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="area2aimage" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@MediaSweng/QuetzalcoatlusNoBackground720.png" />
             </image>
@@ -53,4 +54,8 @@
                 <Insets />
             </opaqueInsets></Button>
     </children>
+    <stylesheets>
+        <URL value="@MediaSweng/pane.css" />
+        <URL value="@MediaSweng/dimbofont.css" />
+    </stylesheets>
 </AnchorPane>
