@@ -24,7 +24,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("Akidemia");
         primaryStage.setScene(new Scene(root, width, height));
-        primaryStage.setMaximized(true);
+        //primaryStage.setMaximized(true);
         primaryStage.show();
     }
 
