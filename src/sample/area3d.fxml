@@ -9,61 +9,62 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area3Controller">
+<AnchorPane prefHeight="800.0" prefWidth="1200.0" styleClass="dimbo" stylesheets="@MediaSweng/dimbofont.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area3Controller">
     <children>
-        <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-            </image>
-        </ImageView>
+      <ImageView fitHeight="800.0" fitWidth="1200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@MediaSweng/plane4.jpg" />
+         </image>
+      </ImageView>
         <AnchorPane prefHeight="800.0" prefWidth="1200.0">
             <children>
-                <ImageView fitHeight="396.0" fitWidth="1220.0" layoutX="331.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="suchomimus1" fitHeight="396.0" fitWidth="1220.0" layoutX="340.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@MediaSweng/3dNB2.PNG" />
+                        <Image url="@MediaSweng/3dNBcrop.PNG" />
                     </image>
                 </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane prefHeight="800.0" prefWidth="1200.0">
+        <AnchorPane fx:id="pane6" prefHeight="800.0" prefWidth="1200.0" styleClass="dimbo" stylesheets="@MediaSweng/dimbofont.css" visible="false">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f2ff85" height="800.0" stroke="BLACK" strokeType="INSIDE" width="1200.0" />
-                <ImageView fitHeight="396.0" fitWidth="1220.0" layoutX="331.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="396.0" fitWidth="1220.0" layoutX="340.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@MediaSweng/3dNB2.PNG" />
+                        <Image url="@MediaSweng/3dNBcrop.PNG" />
                     </image>
                 </ImageView>
-                <Text layoutX="480.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Their name means &quot;crocodile mimic&quot;. They were named this as their head is very similar to a crocodiles" wrappingWidth="499.51568603515625">
+                <Text layoutX="480.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dimbo" text="Their name means &quot;crocodile mimic&quot;. They were named this as their head is very similar to a crocodiles" wrappingWidth="499.51568603515625">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="33.0" />
                     </font>
                 </Text>
-                <Text layoutX="75.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They llived between 125 and 112 millin years ago" wrappingWidth="381.3893127441406">
+                <Text layoutX="75.0" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dimbo" text="They llived between 125 and 112 million years ago" wrappingWidth="381.3893127441406">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="33.0" />
                     </font>
                 </Text>
-                <Text layoutX="75.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Suchomimus comes from the same family as the Spinsaurus." wrappingWidth="381.3893127441406">
+                <Text layoutX="75.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dimbo" text="The Suchomimus comes from the same family as the Spinsaurus." wrappingWidth="381.3893127441406">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="33.0" />
                     </font>
                 </Text>
-                <Text layoutX="75.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="They could grow to be as long as 12m and could weigh 6 tons." wrappingWidth="262.7226257324219">
+                <Text layoutX="75.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dimbo" text="They could grow to be as long as 12m and could weigh 6 tons." wrappingWidth="262.7226257324219">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="33.0" />
                     </font>
                 </Text>
-                <Text layoutX="75.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Their mouths held over 100 fairly blunt teeth, suggesting they mostly ate fish." wrappingWidth="381.3893127441406">
+                <Text layoutX="75.0" layoutY="530.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dimbo" text="Their mouths held over 100 fairly blunt teeth, suggesting they mostly ate fish." wrappingWidth="381.3893127441406">
                     <font>
-                        <Font size="24.0" />
+                        <Font size="33.0" />
                     </font>
                 </Text>
             </children>
         </AnchorPane>
-        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="dimbo" stylesheets="@MediaSweng/dimbofont.css">
             <children>
-                <Text layoutX="75.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Suchomimus">
+                <Text layoutX="75.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dimbo" text="Suchomimus">
                     <font>
-                        <Font size="36.0" />
+                        <Font size="44.0" />
                     </font>
                 </Text>
                 <Button layoutX="5.0" layoutY="605.0" mnemonicParsing="false" onAction="#toMap" prefHeight="161.0" prefWidth="162.0" styleClass="backgroundset" stylesheets="@MediaSweng/backgroundset.css" textFill="TRANSPARENT">
