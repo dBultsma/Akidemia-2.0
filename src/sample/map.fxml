@@ -286,7 +286,7 @@
             </ImageView> 
             <ImageView fx:id="plainsimage" fitHeight="295.0" fitWidth="527.0" layoutX="259.0" layoutY="300.0" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Desktop/Sweng/Akidemia-2.0/src/sample/MediaSweng/aaaa.png" />
+                  <Image url="@MediaSweng/aaaa.png" />
                </image>
             </ImageView>
             <ImageView fx:id="woodlandimage" fitHeight="339.0" fitWidth="392.0" layoutX="319.0" layoutY="115.0" preserveRatio="true">
