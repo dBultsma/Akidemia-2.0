@@ -31,7 +31,6 @@
                   <URL value="@CSS%20Files/prettybutton.css" />
                </stylesheets>
             </Button>
-            <Button mnemonicParsing="false" text="Button" />
             <ImageView fitHeight="645.0" fitWidth="771.0" layoutX="188.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@MediaSweng/submap2.png" />
@@ -219,7 +218,7 @@
             <Button layoutX="238.0" layoutY="98.0" mnemonicParsing="false" onAction="#toQuiz3" text="Quiz" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="stage4" layoutX="135.0" layoutY="194.0" prefHeight="533.0" prefWidth="789.0" visible="false">
+      <AnchorPane fx:id="stage4" layoutX="87.0" layoutY="171.0" prefHeight="556.0" prefWidth="837.0" visible="false">
          <children>
             <ImageView fx:id="area41image" fitHeight="251.0" fitWidth="326.0" layoutX="80.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -323,6 +322,7 @@
                <font>
                   <Font size="22.0" />
                </font></Button>
+
          </children>
       </AnchorPane>
    </children>

@@ -282,7 +282,7 @@ public class QuizController1 implements Initializable{
 
     public void backPressed1(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("area2.fxml", window);
+        sc.changeScene("map.fxml", window);
     }
 
     @Override

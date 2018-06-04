@@ -48,7 +48,10 @@ public class Main extends Application {
                     window.setAlwaysOnTop(true);
                     new ChangingScene().changeScene("childLockClose.fxml", window);
                 } else {
-
+                    CreateFile childLockStatus = new CreateFile();
+                    childLockStatus.openFile("childLockStatus.txt");
+                    childLockStatus.addData("unlocked");
+                    childLockStatus.closeFile();
                     System.exit(0);
                 }
             }
