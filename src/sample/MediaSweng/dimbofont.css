@@ -1,9 +1,12 @@
 @font-face {
     font-family: Dimbo;
-    src: url('Dimbo-Regular.ttf');
+    src: url("Dimbo-Regular.tff");
 }
 
 .dimbo {
 	-fx-font-family: Dimbo;
-
+	-fx-text-fill: red;
+	-fx-fill: red;
+	-fx-background-color: green;
+	-fx-font-size: 500pt;
 }
