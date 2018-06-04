@@ -43,8 +43,11 @@ public class ChildLock {
     }
 
     public void setPassword(ActionEvent event) {
-        System.out.println("----------------------Setting the password--------------------------");
-        if (setPassword.getText().trim().isEmpty()) {
+
+        if (new ChildLock().childLockStatus().equals("locked")) {
+            setPasswordLabel.setText("A password has already been created");
+        } else if(setPassword.getText().trim().isEmpty())
+         {
             setPasswordLabel.setText("Need to set a password");
         } else if (confirmPassword.getText().trim().isEmpty()) {
             setPasswordLabel.setText("Need to set a password");
