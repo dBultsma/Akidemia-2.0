@@ -258,7 +258,6 @@
                </font>
             </Text>
             <Button layoutX="98.0" layoutY="-50.0" mnemonicParsing="false" onAction="#toQuiz4" text="Quiz" />
-            <Button layoutX="17.0" layoutY="10.0" mnemonicParsing="false" onAction="#toMap" text="Back" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="map" prefHeight="200.0" prefWidth="200.0" stylesheets="@MediaSweng/dimbofont.css">
