@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -124,7 +125,10 @@ public class Controller implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("Quiz4.fxml", window);
     }
-
+    public void soundPlaywelcome(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Welcome_Audio.wav").toString());
+        sound.play();
+    }
     public void startVideo(Event event) throws IOException{
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 

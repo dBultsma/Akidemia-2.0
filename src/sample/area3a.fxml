@@ -62,11 +62,12 @@
                         <Font size="36.0" />
                     </font>
                 </Text>
+            <Button fx:id="buttona" layoutX="337.0" layoutY="52.0" mnemonicParsing="false" onAction="#soundPlay" text="Play" />
             </children>
         </AnchorPane>
-        <AnchorPane prefHeight="150.0" prefWidth="300.0">
+        <AnchorPane layoutX="41.0" prefHeight="150.0" prefWidth="300.0">
             <children>
-                <Text layoutX="75.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dimbo" text="Triceratops">
+                <Text layoutX="50.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="dimbo" text="Triceratops">
                     <font>
                         <Font size="44.0" />
                     </font>
