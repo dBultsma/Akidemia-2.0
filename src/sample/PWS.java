@@ -22,7 +22,7 @@ public class PWS extends Application{
 
     @Override
     public void start(Stage stage){
-        stage.setTitle("window");
+        stage.setTitle("Presentation");
 
         Group root = new Group();
         Scene scene = new Scene(root, 1280, 720);
