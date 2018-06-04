@@ -5,8 +5,5 @@
 
 .dimbo {
 	-fx-font-family: Dimbo;
-	-fx-text-fill: red;
-	-fx-fill: red;
-	-fx-background-color: green;
-	-fx-font-size: 500pt;
+	
 }
