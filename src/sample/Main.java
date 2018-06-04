@@ -35,7 +35,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource(
-                "map.fxml"));
+                "sample.fxml"));
         primaryStage.setTitle("Akidemia");
 
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
