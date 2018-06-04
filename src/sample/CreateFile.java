@@ -23,6 +23,14 @@ public class CreateFile {
         f.close();
     }
 
+    public void writeFile(String fileName, String data){
+        CreateFile file = new CreateFile();
+        file.openFile(fileName);
+        file.addData(data);
+        file.closeFile();
+
+    }
+
     // example of usage
     // CreateFile passwordStorage = new CreateFile();
     // passwordStorage.openFile(password.txt);

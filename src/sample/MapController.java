@@ -216,6 +216,26 @@ public class MapController implements Initializable {
         });
     }
 
+    public void toQuiz1(Event event)  {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("Quiz1.fxml", window);
+    }
+
+    public void toQuiz2(Event event)  {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("Quiz2.fxml", window);
+    }
+
+    public void toQuiz3(Event event)  {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("Quiz3.fxml", window);
+    }
+
+    public void toQuiz4(Event event)  {
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        sc.changeScene("Quiz4.fxml", window);
+    }
+
 
     public void transitions(){
         System.out.println(circle);

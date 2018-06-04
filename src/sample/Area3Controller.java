@@ -44,17 +44,21 @@ public class Area3Controller implements Initializable {
 
         if ("area3b.fxml".equals(fileName)) {
             // Do one thing
+            new CreateFile().writeFile("Area3b", "2");
             addButtonHandler3b(pane4, spinosaurus2);
         }
         else if ("area3a.fxml".equals(fileName)) {
             // The other thong
             addButtonHandler3a(pane3, triceratops1);
+            new CreateFile().writeFile("Area3a", "1");
         }
         else if ("area3c.fxml".equals(fileName)) {
+            new CreateFile().writeFile("Area3c", "3");
             // The other thong
             addButtonHandler3a(pane5, trex1);
         }
         else if ("area3d.fxml".equals(fileName)) {
+            new CreateFile().writeFile("Area3d", "4");
             // The other thong
             addButtonHandler3c(pane6, suchomimus1);
         }
