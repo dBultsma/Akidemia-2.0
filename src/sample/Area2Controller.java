@@ -80,10 +80,13 @@ import javafx.fxml.FXML;
 import javafx.scene.shape.Circle;
 import javafx.animation.*;
 import javafx.util.Duration;
+
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.text.Text;
+
 
 
 public class Area2Controller implements Initializable {
@@ -94,15 +97,19 @@ public class Area2Controller implements Initializable {
     private Timeline speechBubbleTimeline = new Timeline();
     private int speechmode = 0;
     int i =0;
-
+    AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
 
     ChangingScene sc = new ChangingScene();
 
     public void initialize(URL location, ResourceBundle resources) {
 
 
+
+
+
+
         addButtonHandler(area2ainfo, area2aimage);
-        AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
+     //   AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
         starterBubble();
 
         spike.setOnMouseEntered(e ->
@@ -146,6 +153,37 @@ public class Area2Controller implements Initializable {
             timelinetransition(val.doubleValue());
         });
 
+
+//        area2aimage.setOnMouseClicked(e -> {
+//                File path = new File(location.getFile());
+//                String fileName = path.getName();
+//
+//                if ("area4b.fxml".equals(fileName)) {
+//                    // Do one thing
+//                    new CreateFile().writeFile("Are4b", "2");
+//                    plonkSound.play();
+//                }
+//                else if ("area4a.fxml".equals(fileName)) {
+//                    // The other thong
+//                    new CreateFile().writeFile("Area3a", "1");
+//                    plonkSound.play();
+//                }
+//                else if ("area4c.fxml".equals(fileName)) {
+//                    new CreateFile().writeFile("Area4c", "3");
+//                    // The other thong
+//                    plonkSound.play();
+//
+//
+//                }
+//                else if ("area3d.fxml".equals(fileName)) {
+//                    new CreateFile().writeFile("Area4d", "4");
+//                    // The other thong
+//                    plonkSound.play();
+//                    //AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
+//
+//                }
+//
+//        });
     }
 
     public void timelinetransition(double x) {
@@ -224,5 +262,8 @@ public class Area2Controller implements Initializable {
                 20,20,false,true);
         ((Node)evt.getSource()).getScene().setCursor(new ImageCursor(image, 1, 1));
     }
+
+
+
 
 }

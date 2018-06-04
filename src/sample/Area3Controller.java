@@ -63,7 +63,12 @@ public class Area3Controller implements Initializable {
             addButtonHandler3c(pane6, suchomimus1);
         }
         AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
-            starterBubble();
+        AudioClip tri = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
+        AudioClip spi = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
+        AudioClip trex = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
+        AudioClip suc = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
+
+        starterBubble();
 
             spike.setOnMouseEntered(e ->
                     {
@@ -92,6 +97,10 @@ public class Area3Controller implements Initializable {
                     }
             );
 
+        spike.translateXProperty().addListener((obs, old, val) -> {
+            timelinetransition(val.doubleValue());
+        });
+
 
             spike.setOnMouseClicked(e -> {
                 if (i<= 0) {
@@ -102,9 +111,7 @@ public class Area3Controller implements Initializable {
             });
 
 
-            spike.translateXProperty().addListener((obs, old, val) -> {
-                timelinetransition(val.doubleValue());
-            });
+
         }
 
 
@@ -192,4 +199,27 @@ public class Area3Controller implements Initializable {
             }}
         );
     }
+
+
+    public void soundPlay(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Triceratops.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayb(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Spinosaurus.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayc(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/T-Rex.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayd(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Suchomimus.wav").toString());
+        sound.play();
+    }
+
+
 }
