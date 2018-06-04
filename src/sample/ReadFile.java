@@ -28,6 +28,16 @@ public class ReadFile {
         s.close();
     }
 
+    public String makeFile(String filename){
+
+        ReadFile readPassword = new ReadFile();
+        readPassword.openFile(filename);
+        String returnString = readPassword.readData();
+        readPassword.closeFile();
+
+        return returnString;
+    }
+
     //ReadFile readPassword = new ReadFile();
     //readPassword.openFile(filename);
     //readPassword.readData();

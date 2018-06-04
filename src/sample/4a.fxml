@@ -12,20 +12,15 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
          <image>
-            <Image url="@../Akidemia/src/sample/MediaSweng/lio%20copyright%20free.jpeg" />
+            <Image url="@MediaSweng/lio%20copyright%20free.jpeg" />
          </image>
       </ImageView>
-      <AnchorPane prefHeight="400.0" prefWidth="600.0">
-         <children>
-            <ImageView fitHeight="270.0" fitWidth="374.0" layoutX="28.0" layoutY="42.0" pickOnBounds="true" />
-            <ImageView fitHeight="182.0" fitWidth="165.0" layoutX="410.0" layoutY="141.0" pickOnBounds="true" />
-         </children></AnchorPane>
-      <AnchorPane prefHeight="400.0" prefWidth="563.0">
+      <AnchorPane fx:id="infoa" prefHeight="400.0" prefWidth="563.0" visible="false">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
             <ImageView fitHeight="341.0" fitWidth="455.0" layoutX="50.0" layoutY="17.0" pickOnBounds="true">
                <image>
-                  <Image url="@../Akidemia/src/sample/MediaSweng/liops.png" />
+                  <Image url="@MediaSweng/liops.png" />
                </image></ImageView>
             <Label layoutX="394.0" layoutY="103.0" prefHeight="40.0" prefWidth="197.0" text="The name 'Liopleurodon' means &quot;smooth-sided teeth&quot; " wrapText="true" />
             <Label layoutX="455.0" layoutY="123.0" prefHeight="94.0" prefWidth="165.0" text="Liopleurodons lived in the Jurassic Period" wrapText="true" />
@@ -40,16 +35,27 @@
                   <Font size="34.0" />
                </font>
             </Label>
-            <Button mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <ImageView fx:id="pica" fitHeight="341.0" fitWidth="455.0" layoutX="50.0" layoutY="17.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/liops.png" />
+               </image>
+            </ImageView>
+            <Button layoutY="275.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="134.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MediaSweng/minimap.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
-            <ImageView fitHeight="134.0" fitWidth="127.0" layoutX="8.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Akidemia-2.0-Area-3-info/Akidemia-2.0-Area-3-info/src/sample/MediaSweng/minimap.png" />
-               </image>
-            </ImageView>
          </children>
       </AnchorPane>
    </children>

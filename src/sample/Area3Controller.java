@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -29,44 +30,127 @@ public class Area3Controller implements Initializable {
    @FXML public ImageView spinosaurus1, spinosaurus2;
    @FXML public ImageView trex1;
    @FXML public ImageView suchomimus1;
+   @FXML public ImageView spike, speech1, speech2, findadino, almostthere;
+
+    int i = 0;
+    private Timeline speechBubbleTimeline = new Timeline();
+    private int speechmode = 0;
 
 
 
     public void initialize(URL location, ResourceBundle resources) {
-
-      //  addButtonHandler3a(pane3, triceratops1);
-       // addButtonHandler3b(pane4, spinosaurus1);
         File path = new File(location.getFile());
         String fileName = path.getName();
 
         if ("area3b.fxml".equals(fileName)) {
             // Do one thing
+            new CreateFile().writeFile("Area3b", "2");
             addButtonHandler3b(pane4, spinosaurus2);
         }
         else if ("area3a.fxml".equals(fileName)) {
             // The other thong
             addButtonHandler3a(pane3, triceratops1);
+            new CreateFile().writeFile("Area3a", "1");
         }
         else if ("area3c.fxml".equals(fileName)) {
+            new CreateFile().writeFile("Area3c", "3");
             // The other thong
             addButtonHandler3a(pane5, trex1);
         }
         else if ("area3d.fxml".equals(fileName)) {
+            new CreateFile().writeFile("Area3d", "4");
             // The other thong
             addButtonHandler3c(pane6, suchomimus1);
         }
+        AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
+            starterBubble();
 
-        /*if(fileName = "area3a.fxml") {
-            addButtonHandler(pane4, spinosaurus1, spinosaurus2);
+            spike.setOnMouseEntered(e ->
+                    {
+                        AudioClip spikeHello = null;
+
+
+
+                        switch ((int) Math.round(Math.random() * 3 )) {
+                            case 0:
+                                spikeHello = new AudioClip(getClass().getResource("MediaSweng/Spike_Here_To_Help.wav").toString());
+                                break;
+                            case 1:
+                                spikeHello = new AudioClip(getClass().getResource("MediaSweng/Spike_Hello.wav").toString());
+                                break;
+                            case 2:
+                                spikeHello = new AudioClip(getClass().getResource("MediaSweng/Spike_Hi_im_Spike.wav").toString());
+                                break;
+                            case 3:
+                                spikeHello = new AudioClip(getClass().getResource("MediaSweng/Spike_Hiya.wav").toString());
+                                break;
+                        }
+
+                        if (spikeHello != null) {
+                            spikeHello.play();
+                        }
+                    }
+            );
+
+
+            spike.setOnMouseClicked(e -> {
+                if (i<= 0) {
+                    transitions();
+                    plonkSound.play();
+                    i++;
+                }
+            });
+
+
+            spike.translateXProperty().addListener((obs, old, val) -> {
+                timelinetransition(val.doubleValue());
+            });
         }
-*/
-
-      //  if( stage.getScene() ==  "area4")//addButtonHandler(pane3, triceratops1, triceratops2);
 
 
-        //addButtonHandler(pane3, triceratops1, triceratops2);
 
+
+    public void timelinetransition(double x) {
+        int speechmode = -1;
+        if (this.speechmode != 1) {
+            speechmode = 1;
+            speechBubbleTimeline.stop();
+            speechBubbleTimeline.getKeyFrames().clear();
+            speech1.setVisible(false);
+            speech2.setVisible(false);
+            speechBubbleTimeline.getKeyFrames().addAll(
+                    new KeyFrame(Duration.ZERO, e -> speech1.setVisible(false)),
+                    new KeyFrame(Duration.seconds(2), e -> findadino.setVisible(true)),
+                    new KeyFrame(Duration.seconds(5), e -> findadino.setVisible(false)),
+                    new KeyFrame(Duration.seconds(7), e -> almostthere.setVisible(true)),
+                    new KeyFrame(Duration.seconds(10), e -> almostthere.setVisible(false)));
+
+        }
+
+        if (this.speechmode != speechmode) {
+            this.speechmode = speechmode;
+            speechBubbleTimeline.play();
+        }
     }
+
+
+
+    public void starterBubble(){ speech1.setVisible(true);}
+
+    public void transitions() {
+        final Duration SEC_3 = Duration.millis(3000);
+        TranslateTransition tt = new TranslateTransition(Duration.millis(2000));
+        tt.setFromX(0);
+        tt.setToX(-200);
+
+
+        SequentialTransition seqT = new SequentialTransition(spike , tt );
+        seqT.play();
+    }
+
+
+
+
 
     ChangingScene sc = new ChangingScene();
 
@@ -108,7 +192,4 @@ public class Area3Controller implements Initializable {
             }}
         );
     }
-
-
-
 }
