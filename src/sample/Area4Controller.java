@@ -56,14 +56,6 @@ public class Area4Controller implements Initializable {
             addButtonHandlerA(infod, picd);
         }
 
-
-        //addButtonHandlerA(infoa, pica);
-        //addButtonHandlerA(infob, picba);
-        //addButtonHandlerA(infob, picbb);
-        //addButtonHandlerA(infoc, picca);
-        //addButtonHandlerA(infoc, piccb);
-        //addButtonHandlerA(infod, picd);
-
     }
 
     public void toMap(Event event) {
@@ -91,30 +83,4 @@ public class Area4Controller implements Initializable {
 
         });
     }
-
-
-//    public void area4a(Event event){
-////        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-////        sc.changeScene("4a.fxml", window);
-////        grey1.setVisible(true);
-////    }
-////
-////    public void area4b(Event event){
-////        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-////        sc.changeScene("4b.fxml", window);
-////        grey2.setVisible(true);
-////    }
-////
-////    public void area4c(Event event){
-////        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-////        sc.changeScene("4c.fxml", window);
-////        grey3.setVisible(true);
-////    }
-////
-////    public void area4d(Event event){
-////        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-////        sc.changeScene("4d.fxml", window);
-////        grey4.setVisible(true);
-////    }
-
 }

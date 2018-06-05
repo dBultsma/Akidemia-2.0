@@ -13,7 +13,6 @@ import java.net.URL;
 
 public class ChangingScene {
 
-
     public Scene changeScene(String name, Stage window)  {
         Parent parentToScene = null;
         try {
@@ -28,7 +27,6 @@ public class ChangingScene {
         window.show();
 
         return(newScene);
-
     }
 }
 

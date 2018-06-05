@@ -87,8 +87,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.text.Text;
 
-
-
 public class Area2Controller implements Initializable {
 
     @FXML public AnchorPane area2ainfo;
@@ -103,20 +101,12 @@ public class Area2Controller implements Initializable {
 
     public void initialize(URL location, ResourceBundle resources) {
 
-
-
-
-
-
         addButtonHandler(area2ainfo, area2aimage);
-     //   AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
         starterBubble();
 
         spike.setOnMouseEntered(e ->
                 {
                     AudioClip spikeHello = null;
-
-
 
                     switch ((int) Math.round(Math.random() * 3 )) {
                         case 0:
@@ -152,38 +142,6 @@ public class Area2Controller implements Initializable {
         spike.translateXProperty().addListener((obs, old, val) -> {
             timelinetransition(val.doubleValue());
         });
-
-
-//        area2aimage.setOnMouseClicked(e -> {
-//                File path = new File(location.getFile());
-//                String fileName = path.getName();
-//
-//                if ("area4b.fxml".equals(fileName)) {
-//                    // Do one thing
-//                    new CreateFile().writeFile("Are4b", "2");
-//                    plonkSound.play();
-//                }
-//                else if ("area4a.fxml".equals(fileName)) {
-//                    // The other thong
-//                    new CreateFile().writeFile("Area3a", "1");
-//                    plonkSound.play();
-//                }
-//                else if ("area4c.fxml".equals(fileName)) {
-//                    new CreateFile().writeFile("Area4c", "3");
-//                    // The other thong
-//                    plonkSound.play();
-//
-//
-//                }
-//                else if ("area3d.fxml".equals(fileName)) {
-//                    new CreateFile().writeFile("Area4d", "4");
-//                    // The other thong
-//                    plonkSound.play();
-//                    //AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
-//
-//                }
-//
-//        });
     }
 
     public void timelinetransition(double x) {
@@ -209,8 +167,6 @@ public class Area2Controller implements Initializable {
         }
     }
 
-
-
     public void starterBubble(){ speech1.setVisible(true);}
 
     public void transitions() {
@@ -219,12 +175,9 @@ public class Area2Controller implements Initializable {
         tt.setFromX(0);
         tt.setToX(-200);
 
-
         SequentialTransition seqT = new SequentialTransition(spike , tt );
         seqT.play();
     }
-
-
 
     public void toMap(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -240,6 +193,7 @@ public class Area2Controller implements Initializable {
             text.setVisible(false);
         });
     }
+
     public void addButtonHandler(AnchorPane anchorPane, ImageView imageView) {
         imageView.addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
             Color color = imageView.getImage().getPixelReader().getColor((int)e.getX(),(int)e.getY());
@@ -257,13 +211,8 @@ public class Area2Controller implements Initializable {
     }
 
     public void excCursor(MouseEvent evt) {
-
         Image image = new Image(getClass().getResource("MediaSweng/exclamation.png").toExternalForm(),
                 20,20,false,true);
         ((Node)evt.getSource()).getScene().setCursor(new ImageCursor(image, 1, 1));
     }
-
-
-
-
 }

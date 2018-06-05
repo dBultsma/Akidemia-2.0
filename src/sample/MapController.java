@@ -90,13 +90,7 @@ public class MapController implements Initializable {
             area42image.setOnMouseClicked(e -> toArea4b(e));
             area43image.setOnMouseClicked(e -> toArea4c(e));
             area44image.setOnMouseClicked(e -> toArea4d(e));
-
-
-
     }
-
-
-
 
     public void PressGo(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -175,7 +169,6 @@ public class MapController implements Initializable {
         sc.changeScene("4d.fxml", window);
     }
 
-
     public void MapStage1(ActionEvent event) {
         map.setVisible(false);
         stage1.setVisible(true);
@@ -212,7 +205,6 @@ public class MapController implements Initializable {
                 anchorPane.setVisible(true);
                 map.setVisible(false);
             }
-
         });
     }
 
@@ -235,7 +227,6 @@ public class MapController implements Initializable {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("Quiz4.fxml", window);
     }
-
 
     public void transitions(){
         System.out.println(circle);
@@ -266,8 +257,4 @@ public class MapController implements Initializable {
         SequentialTransition seqT = new SequentialTransition (circle, pt, ft, tt, rt, st);
         seqT.play();
     }
-
-
-
-
 }

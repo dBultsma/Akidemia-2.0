@@ -32,7 +32,6 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
 
-
     ChangingScene sc = new ChangingScene();
     Presentation presentation;
     Pane currentSlide;
@@ -43,8 +42,6 @@ public class Controller implements Initializable {
     public void PressGo(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("ChooseYourAdventure.fxml", window);
-
-        //start();
     }
 
     public void dinoSelected (ActionEvent event) throws IOException {
@@ -102,10 +99,6 @@ public class Controller implements Initializable {
         magCursor(((Node)evt.getSource()).getScene());
     }
 
-//    public void unlockAnimation(Stage primaryStage) throws Exception {
-//        ImageView.setStyle("-fx-image: url(\"MediaSweng/unlock.png\");");
-//    }
-
     public void quiz1Pressed(ActionEvent event) throws IOException {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("Quiz1.fxml", window);
@@ -160,14 +153,10 @@ public class Controller implements Initializable {
         });
     }
 
-
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-
-
 
     private File openFile(Stage stage) {
         FileChooser fileChooser = new FileChooser();
@@ -181,15 +170,12 @@ public class Controller implements Initializable {
         pws.start(new Stage());
     }
 
-
     public void parser(Stage window) throws IOException {
-
 
         Parser parser = new Parser();
         Group group = new Group();
         File xml = openFile(window);
         presentation = parser.Parser(xml);
-
 
         if (presentation != null) {
             Scene scene = new Scene(group, window.getWidth(), window.getHeight());

@@ -43,8 +43,6 @@ public class Area1Controller implements Initializable {
                 {
                     AudioClip spikeHello = null;
 
-
-
                     switch ((int) Math.round(Math.random() * 3 )) {
                         case 0:
                             spikeHello = new AudioClip(getClass().getResource("MediaSweng/Spike_Here_To_Help.wav").toString());
@@ -66,7 +64,6 @@ public class Area1Controller implements Initializable {
                 }
         );
 
-
         spike.setOnMouseClicked(e -> {
             if (i<= 0) {
                 transitions();
@@ -74,7 +71,6 @@ public class Area1Controller implements Initializable {
                 i++;
             }
         });
-
 
         spike.translateXProperty().addListener((obs, old, val) -> {
             timelinetransition(val.doubleValue());
@@ -84,7 +80,6 @@ public class Area1Controller implements Initializable {
     public void toMap(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("map.fxml", window);
-
     }
 
     public void addButtonHandler(AnchorPane anchorPane, ImageView imageView) {
@@ -107,7 +102,6 @@ public class Area1Controller implements Initializable {
                     new KeyFrame(Duration.seconds(5), e -> findadino.setVisible(false)),
                     new KeyFrame(Duration.seconds(7), e -> almostthere.setVisible(true)),
                     new KeyFrame(Duration.seconds(10), e -> almostthere.setVisible(false)));
-
         }
 
         if (this.speechmode != speechmode) {
@@ -116,8 +110,6 @@ public class Area1Controller implements Initializable {
         }
     }
 
-
-
     public void starterBubble(){ speech1.setVisible(true);}
 
     public void transitions() {
@@ -125,7 +117,6 @@ public class Area1Controller implements Initializable {
         TranslateTransition tt = new TranslateTransition(Duration.millis(2000));
         tt.setFromX(0);
         tt.setToX(-200);
-
 
         SequentialTransition seqT = new SequentialTransition(spike , tt );
         seqT.play();

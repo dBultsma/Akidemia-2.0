@@ -17,16 +17,11 @@ import sun.awt.OSInfo;
 import java.io.*;
 import java.util.*;
 
-
-
 import javax.swing.*;
 import java.awt.*;
 
 
 public class Main extends Application {
-
-    public GetOS type = new GetOS();
-
 
     GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     int width = gd.getDisplayMode().getWidth();
@@ -39,7 +34,6 @@ public class Main extends Application {
         primaryStage.setTitle("Akidemia");
 
         primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-
 
             public void handle(WindowEvent we) {
                 if (new ChildLock().childLockStatus().equals("locked")) {
@@ -58,19 +52,12 @@ public class Main extends Application {
         });
 
         primaryStage.setScene(new Scene(root, width, height));
-        //primaryStage.setMaximized(true);
         primaryStage.show();
-        //type.returnOSType();
     }
-
-
 
     public static void main(String[] args) {
         launch(args);
     }
-
-
-
 
 }
 

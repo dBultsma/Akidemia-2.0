@@ -39,7 +39,6 @@ public class ChildLock {
         else{
             PasswordLabel.setText("Your Password is wrong");
         }
-
     }
 
     public void setPassword(ActionEvent event) {
@@ -62,8 +61,6 @@ public class ChildLock {
             childLockStatus.addData("locked");
             childLockStatus.closeFile();
 
-
-
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
             window.setOnCloseRequest(new EventHandler<WindowEvent>() {
@@ -74,7 +71,6 @@ public class ChildLock {
                     new ChangingScene().changeScene("childLockClose.fxml", window);
                 }
             });
-
             window.close();
 
         } else {
@@ -107,5 +103,4 @@ public class ChildLock {
         readChildLockStatus.closeFile();
         return childLockStatus;
     }
-
 }

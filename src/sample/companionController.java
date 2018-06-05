@@ -32,20 +32,14 @@ public class companionController implements Initializable {
 
     private Timeline speechBubbleTimeline = new Timeline();
 
-
-
-
     AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
 
     public void initialize(URL location, ResourceBundle resources) {
-       // transitions();
         starterBubble();
 
         spike.setOnMouseEntered(e ->
                 {
                     AudioClip spikeHello = null;
-
-
 
                     switch ((int) Math.round(Math.random() * 3 )) {
                         case 0:
@@ -68,7 +62,6 @@ public class companionController implements Initializable {
                 }
         );
 
-
         spike.setOnMouseClicked(e -> {
             if (i<= 0) {
                 transitions();
@@ -77,13 +70,10 @@ public class companionController implements Initializable {
             }
         });
 
-
         spike.translateXProperty().addListener((obs, old, val) -> {
             timelinetransition(val.doubleValue());
         });
     }
-
-
 
     private int speechmode = 0;
     public void timelinetransition(double x) {
@@ -113,31 +103,12 @@ public class companionController implements Initializable {
         }
     }
 
-
-
     public void transitions() {
         final Duration SEC_3 = Duration.millis(3000);
 
-        //PauseTransition pt = new PauseTransition(Duration.millis(1000));
-//        FadeTransition ft = new FadeTransition(SEC_3);
-//        ft.setFromValue(1.0);
-//        ft.setToValue(0.3);
-//        ft.setCycleCount(2);
-//        ft.setAutoReverse(true);
         TranslateTransition tt = new TranslateTransition(Duration.millis(2000));
         tt.setFromX(0);
         tt.setToX(-200);
-        //tt.setCycleCount(1);
-        //tt.setAutoReverse(true);
-//        RotateTransition rt = new RotateTransition(SEC_3);
-//        rt.setByAngle(720);
-//        rt.setCycleCount(4);
-//        rt.setAutoReverse(false);
-//        ScaleTransition st = new ScaleTransition(Duration.millis(4000));
-//        st.setByX(1.5);
-//        st.setByY(1.5);
-//        st.setCycleCount(2);
-//        st.setAutoReverse(true);
 
         SequentialTransition seqT = new SequentialTransition(spike , tt );
         seqT.play();
