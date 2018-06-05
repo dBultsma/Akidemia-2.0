@@ -91,7 +91,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="stage3" prefHeight="730.0" prefWidth="1171.0">
+      <AnchorPane fx:id="stage3" prefHeight="730.0" prefWidth="1171.0" visible="false">
          <children>
             <Button layoutX="23.0" layoutY="21.0" mnemonicParsing="false" onAction="#toMap" prefHeight="42.0" prefWidth="67.0" stylesheets="@CSS%20Files/prettybutton.css" text="Back">
                <font>
@@ -260,7 +260,7 @@
             <Button layoutX="98.0" layoutY="-50.0" mnemonicParsing="false" onAction="#toQuiz4" text="Quiz" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="map" prefHeight="200.0" prefWidth="200.0" stylesheets="@MediaSweng/dimbofont.css" visible="false">
+      <AnchorPane fx:id="map" prefHeight="200.0" prefWidth="200.0" stylesheets="@MediaSweng/dimbofont.css">
          <children>
             <ImageView fx:id="oceanimage" fitHeight="776.0" fitWidth="991.0" layoutX="181.0" layoutY="-36.0" preserveRatio="true">
                <image>
