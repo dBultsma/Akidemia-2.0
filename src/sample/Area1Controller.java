@@ -18,6 +18,7 @@ import javafx.scene.image.*;
 import javafx.animation.*;
 import javafx.util.Duration;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.ResourceBundle;
 import java.net.URL;
@@ -28,6 +29,7 @@ public class Area1Controller implements Initializable {
     @FXML public ImageView targetDino;
     @FXML public AnchorPane infoPane;
     @FXML public ImageView spike, speech1, speech2, findadino, almostthere;
+    @FXML public Button button;
     private Timeline speechBubbleTimeline = new Timeline();
     private int speechmode = 0;
     int i =0;
@@ -136,6 +138,7 @@ public class Area1Controller implements Initializable {
     public void soundPlayHadrosaurus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Hadrosaurus.wav").toString());
         sound.play();
+        System.out.println("test");
     }
 
     public void soundPlayStegosaurus(){

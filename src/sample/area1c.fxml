@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,24 +14,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="685.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area1Controller">
+<AnchorPane prefHeight="685.0" prefWidth="1029.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Area1Controller">
     <children>
         <ImageView fitHeight="689.0" fitWidth="1040.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
             <image>
                 <Image url="@MediaSweng/area_1c_back.jpg" />
             </image>
         </ImageView>
-        <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" visible="false">
-            <children>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="689.0" stroke="BLACK" strokeType="INSIDE" width="1028.0" />
-                <Text layoutX="26.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Stegosaurus (meaning &quot;Roofed Lizard&quot;) is a herbivorous dinosaur from the late Jurassic period. The plates on its back could blush (flush with blood) which would help the Stegosaurus find a mate, intimidate predators, and cool itself down. The spikes on its tail were used for defence against predators such as the Allosaurus. These would often be epic battles!" wrappingWidth="342.8095703125" />
-                <Text layoutX="16.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stegosaurus" x="10.0" y="20.0">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Text>
-            </children>
-        </AnchorPane>
         <AnchorPane layoutY="-8.0" prefHeight="412.0" prefWidth="164.0">
             <children>
                 <ImageView fx:id="targetDino" fitHeight="428.0" fitWidth="592.0" layoutX="294.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
@@ -38,7 +33,28 @@
                         <Image url="@MediaSweng/minimap.png" />
                     </image>
                 </ImageView>
-            <Button layoutX="389.0" layoutY="56.0" mnemonicParsing="false" onAction="#soundPlayStegosaurus" text="Play" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="689.0" stroke="BLACK" strokeType="INSIDE" width="1028.0" />
+                <Text layoutX="26.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Stegosaurus (meaning &quot;Roofed Lizard&quot;) is a herbivorous dinosaur from the late Jurassic period. The plates on its back could blush (flush with blood) which would help the Stegosaurus find a mate, intimidate predators, and cool itself down. The spikes on its tail were used for defence against predators such as the Allosaurus. These would often be epic battles!" wrappingWidth="342.8095703125" />
+            <Button layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#soundPlayStegosaurus" text="Play" />
+                <Text layoutX="16.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stegosaurus" x="10.0" y="20.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+            <ImageView fitHeight="121.0" fitWidth="132.0" layoutX="42.0" layoutY="526.0" onMouseClicked="#toMap" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/minimap.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="targetDino1" fitHeight="428.0" fitWidth="592.0" layoutX="295.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/area_1_stego.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
       <AnchorPane layoutX="318.0" layoutY="486.0" prefHeight="200.0" prefWidth="705.0" stylesheets="@MediaSweng/spike.css">
