@@ -15,17 +15,6 @@
                 <Image url="@MediaSweng/area_1b_back.jpg" />
             </image>
         </ImageView>
-        <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" visible="false">
-            <children>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="684.0" stroke="BLACK" strokeType="INSIDE" width="1028.0" />
-                <Text layoutX="29.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Allosaurus (meaning &quot;Different Lizard&quot;) was a carnivorous dinosaur from the late Jurassic period. They were a member of the Therapod family. This family also included the famous Tyrannosaurus Rex. The Allosaurus was the 5th largest land predator to have ever lived. They famously hunted stegosaurus, as we have found their remains with holes in their bones, matching the pattern of a stegosaurus's spiked tail! They were also known to scavenge for food." wrappingWidth="368.8095703125" />
-                <Text layoutX="19.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allosaurus" x="10.0" y="20.0">
-                    <font>
-                        <Font name="System Bold" size="14.0" />
-                    </font>
-                </Text>
-            </children>
-        </AnchorPane>
         <AnchorPane prefHeight="200.0" prefWidth="200.0">
             <children>
                 <ImageView fx:id="targetDino" fitHeight="416.0" fitWidth="613.0" layoutX="140.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
@@ -38,7 +27,28 @@
                         <Image url="@MediaSweng/minimap.png" />
                     </image>
                 </ImageView>
-            <Button layoutX="411.0" layoutY="44.0" mnemonicParsing="false" onAction="#soundPlayAllosaurus" text="Play" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="infoPane" prefHeight="200.0" prefWidth="200.0" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="684.0" stroke="BLACK" strokeType="INSIDE" width="1028.0" />
+            <Button layoutX="300.0" layoutY="200.0" mnemonicParsing="false" onAction="#soundPlayAllosaurus" text="Play" />
+                <Text layoutX="29.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Allosaurus (meaning &quot;Different Lizard&quot;) was a carnivorous dinosaur from the late Jurassic period. They were a member of the Therapod family. This family also included the famous Tyrannosaurus Rex. The Allosaurus was the 5th largest land predator to have ever lived. They famously hunted stegosaurus, as we have found their remains with holes in their bones, matching the pattern of a stegosaurus's spiked tail! They were also known to scavenge for food." wrappingWidth="368.8095703125" />
+                <Text layoutX="19.0" layoutY="9.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allosaurus" x="10.0" y="20.0">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Text>
+            <ImageView fitHeight="106.0" fitWidth="107.0" layoutX="33.0" layoutY="519.0" onMouseClicked="#toMap" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/minimap.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="targetDino1" fitHeight="416.0" fitWidth="613.0" layoutX="139.0" layoutY="224.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/area_1_allo.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
       <AnchorPane layoutX="305.0" layoutY="482.0" prefHeight="200.0" prefWidth="705.0" stylesheets="@MediaSweng/spike.css">
