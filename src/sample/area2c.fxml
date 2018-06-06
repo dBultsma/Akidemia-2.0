@@ -25,26 +25,6 @@
                 <Image url="@MediaSweng/DimorphodonBackground.png" />
             </image>
         </ImageView>
-        <AnchorPane fx:id="area2ainfo" prefHeight="720.0" prefWidth="1280.0">
-            <children>
-                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#949494" height="720.0" opacity="0.59" width="1280.0" />
-                <Text fill="WHITE" layoutX="50.0" layoutY="118.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="7.0" text="Dimorphodon" wrappingWidth="486.4951171875">
-                    <font>
-                        <Font name="Dimbo Regular" size="96.0" />
-                    </font>
-                </Text>
-                <Text fill="BLACK" layoutX="50.0" layoutY="178.0" text="These are medium sized pterosaurs." wrappingWidth="586.4951171875">
-                    <font>
-                        <Font name="Dimbo Regular" size="40.0" />
-                    </font>
-                </Text>
-                <Text fill="BLACK" layoutX="300.0" layoutY="578.0" text="Dimorphodons are a genus of flying dinosaurs from the early Jurassic Period. Adult dimorphodons have a wingspan of 4.6 feet." wrappingWidth="750.0">
-                    <font>
-                        <Font name="Dimbo Regular" size="40.0" />
-                    </font>
-                </Text>
-            <Button layoutX="250.0" layoutY="470.0" mnemonicParsing="false" onAction="#soundPlayDimorphodon" text="Play" />
-            </children></AnchorPane>
         <ImageView fx:id="area2aimage" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@MediaSweng/Dimorphodon.png" />
@@ -62,6 +42,43 @@
             <opaqueInsets>
                 <Insets />
             </opaqueInsets></Button>
+        <AnchorPane fx:id="area2ainfo" prefHeight="720.0" prefWidth="1280.0" visible="false">
+            <children>
+                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#949494" height="720.0" opacity="0.59" width="1280.0" />
+            <ImageView fx:id="area2aimage1" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/Dimorphodon.png" />
+               </image>
+            </ImageView>
+                <Text fill="WHITE" layoutX="50.0" layoutY="118.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="7.0" text="Dimorphodon" wrappingWidth="486.4951171875">
+                    <font>
+                        <Font name="Dimbo Regular" size="96.0" />
+                    </font>
+                </Text>
+                <Text fill="BLACK" layoutX="50.0" layoutY="178.0" text="These are medium sized pterosaurs." wrappingWidth="586.4951171875">
+                    <font>
+                        <Font name="Dimbo Regular" size="40.0" />
+                    </font>
+                </Text>
+                <Text fill="BLACK" layoutX="300.0" layoutY="578.0" text="Dimorphodons are a genus of flying dinosaurs from the early Jurassic Period. Adult dimorphodons have a wingspan of 4.6 feet." wrappingWidth="750.0">
+                    <font>
+                        <Font name="Dimbo Regular" size="40.0" />
+                    </font>
+                </Text>
+            <Button layoutX="250.0" layoutY="470.0" mnemonicParsing="false" onAction="#soundPlayDimorphodon" text="Play" />
+            <Button layoutX="53.0" layoutY="523.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MediaSweng/minimap.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            </children></AnchorPane>
         <AnchorPane layoutX="547.0" layoutY="519.0" prefHeight="200.0" prefWidth="705.0" stylesheets="@MediaSweng/spike.css">
             <children>
                 <ImageView fx:id="spike" fitHeight="154.0" fitWidth="291.0" layoutX="517.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" styleClass="spike" />

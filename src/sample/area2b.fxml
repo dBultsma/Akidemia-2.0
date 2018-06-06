@@ -25,21 +25,6 @@
                 <Image url="@MediaSweng/PterosaurBackground.png" />
             </image>
         </ImageView>
-      <AnchorPane fx:id="area2ainfo" prefHeight="720.0" prefWidth="1280.0" visible="false">
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#949494" height="720.0" opacity="0.59" width="1280.0" />
-            <Button layoutX="250.0" layoutY="470.0" mnemonicParsing="false" onAction="#soundPlayPterodactyl" text="Play" />
-             <Text fill="WHITE" layoutX="50.0" layoutY="118.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="7.0" text="Pterodactylus" wrappingWidth="486.4951171875">
-                 <font>
-                     <Font name="Dimbo Regular" size="96.0" />
-                 </font>
-             </Text>
-            <Text fill="BLACK" layoutX="50.0" layoutY="178.0" text="These creatures lived in the late Jurassic period. They had an adult wingspan around 1 meter. They were thought to be diurnal, active during the day. They were the first pterosaur ever identified." wrappingWidth="586.4951171875">
-               <font>
-                  <Font name="Dimbo Regular" size="40.0" />
-               </font>
-            </Text>
-         </children></AnchorPane>
       <ImageView fx:id="area2aimage" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@MediaSweng/Pterosaur.png" />
@@ -57,6 +42,38 @@
             <opaqueInsets>
                 <Insets />
             </opaqueInsets></Button>
+      <AnchorPane fx:id="area2ainfo" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#949494" height="720.0" opacity="0.59" width="1280.0" />
+            <ImageView fx:id="area2aimage1" fitHeight="720.0" fitWidth="1280.0" layoutX="4.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@MediaSweng/Pterosaur.png" />
+               </image>
+            </ImageView>
+             <Text fill="WHITE" layoutX="50.0" layoutY="118.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="7.0" text="Pterodactylus" wrappingWidth="486.4951171875">
+                 <font>
+                     <Font name="Dimbo Regular" size="96.0" />
+                 </font>
+             </Text>
+            <Text fill="BLACK" layoutX="50.0" layoutY="178.0" text="These creatures lived in the late Jurassic period. They had an adult wingspan around 1 meter. They were thought to be diurnal, active during the day. They were the first pterosaur ever identified." wrappingWidth="586.4951171875">
+               <font>
+                  <Font name="Dimbo Regular" size="40.0" />
+               </font>
+            </Text>
+            <Button layoutX="55.0" layoutY="525.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MediaSweng/minimap.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button layoutX="250.0" layoutY="470.0" mnemonicParsing="false" onAction="#soundPlayPterodactyl" text="Play" />
+         </children></AnchorPane>
       <AnchorPane layoutX="547.0" layoutY="519.0" prefHeight="200.0" prefWidth="705.0" stylesheets="@MediaSweng/spike.css">
          <children>
             <ImageView fx:id="spike" fitHeight="154.0" fitWidth="291.0" layoutX="517.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" styleClass="spike" />

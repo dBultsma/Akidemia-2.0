@@ -35,7 +35,7 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <AnchorPane fx:id="infoPane" prefHeight="686.0" prefWidth="1029.0">
+        <AnchorPane fx:id="infoPane" prefHeight="686.0" prefWidth="1029.0" visible="false">
             <children>
                 <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="687.0" stroke="BLACK" strokeType="INSIDE" width="1029.0" />
                 <Text layoutX="39.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Hadrosaur (Large Lizard) was a herbivour from the late Cretacious period. It could walk on two legs, and rest on its tail, much like a kangaroo! The Hadrosaur was part of the Hadrosaurid family, which were also called &quot;duck-billed dinosaurs.&quot;" wrappingWidth="279.8095703125" />
