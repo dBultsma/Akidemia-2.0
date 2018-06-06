@@ -13,17 +13,13 @@ import javafx.fxml.FXML;
 import javafx.scene.shape.Circle;
 import javafx.animation.*;
 import javafx.util.Duration;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.text.Text;
 
-
 public class MapController implements Initializable {
 
-
     @FXML public Circle circle;
-    @FXML public ImageView backg;
     @FXML public AnchorPane stage1, stage2, stage3, stage4, map;
     @FXML public Text oceanlabel, plainslabel, mountainslabel, woodlandlabel;
     @FXML public ImageView mountainimage, oceanimage, plainsimage, woodlandimage;
@@ -35,8 +31,6 @@ public class MapController implements Initializable {
     @FXML public Text onelabela, onelabelb, onelabelc, onelabeld;
     @FXML public Text twolabela, twolabelb, twolabelc, twolabeld;
     @FXML public Text area4one, area4two, area4three, area4four;
-
-
 
     ChangingScene sc = new ChangingScene();
 

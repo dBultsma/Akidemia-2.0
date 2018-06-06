@@ -5,13 +5,10 @@ import PWS.Presentation;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.media.AudioClip;
@@ -25,7 +22,6 @@ import javafx.scene.*;
 import javafx.scene.image.*;
 import java.io.File;
 import java.io.IOException;
-import java.io.UncheckedIOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -39,22 +35,8 @@ public class Controller implements Initializable {
 
     @FXML public Button goButton;
 
-    public void PressGo(ActionEvent event) throws IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("ChooseYourAdventure.fxml", window);
-    }
-
     public void dinoSelected (ActionEvent event) throws IOException {
         goButton.setDisable((false));
-    }
-
-    public void toSettings(ActionEvent event) throws IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("settings.fxml", window);
-    }
-    public void toCompanion(ActionEvent event) throws IOException {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("companion.fxml", window);
     }
 
     public void BackToMainScene(ActionEvent event) throws IOException {
@@ -75,28 +57,6 @@ public class Controller implements Initializable {
     public void toPasswordsettings(ActionEvent event) throws IOException {
         Stage window = new Stage();
         sc.changeScene("SettingPassword.fxml", window);
-    }
-
-    public void magCursor(Scene x) {
-        Image image = new Image(getClass().getResource("MediaSweng/cursor.png").toExternalForm(),
-                20, 20, false, true);
-        x.setCursor(new ImageCursor(image, 1, 1));
-    }
-
-    public void excCursor(MouseEvent evt) {
-
-        Image image = new Image(getClass().getResource("MediaSweng/exclamation.png").toExternalForm(),
-                20,20,false,true);
-        ((Node)evt.getSource()).getScene().setCursor(new ImageCursor(image, 1, 1));
-    }
-
-    public void toChildLock(ActionEvent event)throws IOException {
-        Stage window = new Stage();
-        sc.changeScene("childLock.fxml", window);
-    }
-
-    public void mag2Cursor(MouseEvent evt) {
-        magCursor(((Node)evt.getSource()).getScene());
     }
 
     public void quiz1Pressed(ActionEvent event) throws IOException {
