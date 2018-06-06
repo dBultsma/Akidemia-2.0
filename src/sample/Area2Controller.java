@@ -215,4 +215,24 @@ public class Area2Controller implements Initializable {
                 20,20,false,true);
         ((Node)evt.getSource()).getScene().setCursor(new ImageCursor(image, 1, 1));
     }
+
+    public void soundPlayDimorphodon(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Dimorphodon.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayHatzegopteryx(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Hatzegopteryx.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayPterodactyl(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Pterodactyl.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayQuetzalcoatlus(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Quetzalcoatlus.wav").toString());
+        sound.play();
+    }
 }
