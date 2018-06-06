@@ -9,6 +9,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
@@ -82,5 +83,25 @@ public class Area4Controller implements Initializable {
             }
 
         });
+    }
+
+    public void soundPlayBasilosaurus(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Basilosaurus.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayKronosaurus(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Kronosaurus.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayLiopleurdon(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Liopleurdon.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayMauisaurus(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Mauisaurus.wav").toString());
+        sound.play();
     }
 }

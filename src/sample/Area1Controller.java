@@ -121,4 +121,25 @@ public class Area1Controller implements Initializable {
         SequentialTransition seqT = new SequentialTransition(spike , tt );
         seqT.play();
     }
+
+
+    public void soundPlayDiplodocus(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Diplodocus.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayAllosaurus(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Allosaurus.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayHadrosaurus(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Hadrosaurus.wav").toString());
+        sound.play();
+    }
+
+    public void soundPlayStegosaurus(){
+        AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Stegosaurus.wav").toString());
+        sound.play();
+    }
 }
