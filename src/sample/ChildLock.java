@@ -1,32 +1,25 @@
 package sample;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 
-import java.io.IOException;
-
 public class ChildLock {
-    @FXML
-    private Label PasswordLabel;
+    @FXML private Label PasswordLabel;
     @FXML private Label setPasswordLabel;
     @FXML private PasswordField setPassword;
     @FXML private PasswordField confirmPassword;
     @FXML private PasswordField checkPassword;
 
-    private String savedPassword = new String();
-    public String childLockStatus = new String();
+    private String savedPassword;// = new String();
+    public String childLockStatus;// = new String();
 
-
+    //compare typed password with stored password
     public void passwordChecker(ActionEvent event){
         ReadFile readPassword = new ReadFile();
         readPassword.openFile("password.txt");
@@ -41,8 +34,10 @@ public class ChildLock {
         }
     }
 
+    //store typed password
     public void setPassword(ActionEvent event) {
 
+        //if childlock is in use, don't allow a new password to be created
         if (new ChildLock().childLockStatus().equals("locked")) {
             setPasswordLabel.setText("A password has already been created");
         } else if(setPassword.getText().trim().isEmpty())
@@ -56,6 +51,7 @@ public class ChildLock {
              passwordStorage.addData(setPassword.getText());
              passwordStorage.closeFile();
 
+             //create file to store locked status of child lock
             CreateFile childLockStatus = new CreateFile();
             childLockStatus.openFile("childLockStatus.txt");
             childLockStatus.addData("locked");
@@ -78,6 +74,7 @@ public class ChildLock {
         }
     }
 
+    //request password and unlock
     public void checkPasswordClose(ActionEvent event){
         ReadFile readPassword = new ReadFile();
         readPassword.openFile("password.txt");
@@ -96,6 +93,7 @@ public class ChildLock {
 
     }
 
+    // read status of child lock
     public String childLockStatus(){
         ReadFile readChildLockStatus = new ReadFile();
         readChildLockStatus.openFile("childLockStatus.txt");

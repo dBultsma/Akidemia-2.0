@@ -1,25 +1,17 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.AudioClip;
-import javafx.scene.paint.Color;
 import javafx.stage.Stage;
-import javafx.scene.*;
 import javafx.scene.image.*;
 import javafx.animation.*;
 import javafx.util.Duration;
-
 import java.awt.*;
-import java.io.IOException;
 import java.util.ResourceBundle;
 import java.net.URL;
 
@@ -34,13 +26,14 @@ public class Area1Controller implements Initializable {
     private int speechmode = 0;
     int i =0;
 
+    AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
+
     public void initialize(URL location, ResourceBundle resources) {
 
         addButtonHandler(infoPane, targetDino);
-
-        AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
         starterBubble();
 
+        // spike sound on mouse hover
         spike.setOnMouseEntered(e ->
                 {
                     AudioClip spikeHello = null;
@@ -66,6 +59,7 @@ public class Area1Controller implements Initializable {
                 }
         );
 
+        // spike move and sound on mouse click
         spike.setOnMouseClicked(e -> {
             if (i<= 0) {
                 transitions();
@@ -79,6 +73,7 @@ public class Area1Controller implements Initializable {
         });
     }
 
+    // to Island
     public void toMap(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("map.fxml", window);
@@ -90,6 +85,7 @@ public class Area1Controller implements Initializable {
         });
     }
 
+    // spike speech bubble
     public void timelinetransition(double x) {
         int speechmode = -1;
         if (this.speechmode != 1) {
@@ -114,6 +110,7 @@ public class Area1Controller implements Initializable {
 
     public void starterBubble(){ speech1.setVisible(true);}
 
+    // transition distance
     public void transitions() {
         final Duration SEC_3 = Duration.millis(3000);
         TranslateTransition tt = new TranslateTransition(Duration.millis(2000));
@@ -124,23 +121,26 @@ public class Area1Controller implements Initializable {
         seqT.play();
     }
 
-
+    // play diplodocus information script
     public void soundPlayDiplodocus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Diplodocus.wav").toString());
         sound.play();
     }
 
+    // play allosaurus information script
     public void soundPlayAllosaurus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Allosaurus.wav").toString());
         sound.play();
     }
 
+    // play hadrosaurus information script
     public void soundPlayHadrosaurus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Hadrosaurus.wav").toString());
         sound.play();
         System.out.println("test");
     }
 
+    // play stegosaurus information script
     public void soundPlayStegosaurus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Stegosaurus.wav").toString());
         sound.play();

@@ -1,11 +1,8 @@
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -13,28 +10,14 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
-import javafx.scene.shape.Circle;
-import javafx.animation.*;
-import javafx.util.Duration;
-
 import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.application.Application;
-import static javafx.application.Application.launch;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.ToggleGroup;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 public class Area4Controller implements Initializable {
 
     @FXML public AnchorPane infoa, infob, info3, infod, infoc;
-    @FXML public ImageView pica, picbb, pic3, picd, picc3;
+    @FXML public ImageView pica, picbb, picd, picc3;
 
     ChangingScene sc = new ChangingScene();
 
@@ -44,6 +27,7 @@ public class Area4Controller implements Initializable {
         File path = new File(location.getFile());
         String fileName = path.getName();
 
+        // reads fxml file in use
         if("4a.fxml".equals(fileName)){
             addButtonHandlerA(infoa, pica);
         }
@@ -56,9 +40,9 @@ public class Area4Controller implements Initializable {
         else if ("4d.fxml".equals(fileName)){
             addButtonHandlerA(infod, picd);
         }
-
     }
 
+    // to Island
     public void toMap(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("map.fxml", window);
@@ -85,21 +69,25 @@ public class Area4Controller implements Initializable {
         });
     }
 
+    // play basilosaurus information script
     public void soundPlayBasilosaurus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Basilosaurus.wav").toString());
         sound.play();
     }
 
+    // play kronosaurus information script
     public void soundPlayKronosaurus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Kronosaurus.wav").toString());
         sound.play();
     }
 
+    // play liopleurodon information script
     public void soundPlayLiopleurdon(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Liopleurdon.wav").toString());
         sound.play();
     }
 
+    // play mauisaurus information script
     public void soundPlayMauisaurus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Mauisaurus.wav").toString());
         sound.play();
