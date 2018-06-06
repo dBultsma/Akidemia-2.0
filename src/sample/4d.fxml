@@ -35,31 +35,63 @@
                   <Image url="@MediaSweng/kronops.png" />
                </image>
             </ImageView>
-            <Button layoutX="600.0" layoutY="20.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+            <Button layoutX="25.0" layoutY="600.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="134.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MediaSweng/minimap.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane fx:id="infod" prefHeight="750.0" prefWidth="1280.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="750.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
+            <ImageView fitHeight="589.0" fitWidth="976.0" layoutX="191.0" layoutY="97.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/kronops.png" />
+               </image></ImageView>
+            <Label layoutX="419.0" layoutY="555.0" prefHeight="156.0" prefWidth="373.0" text="The name 'Kronosaurus' means &quot;Lizard of Kronos&quot;. They were named after the leader of the Greek Titans, Cronus" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="661.0" layoutY="158.0" prefHeight="152.0" prefWidth="423.0" text="The Kronosaurus lived in the Early Cretaceous period, around the areas that now comprise Australia and Columbia" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="27.0" layoutY="349.0" prefHeight="178.0" prefWidth="312.0" text="They were a marine reptile and not a dinosaur, as well as a close relative to the Liopleurodon" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="887.0" layoutY="518.0" prefHeight="186.0" prefWidth="368.0" text="They had an elongated head, a short neck and a stiff body which was propelled by four flippers and a short tail" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="670.0" layoutY="48.0" prefHeight="102.0" prefWidth="439.0" text="They typical grew to be around 9 to 10.5m in length and weighed up to 11 tons" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="29.0" layoutY="263.0" prefHeight="110.0" prefWidth="293.0" text="They were carnivores and mainly ate turtles and plesiosaurs" wrapText="true">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Button layoutX="250.0" layoutY="25.0" mnemonicParsing="false" onAction="#soundPlayKronosaurus" text="Play" />
+            <Button layoutX="25.0" layoutY="600.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+               <graphic>
+                  <ImageView fitHeight="134.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MediaSweng/minimap.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
             </Button>
-            <ImageView fitHeight="134.0" fitWidth="127.0" layoutX="43.0" layoutY="522.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@MediaSweng/minimap.png" />
-               </image>
-            </ImageView>
-         </children></AnchorPane>
-      <AnchorPane fx:id="infod" prefHeight="400.0" prefWidth="600.0" visible="false">
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-            <ImageView fitHeight="311.0" fitWidth="472.0" layoutX="83.0" layoutY="53.0" pickOnBounds="true">
-               <image>
-                  <Image url="@MediaSweng/kronops.png" />
-               </image></ImageView>
-            <Label layoutX="192.0" layoutY="299.0" prefHeight="87.0" prefWidth="197.0" text="The name 'Kronosaurus' means &quot;Lizard of Kronos&quot;. They were named after the leader of the Greek Titans, Cronus" wrapText="true" />
-            <Label layoutX="435.0" layoutY="118.0" prefHeight="94.0" prefWidth="165.0" text="The Kronosaurus lived in the Early Cretaceous period, around the areas that now comprise Australia and Columbia" wrapText="true" />
-            <Label layoutX="10.0" layoutY="198.0" prefHeight="69.0" prefWidth="165.0" text="They were a marine reptile and not a dinosaur, as well as a close relative to the Liopleurodon" wrapText="true" />
-            <Label layoutX="408.0" layoutY="276.0" prefHeight="94.0" prefWidth="178.0" text="They had an elongated head, a short neck and a stiff body which was propelled by four flippers and a short tail" wrapText="true" />
-            <Label layoutX="403.0" layoutY="31.0" prefHeight="87.0" prefWidth="189.0" text="They typical grew to be around 9 to 10.5m in length and weighed up to 11 tons" wrapText="true" />
-            <Label layoutX="10.0" layoutY="122.0" prefHeight="87.0" prefWidth="137.0" text="They were carnivores and mainly ate turtles and plesiosaurs" wrapText="true" />
-            <Button layoutX="250.0" layoutY="25.0" mnemonicParsing="false" onAction="#soundPlayKronosaurus" text="Play" />
          </children></AnchorPane>
    </children>
 </AnchorPane>

@@ -23,40 +23,6 @@
             <Image url="@MediaSweng/bas%20bg.jpg" />
          </image>
       </ImageView>
-      <AnchorPane prefHeight="750.0" prefWidth="1280.0">
-         <children>
-            <ImageView fx:id="picc3" fitHeight="720.0" fitWidth="1280.0" opacity="0.88" pickOnBounds="true">
-               <image>
-                  <Image url="@MediaSweng/basnew.PNG" />
-               </image>
-            </ImageView>
-            <AnchorPane layoutX="35.0" layoutY="553.0" prefHeight="150.0" prefWidth="100.0">
-               <children>
-                  <Button mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <graphic>
-                        <ImageView fitHeight="134.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@MediaSweng/minimap.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
-               </children>
-            </AnchorPane>
-            <AnchorPane layoutX="33.0" layoutY="93.0" prefHeight="50.0" prefWidth="600.0">
-               <children>
-                  <Label layoutX="33.0" layoutY="6.0" prefHeight="62.0" prefWidth="220.0" text="Basilosaurus">
-                     <font>
-                        <Font size="34.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="infob" prefHeight="750.0" prefWidth="1280.0" visible="false">
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e5f9ff85" height="750.0" stroke="BLACK" strokeType="INSIDE" width="1280.0" />
@@ -68,32 +34,65 @@
             <Label layoutX="162.0" layoutY="128.0" prefHeight="161.0" prefWidth="324.0" text="The name 'Basilosaurus' means &quot;king lizard&quot; " wrapText="true">
                <font>
                   <Font size="24.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label layoutX="288.0" layoutY="504.0" prefHeight="236.0" prefWidth="293.0" text="The Basilosaurus lived in the Late Eocene (40 to 35 million years ago)" wrapText="true">
                <font>
                   <Font size="24.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label layoutX="798.0" layoutY="48.0" prefHeight="131.0" prefWidth="283.0" text="They were originally thought to be a reptile hence why their name ends with '-saurus'..." wrapText="true">
                <font>
                   <Font size="24.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label layoutX="661.0" layoutY="490.0" prefHeight="212.0" prefWidth="454.0" text="They typically grew to between 15 to 18m in length, with a mass of around 15 tonnes" wrapText="true">
                <font>
                   <Font size="24.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label layoutX="294.0" layoutY="450.0" prefHeight="123.0" prefWidth="264.0" text="They were carnivores mainly eating large fish and small whales" wrapText="true">
                <font>
                   <Font size="24.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label layoutX="980.0" layoutY="182.0" prefHeight="123.0" prefWidth="327.0" text="...they are actually cetaceans. Modern day equivalents include whales and dolphins" wrapText="true">
                <font>
                   <Font size="24.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Label layoutX="655.0" layoutY="368.0" prefHeight="174.0" prefWidth="416.0" text="Thought to have lived all over the world, with lots of fossils found in America and some found in Egypt too" wrapText="true">
                <font>
                   <Font size="24.0" />
-               </font></Label>
+               </font>
+            </Label>
             <Button layoutX="230.0" layoutY="25.0" mnemonicParsing="false" onAction="#soundPlayBasilosaurus" text="Play" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="750.0" prefWidth="1280.0">
+         <children>
+            <ImageView fx:id="picc3" fitHeight="720.0" fitWidth="1280.0" layoutX="24.0" layoutY="24.0" opacity="0.88" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/basnew.PNG" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="50.0" prefHeight="62.0" prefWidth="220.0" text="Basilosaurus">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+            <Button layoutX="25.0" layoutY="600.0" mnemonicParsing="false" onAction="#toMap" style="-fx-background-color: transparent; -fx-text-fill: transparent;">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <graphic>
+                  <ImageView fitHeight="134.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@MediaSweng/minimap.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
          </children>
       </AnchorPane>
    </children>
