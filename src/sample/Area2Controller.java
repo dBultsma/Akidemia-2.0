@@ -1,69 +1,5 @@
-/*package sample;
-
-import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.paint.Color;
-import javafx.stage.Stage;
-import sample.Controller;
-import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.shape.Circle;
-import javafx.animation.*;
-import javafx.util.Duration;
-
-import javax.annotation.Resources;
-import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
-
-public class Area2Controller {
-
-    @FXML public AnchorPane info2a, infotwob, stage4;
-    @FXML public ImageView quetzal, imagetwob, oceanimage;
-
-    ChangingScene sc = new ChangingScene();
-
-    public void initialize(URL location, ResourceBundle resources) {
-
-        addButtonHandler(info2a, quetzal);
-        addButtonHandler(infotwob, imagetwob);
-
-    }
-
-    public void toMap(Event event) {
-        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        sc.changeScene("map.fxml", window);
-    }
-
-    public void infotest(ActionEvent event) {
-        info2a.setVisible(true);
-    }
-
-    public void addButtonHandler(AnchorPane anchorPane, ImageView imageView) {
-        imageView.addEventFilter(MouseEvent.MOUSE_CLICKED, e -> {
-            Color color = imageView.getImage().getPixelReader().getColor((int)e.getX(),(int)e.getY());
-            if (color.getOpacity() != 0) {
-                anchorPane.setVisible(true);
-                imageView.setVisible(false);
-            }
-
-        });
-    }
-
-}*/
-
 package sample;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.ImageCursor;
@@ -77,33 +13,30 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
-import javafx.scene.shape.Circle;
 import javafx.animation.*;
 import javafx.util.Duration;
-
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.scene.text.Text;
 
 public class Area2Controller implements Initializable {
 
+    ChangingScene sc = new ChangingScene();
     @FXML public AnchorPane area2ainfo;
     @FXML public ImageView area2aimage;
     @FXML public ImageView spike, speech1, speech2, findadino, almostthere;
     private Timeline speechBubbleTimeline = new Timeline();
     private int speechmode = 0;
     int i =0;
-    AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
 
-    ChangingScene sc = new ChangingScene();
+    AudioClip plonkSound = new AudioClip(getClass().getResource("MediaSweng/spikein.wav").toString());
 
     public void initialize(URL location, ResourceBundle resources) {
 
         addButtonHandler(area2ainfo, area2aimage);
         starterBubble();
 
+        // spike sound on mouse hover
         spike.setOnMouseEntered(e ->
                 {
                     AudioClip spikeHello = null;
@@ -129,7 +62,7 @@ public class Area2Controller implements Initializable {
                 }
         );
 
-
+    // spike move and sound on mouse click
         spike.setOnMouseClicked(e -> {
             if (i<= 0) {
                 transitions();
@@ -144,8 +77,11 @@ public class Area2Controller implements Initializable {
         });
     }
 
+    // spike speech bubble
     public void timelinetransition(double x) {
+
         int speechmode = -1;
+
         if (this.speechmode != 1) {
             speechmode = 1;
             speechBubbleTimeline.stop();
@@ -158,7 +94,6 @@ public class Area2Controller implements Initializable {
                     new KeyFrame(Duration.seconds(5), e -> findadino.setVisible(false)),
                     new KeyFrame(Duration.seconds(7), e -> almostthere.setVisible(true)),
                     new KeyFrame(Duration.seconds(10), e -> almostthere.setVisible(false)));
-
         }
 
         if (this.speechmode != speechmode) {
@@ -169,6 +104,7 @@ public class Area2Controller implements Initializable {
 
     public void starterBubble(){ speech1.setVisible(true);}
 
+    //transition distance
     public void transitions() {
         final Duration SEC_3 = Duration.millis(3000);
         TranslateTransition tt = new TranslateTransition(Duration.millis(2000));
@@ -179,19 +115,10 @@ public class Area2Controller implements Initializable {
         seqT.play();
     }
 
+    // to Island
     public void toMap(Event event) {
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
         sc.changeScene("map.fxml", window);
-    }
-
-    public void addTextHandler(Text text, ImageView imageView) {
-        imageView.addEventFilter(MouseEvent.MOUSE_MOVED, e -> {
-            Color color = imageView.getImage().getPixelReader().getColor((int)e.getX(),(int)e.getY());
-            text.setVisible(color.getOpacity() != 0);
-        });
-        imageView.addEventFilter(MouseEvent.MOUSE_EXITED, e -> {
-            text.setVisible(false);
-        });
     }
 
     public void addButtonHandler(AnchorPane anchorPane, ImageView imageView) {
@@ -200,37 +127,28 @@ public class Area2Controller implements Initializable {
             if (color.getOpacity() != 0) {
                 anchorPane.setVisible(!anchorPane.isVisible());
             }
-
         });
     }
 
-    public void magCursor(Scene x) {
-        Image image = new Image(getClass().getResource("MediaSweng/cursor.png").toExternalForm(),
-                20, 20, false, true);
-        x.setCursor(new ImageCursor(image, 1, 1));
-    }
-
-    public void excCursor(MouseEvent evt) {
-        Image image = new Image(getClass().getResource("MediaSweng/exclamation.png").toExternalForm(),
-                20,20,false,true);
-        ((Node)evt.getSource()).getScene().setCursor(new ImageCursor(image, 1, 1));
-    }
-
+    // play dimorphodon information script
     public void soundPlayDimorphodon(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Dimorphodon.wav").toString());
         sound.play();
     }
 
+    // play hatzegopteryx information script
     public void soundPlayHatzegopteryx(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Hatzegopteryx.wav").toString());
         sound.play();
     }
 
+    // play pterodactyl information script
     public void soundPlayPterodactyl(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Pterodactyl.wav").toString());
         sound.play();
     }
 
+    // play quetzalcoatlus information script
     public void soundPlayQuetzalcoatlus(){
         AudioClip sound = new AudioClip(getClass().getResource("MediaSweng/Quetzalcoatlus.wav").toString());
         sound.play();
