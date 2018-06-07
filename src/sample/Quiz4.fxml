@@ -11,16 +11,6 @@
 
 <AnchorPane fx:id="quizPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuizController4">
    <children>
-      <Label fx:id="correctLabel" alignment="CENTER" layoutX="550.0" layoutY="550.0" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #b2dfee;" text="Correct!" visible="false">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <Label fx:id="incorrectLabel" alignment="CENTER" layoutX="550.0" layoutY="550.0" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #b2dfee;" text="Incorrect!" visible="false">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
       <AnchorPane fx:id="quizFinished" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #b2dfee;" visible="false">
          <children>
             <ImageView fitHeight="750.0" fitWidth="1280.0" pickOnBounds="true">
@@ -256,5 +246,15 @@
             </Label>
          </children>
       </AnchorPane>
+      <Label fx:id="correctLabel" alignment="CENTER" layoutX="550.0" layoutY="550.0" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #b2dfee;" text="Correct!" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="incorrectLabel" alignment="CENTER" layoutX="550.0" layoutY="550.0" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #b2dfee;" text="Incorrect!" visible="false">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

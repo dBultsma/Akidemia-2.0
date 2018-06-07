@@ -220,6 +220,15 @@
       </AnchorPane>
       <AnchorPane fx:id="stage4" layoutX="87.0" layoutY="171.0" prefHeight="556.0" prefWidth="837.0" visible="false">
          <children>
+            <Button mnemonicParsing="false" onAction="#toMap" prefHeight="42.0" prefWidth="67.0" text="Back">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <stylesheets>
+                  <URL value="@CSS%20Files/prettybutton.css" />
+                  <URL value="@CSS%20Files/prettybutton.css" />
+               </stylesheets>
+            </Button>
             <ImageView fx:id="area41image" fitHeight="251.0" fitWidth="326.0" layoutX="80.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@MediaSweng/4al.png" />
