@@ -25,12 +25,17 @@ public class PWS extends Application{
         stage.setTitle("Presentation");
 
         Group root = new Group();
-        Scene scene = new Scene(root, 1280, 720);
-        File xml = openFile(stage);
+        Scene scene = new Scene(root, 1280, 720); // opens new window for new presentation
 
-        Parser parser = new Parser();
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("open xml");
+        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("PWS (*.pws)", "*.pws"));
 
-        presentation = parser.Parser(xml);
+        File xml = fileChooser.showOpenDialog(stage);
+
+        Parser parser = new Parser(); // sets up parser
+
+        presentation = parser.Parser(xml); // parses xml, returns presentation object
 
 
         if (presentation != null) {
@@ -41,7 +46,7 @@ public class PWS extends Application{
 
             root.getChildren().add(currentSlide);
 
-            scene.setOnKeyPressed((keyEvent) -> {
+            scene.setOnKeyPressed((keyEvent) -> { //defines arrow key navigation
                 switch (keyEvent.getCode()) {
                     case RIGHT:
                         root.getChildren().remove(currentSlide);
@@ -58,10 +63,4 @@ public class PWS extends Application{
         }
     }
 
-    private File openFile(Stage stage) {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("open xml");
-        fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("PWS (*.pws)", "*.pws"));
-        return fileChooser.showOpenDialog(stage);
-    }
 }

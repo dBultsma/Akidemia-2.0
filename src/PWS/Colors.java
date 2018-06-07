@@ -5,7 +5,7 @@ import javafx.scene.paint.LinearGradient;
 import javafx.scene.paint.Paint;
 
 public class Colors {
-    private String color;
+    private String color; //define variables
     private String fill;
 
     public Colors(String color, String fill){
@@ -15,15 +15,15 @@ public class Colors {
 
     public String getColorString() {
         return color;
-    }
+    } //defining getters
 
     public String getFillString() {
         return fill;
     }
 
     public Paint getColor() {
-        if(this.color.contains("gradient")){
-            String array[] = color.split("[\\(||,||\\)]");
+        if(this.color.contains("gradient")){ //gradient behaviour
+            String array[] = color.split("[(||,||)]"); //splitting gradient into deperate values
             return LinearGradient.valueOf("linear-gradient(from 50% 0% to 50% 100%, " + array[1] + " 0%, " + array[2] + " 100%)");
         }
         else{
@@ -33,7 +33,7 @@ public class Colors {
 
     public Paint getFill() {
         if(this.fill.contains("gradient")){
-            String array[] = fill.split("[\\(||,||\\)]");
+            String array[] = fill.split("[(||,||)]");
             return LinearGradient.valueOf("linear-gradient(from 50% 0% to 50% 100%, " + array[1] + " 0%, " + array[2] + " 100%)");
         }
         else{
@@ -43,7 +43,7 @@ public class Colors {
 
     public Color getFillSingle(){
         if(this.fill.contains("gradient")){
-            String array[] = fill.split("[\\(||,||\\)]");
+            String array[] = fill.split("[(||,||)]");
             return Color.valueOf(array[1]);
         }
         else{
