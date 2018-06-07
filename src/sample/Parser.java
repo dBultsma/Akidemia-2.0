@@ -24,15 +24,15 @@ import java.util.ArrayList;
 public class Parser {
 
     public Presentation Parser(File file){
-        SAXParserFactory spf = SAXParserFactory.newInstance();
+        SAXParserFactory spf = SAXParserFactory.newInstance(); //parser constructor
         try{
             spf.setNamespaceAware(true);
             SAXParser saxParser = spf.newSAXParser();
-            PwsHandler handler = new PwsHandler();
-            saxParser.parse(file, handler);
-            return handler.getPresentation();
+            PwsHandler handler = new PwsHandler(); //sets up PWS handler
+            saxParser.parse(file, handler); //parses using PWS handler
+            return handler.getPresentation(); //returns presentation
         }
-        catch (ParserConfigurationException | SAXException | IOException e){
+        catch (ParserConfigurationException | SAXException | IOException e){ //catching exceptions
             e.printStackTrace();
             return null;
         }
@@ -40,7 +40,7 @@ public class Parser {
 }
 
 class PwsHandler extends DefaultHandler{
-    private boolean bText = false;
+    private boolean bText = false; //setting up variables
     private boolean bFormat = false;
 
     private Presentation presentation;
@@ -58,13 +58,13 @@ class PwsHandler extends DefaultHandler{
 
     Presentation getPresentation() {
         return presentation;
-    }
-
-    @Override
-    public void startDocument() throws SAXException{}
+    } //defines get presentation method
 
     @Override
     public void startElement(String namespaceURI, String localName, String qName, Attributes attrs) throws SAXException{
+
+        // variable set up for multiple PWS required classes
+
         // Font
         String attrs_font = attrs.getValue("font");
         String attrs_size = attrs.getValue("textsize");
@@ -202,9 +202,7 @@ class PwsHandler extends DefaultHandler{
         switch(qName.toLowerCase()){
             case "presentation": {
 
-//                System.out.println("new presentation");
-
-                if(attrs_font != null){ font = attrs_font; }
+                if(attrs_font != null){ font = attrs_font; } //identifying attibutes and parsing to variables
                 else{ font = "Arial"; }
 
                 if(attrs_size != null){ size = Integer.parseInt(attrs_size); }
@@ -221,7 +219,6 @@ class PwsHandler extends DefaultHandler{
 
                 Fonts fonts = new Fonts(font, italic, bold, underline, size);
 
-//                System.out.println("    text formatting: font: " + font + ", size: " + size + ", bold: " + bold + ", italic: " + italic + ", underline: " + underline);
 
                 if(attrs_color != null){ color = attrs_color; }
                 else{ color = "#000000"; }
@@ -231,7 +228,6 @@ class PwsHandler extends DefaultHandler{
 
                 Colors colors = new Colors(color, fill);
 
-//                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
 
                 presentation = new Presentation(fonts, colors);
 
@@ -239,15 +235,12 @@ class PwsHandler extends DefaultHandler{
             break;
             case "meta": {
 
-//                System.out.println("    meta: key: " + key + ", value: " + value);
-
                 presentation.add(new Meta(key, value));
 
             }
             break;
             case "slide": {
 
-//                System.out.println("new slide");
 
                 if(attrs_font != null){ font = attrs_font; }
                 else{ font = "Arial"; }
@@ -266,8 +259,6 @@ class PwsHandler extends DefaultHandler{
 
                 Fonts fonts = new Fonts(font, italic, bold, underline, size);
 
-//                System.out.println("    text formatting: font: " + font + ", size: " + size + ", bold: " + bold + ", italic: " + italic + ", underline: " + underline);
-
                 if(attrs_color != null){ color = attrs_color; }
                 else{ color = "#000000"; }
 
@@ -275,8 +266,6 @@ class PwsHandler extends DefaultHandler{
                 else{ fill = "#ffffff"; }
 
                 Colors colors = new Colors(color, fill);
-
-//                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
 
                 Transitions transitions = new Transitions(start, duration);
 
@@ -287,7 +276,6 @@ class PwsHandler extends DefaultHandler{
             break;
             case "text": {
                 bText = true;
-//                System.out.println("new text");
 
                 if(attrs_font != null){ font = attrs_font; }
                 else{ font = "Arial"; }
@@ -304,7 +292,6 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_underline != null){ underline = Boolean.parseBoolean(attrs_underline); }
                 else{ underline = false; }
 
-//                System.out.println("    text formatting: font: " + font + ", size: " + size + ", bold: " + bold + ", italic: " + italic + ", underline: " + underline);
 
                 if(attrs_color != null){ color = attrs_color; }
                 else{ color = "#000000"; }
@@ -312,7 +299,7 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_fill != null){ fill = attrs_fill; }
                 else{ fill = "#ffffff"; }
 
-//                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
+
 
                 fonts = new Fonts(font, italic, bold, underline, size);
                 colors = new Colors(color, fill);
@@ -326,7 +313,7 @@ class PwsHandler extends DefaultHandler{
             break;
             case "format": {
                 bFormat = true;
-//                System.out.println("new format");
+
 
                 if(attrs_font != null){ font = attrs_font; }
                 else{ font = "Arial"; }
@@ -343,7 +330,6 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_underline != null){ underline = Boolean.parseBoolean(attrs_underline); }
                 else{ underline = false; }
 
-//                System.out.println("    text formatting: font: " + font + ", size: " + size + ", bold: " + bold + ", italic: " + italic + ", underline: " + underline);
 
                 if(attrs_color != null){ color = attrs_color; }
                 else{ color = "#000000"; }
@@ -351,7 +337,6 @@ class PwsHandler extends DefaultHandler{
                 if(attrs_fill != null){ fill = attrs_fill; }
                 else{ fill = "#ffffff"; }
 
-//                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
 
                 formatFonts = new Fonts(font, italic, bold, underline, size);
                 formatColors = new Colors(color, fill);
@@ -360,7 +345,6 @@ class PwsHandler extends DefaultHandler{
             break;
             case "br": {
 
-//                System.out.println("new break");
 
                 textArrayList.add(new Text("\n"));
             }
@@ -369,9 +353,6 @@ class PwsHandler extends DefaultHandler{
 
                 Position position = new Position(x, y, x2, y2);
 
-//                System.out.println("new shape");
-
-//                System.out.println("    shape: type: " + type + ", stroke: " + stroke);
 
                 if(attrs_color != null){ color = attrs_color; }
                 else{ color = "#000000"; }
@@ -381,7 +362,6 @@ class PwsHandler extends DefaultHandler{
 
                 Colors colors = new Colors(color, fill);
 
-//                System.out.println("    color formatting: color: " + color + ", fill: " + fill);
 
                 slide.add(new ShapePws(position, colors, type, stroke));
 
@@ -391,9 +371,6 @@ class PwsHandler extends DefaultHandler{
 
                 Position position = new Position(x, y, x2, y2);
 
-//                System.out.println("new image");
-
-//                System.out.println("    image: path: " + path);
                 try{
                     slide.add(new ImagePws(position, path));
                 }
@@ -403,9 +380,6 @@ class PwsHandler extends DefaultHandler{
             }
             break;
             case "audio": {
-//                System.out.println("new audio");
-
-//                System.out.println("    audio: path: " + path);
                 try{
                     slide.add(new Audio(path, false));
                 }
@@ -416,9 +390,6 @@ class PwsHandler extends DefaultHandler{
             }
             break;
             case "video": {
-//                System.out.println("new video");
-
-//                System.out.println("    video: path: " + path);
                 try{
                     VideoPlayer videoPlayer = new VideoPlayer(path);
                     videoPlayer.enableVideoControls();
@@ -437,7 +408,7 @@ class PwsHandler extends DefaultHandler{
     @Override
     public void endElement(String namespaceURI, String localName, String qName) throws SAXException{
 
-        switch (qName.toLowerCase()){
+        switch (qName.toLowerCase()){ //compiling text together once end is reached
             case "text":
                 bText = false;
                 for(Text text : textArrayList){
@@ -452,15 +423,11 @@ class PwsHandler extends DefaultHandler{
     }
 
     @Override
-    public void endDocument() throws SAXException{}
-
-    @Override
     public void characters(char[] ch, int start, int length) throws SAXException{
         String string = new String(ch, start, length);
-        if(bText){
+        if(bText){ // only checks if in text part of xml file
             if(bFormat){
-//                System.out.println("    text = " + string);
-                Text text = new Text(string);
+                Text text = new Text(string); //text parsing if formatted
                 text.setFont(Font.font(formatFonts.getFont(), formatFonts.getBold(), formatFonts.getItalic(), formatFonts.getTextsize()));
                 text.setUnderline(formatFonts.isUnderline());
                 text.setFill(formatColors.getColor());
@@ -468,8 +435,7 @@ class PwsHandler extends DefaultHandler{
                 textArrayList.add(text);
             }
             else {
-//                System.out.println("    text = " + string.trim());
-                Text text = new Text(string.trim());
+                Text text = new Text(string.trim()); // removes unwanted space
                 text.setFont(Font.font(fonts.getFont(), fonts.getBold(), fonts.getItalic(), fonts.getTextsize()));
                 text.setUnderline(fonts.isUnderline());
                 text.setFill(colors.getColor());

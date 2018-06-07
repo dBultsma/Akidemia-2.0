@@ -5,7 +5,7 @@ import javafx.scene.layout.Pane;
 import java.util.ArrayList;
 
 public class Slide {
-    Fonts fonts;
+    Fonts fonts; //defining variables
     Colors colors;
     Transitions transitions;
 
@@ -17,7 +17,7 @@ public class Slide {
 
     Pane pane;
 
-    public Slide(Fonts fonts, Colors colors, Transitions transitions){
+    public Slide(Fonts fonts, Colors colors, Transitions transitions){ //constructor
         this.fonts = fonts;
         this.colors = colors;
         this.transitions = transitions;
@@ -31,7 +31,7 @@ public class Slide {
 
     public void add(Audio audio){
         this.audioArrayList.add(audio);
-    }
+    } //adding elements contained in slide
 
     public void add(ImagePws image){
         this.imageArrayList.add(image);
@@ -49,7 +49,7 @@ public class Slide {
         this.videoArrayList.add(videoPlayer);
     }
 
-    public Pane getSlidePane(){
+    public Pane getSlidePane(){ //getter method
         pane = new Pane();
         for(TextView textView : textViewArrayList){
             pane.getChildren().add(textView.getTextFlowNode());
