@@ -9,20 +9,15 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="quizPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: ;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuizController3">
+<AnchorPane fx:id="quizPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.QuizController3">
    <children>
-      <Label fx:id="correctLabel" alignment="CENTER" layoutX="550.0" layoutY="550.0" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #b2dfee;" text="Correct!" visible="false">
-         <font>
-            <Font name="Myanmar Text" size="19.0" />
-         </font>
-      </Label>
-      <Label fx:id="incorrectLabel" alignment="CENTER" layoutX="550.0" layoutY="550.0" prefHeight="50.0" prefWidth="170.0" style="-fx-background-color: #b2dfee;" text="Incorrect!" visible="false">
-         <font>
-            <Font name="Myanmar Text" size="19.0" />
-         </font>
-      </Label>
-      <AnchorPane fx:id="quizFinished" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #b2dfee;" visible="false">
+      <AnchorPane fx:id="quizFinished" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" visible="false">
          <children>
+            <ImageView fitHeight="750.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/plane3.jpg" />
+               </image>
+            </ImageView>
             <Button fx:id="mapButton" layoutX="550.0" layoutY="600.0" mnemonicParsing="false" onAction="#mapButtonPressed" prefHeight="56.0" prefWidth="119.0" stylesheets="@CSS%20Files/whitebutton.css" text="Back to map">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
@@ -59,8 +54,13 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="question1" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #b2dfee;" visible="false">
+      <AnchorPane fx:id="question1" prefHeight="750.0" prefWidth="1280.0" visible="false">
          <children>
+            <ImageView fitHeight="750.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/plane3.jpg" />
+               </image>
+            </ImageView>
             <Button fx:id="nextQuestion1" layoutX="900.0" layoutY="600.0" mnemonicParsing="false" onAction="#nextQ1Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/brownbutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="15.0" />
@@ -97,8 +97,13 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="question2" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #b2dfee;" visible="false">
+      <AnchorPane fx:id="question2" prefHeight="750.0" prefWidth="1280.0" visible="false">
          <children>
+            <ImageView fitHeight="750.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/plane3.jpg" />
+               </image>
+            </ImageView>
             <Button fx:id="nextQuestion2" layoutX="900.0" layoutY="600.0" mnemonicParsing="false" onAction="#nextQ2Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/brownbutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
@@ -133,8 +138,13 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="question3" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #b2dfee;" visible="false">
+      <AnchorPane fx:id="question3" prefHeight="750.0" prefWidth="1280.0" visible="false">
          <children>
+            <ImageView fitHeight="750.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/plane3.jpg" />
+               </image>
+            </ImageView>
             <Button fx:id="nextQuestion3" layoutX="900.0" layoutY="600.0" mnemonicParsing="false" onAction="#nextQ3Pressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/brownbutton.css" text="Next Question">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
@@ -169,8 +179,13 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="question4" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #b2dfee;" visible="false">
+      <AnchorPane fx:id="question4" prefHeight="750.0" prefWidth="1280.0" visible="false">
          <children>
+            <ImageView fitHeight="750.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/plane3.jpg" />
+               </image>
+            </ImageView>
             <Button fx:id="nextButton" layoutX="900.0" layoutY="600.0" mnemonicParsing="false" onAction="#nextPressed" prefHeight="49.0" prefWidth="145.0" stylesheets="@CSS%20Files/brownbutton.css" text="Next">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
@@ -205,8 +220,13 @@
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="quizStart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0" style="-fx-background-color: #b2dfee;">
+      <AnchorPane fx:id="quizStart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1280.0">
          <children>
+            <ImageView fitHeight="750.0" fitWidth="1280.0" pickOnBounds="true">
+               <image>
+                  <Image url="@MediaSweng/plane3.jpg" />
+               </image>
+            </ImageView>
             <Button fx:id="startButton" layoutX="900.0" layoutY="600.0" mnemonicParsing="false" onAction="#startPressed" prefHeight="50.0" prefWidth="100.0" stylesheets="@CSS%20Files/brownbutton.css" text="Start">
                <font>
                   <Font name="Myanmar Text" size="12.0" />
@@ -222,5 +242,15 @@
             </Label>
          </children>
       </AnchorPane>
+      <Label fx:id="correctLabel" alignment="CENTER" layoutX="550.0" layoutY="550.0" prefHeight="50.0" prefWidth="170.0" text="Correct!" visible="false">
+         <font>
+            <Font name="Myanmar Text" size="19.0" />
+         </font>
+      </Label>
+      <Label fx:id="incorrectLabel" alignment="CENTER" layoutX="550.0" layoutY="550.0" prefHeight="50.0" prefWidth="170.0" text="Incorrect!" visible="false">
+         <font>
+            <Font name="Myanmar Text" size="19.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

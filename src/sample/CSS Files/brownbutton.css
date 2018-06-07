@@ -1,0 +1,11 @@
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Dimbo";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#a5682a, #421010);
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#421010, #a5682a);
+}
